@@ -15,7 +15,7 @@
 		<?php include('./../../../../includes/_sidebar.php'); ?>
 		<!-- end siderbar -->
 
-		<div id="main">
+		<div id="main">6
 			<header class="mb-3">
 				<a href="#" class="burger-btn d-block d-xl-none">
 					<i class="bi bi-justify fs-3"></i>
