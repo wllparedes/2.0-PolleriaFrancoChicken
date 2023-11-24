@@ -22,6 +22,7 @@ if (!empty($_POST["email"]) and !empty($_POST["password"])) {
     // Guardar en session los datos del usuario
     $_SESSION["id_user"] = $datos->id;
     $_SESSION["user_name"] = $datos->user_name;
+    $_SESSION["email"] = $datos->email;
 
     // Obtener el nombre del cargo
     $query_charge = "SELECT * FROM charges WHERE id = ?";

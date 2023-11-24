@@ -1,5 +1,14 @@
+<?php
+
+include("./../../../../php/empezar_session.php");
+include("./../../../../php/verificar_session.php");
+// include("./../../../../php/calcular-registros.php");
+// include("./../../../../php/ventas_compras.php");
+
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 	<?php include('./../../../../includes/_head.php'); ?>
@@ -8,7 +17,7 @@
 <body>
 	<div id="app">
 
-	
+
 		<!-- dasdasdas -->
 
 		<!-- start siderbar -->
@@ -23,7 +32,7 @@
 			</header>
 
 			<div class="page-heading">
-				<h3>Profile Statistics</h3>
+				<h3>Estadisticas</h3>
 			</div>
 			<div class="page-content">
 				<section class="row">
@@ -215,7 +224,8 @@
 														<td class="col-3">
 															<div class="d-flex align-items-center">
 																<div class="avatar avatar-md">
-																	<img src="./../../../../assets/images/faces/5.jpg" />
+																	<img
+																		src="./../../../../assets/images/faces/5.jpg" />
 																</div>
 																<p class="font-bold ms-3 mb-0">
 																	Si
@@ -235,7 +245,8 @@
 														<td class="col-3">
 															<div class="d-flex align-items-center">
 																<div class="avatar avatar-md">
-																	<img src="./../../../../assets/images/faces/2.jpg" />
+																	<img
+																		src="./../../../../assets/images/faces/2.jpg" />
 																</div>
 																<p class="font-bold ms-3 mb-0">
 																	Si
@@ -270,9 +281,11 @@
 										<img src="./../../../../assets/images/faces/1.jpg" alt="Face 1" />
 									</div>
 									<div class="ms-3 name">
-										<h5 class="font-bold">John Duck</h5>
+										<h5 class="font-bold">
+											<?php echo $_SESSION["user_name"] ?>
+										</h5>
 										<h6 class="text-muted mb-0">
-											@johnducky
+											<?php echo $_SESSION["email"] ?>
 										</h6>
 									</div>
 								</div>

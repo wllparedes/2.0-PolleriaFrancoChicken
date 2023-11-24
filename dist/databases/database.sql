@@ -28,7 +28,7 @@ create table users( -- empleado
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     names VARCHAR(40) NOT NULL,
     surnames VARCHAR(40) NOT NULL,
-    phone VARCHAR(9) NOT NULL,
+    phone VARCHAR(15) NOT NULL,
     dni VARCHAR(8) UNIQUE NOT NULL,
     user_name VARCHAR(40) NOT NULL,
     email VARCHAR(40) UNIQUE NOT NULL,
