@@ -85,6 +85,7 @@ include("./../../../../php/verificar_session.php");
 
             </div>
 
+            <?php include("updateProduct.php") ?>
             <!-- start footer -->
             <?php include('./../../../../includes/_footer.php') ?>
             <!-- end footer -->
@@ -105,8 +106,9 @@ include("./../../../../php/verificar_session.php");
     <!-- * -->
     <script src="./../controllers/listProducts.js" type="module"></script>
     <script src="./../../../../assets/js/main.js"></script>
-
-
+    <script src="./../controllers/updateProduct.js" type="module"></script>
+    <script src="./../controllers/deleteProduct.js" type="module"></script>
+    
 
 </body>
 
