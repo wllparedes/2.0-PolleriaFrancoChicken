@@ -19,6 +19,7 @@ $(document).on('click', '.eliminar', function () {
                 type: 'POST',
                 data: { id },
                 success: function (response) {
+                    console.log(response);
                     let respuesta = response.trim();
                     if (respuesta !== 'correcto') {
                         no_eliminado();

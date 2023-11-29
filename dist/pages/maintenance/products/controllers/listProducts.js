@@ -18,7 +18,7 @@ export const dataTable = new DataTable(tableProducts, {
 		{ data: 'category' },
 		{
 			defaultContent:
-			'<button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editProduct"><i class="bi bi-pen-fill"></i></button> &nbsp;<button class="btn btn-sm btn-danger"> <i class="bi bi-trash"></i> </button>'
+			'<button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editProduct"><i class="bi bi-pen-fill"></i></button> &nbsp;<button class="btn btn-sm btn-danger eliminar"> <i class="bi bi-trash"></i> </button>'
 		},
 	],
 	language: language,
