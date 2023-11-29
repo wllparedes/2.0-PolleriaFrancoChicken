@@ -15,6 +15,7 @@ include("./../../../../php/verificar_session.php");
     <link rel="stylesheet" href="./../../../../assets/vendors/datatable/datatable.min.css">
     <link rel="stylesheet" href="./../../../../assets/vendors/simple-datatables/style.css">
     <link rel="stylesheet" href="./../../../../assets/vendors/sweetalert2/sweetalert2.min.css">
+
 </head>
 
 <body>
@@ -73,7 +74,7 @@ include("./../../../../php/verificar_session.php");
                                         <th>Nombre de usuario</th>
                                         <th>Email</th>
                                         <th>Cargo</th>
-                                        <th>Opcciones</th>
+                                        <th>Opciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -88,7 +89,7 @@ include("./../../../../php/verificar_session.php");
                 <!-- * DATA TABLES -->
 
             </div>
-
+            <?php include("update-User.php") ?>
             <!-- start footer -->
             <?php include('./../../../../includes/_footer.php') ?>
             <!-- end footer -->
@@ -105,12 +106,13 @@ include("./../../../../php/verificar_session.php");
     <script src="./../../../../assets/js/underscore-min.js"></script>
     <!-- <script src="./../../../../assets/vendors/simple-datatables/simple-datatables.js"></script> -->
     <script src="./../../../../assets/vendors/datatable/datatable.min.js"></script>
-
+    <!-- Modal Actualziar Cliente -->
+    
     <!-- * -->
     <script src="./../controllers/listUsers.js" type="module"></script>
     <script src="./../../../../assets/js/main.js"></script>
-
-
+    <script src="./../controllers/updateUser.js" type="module"></script>
+    <script src="./../controllers/deleteUser.js" type="module"></script>
 
 </body>
 
