@@ -20,7 +20,7 @@ while ($row = $result->fetch_assoc()) {
     $json['product'][] = array( 
         'id' => $row['id'],
         'name' => $row['name'],
-        'price' => $row['surnames'],
+        'price' => $row['price'],
         'id_category' => $row['id_category'],
     );
 }

@@ -29,12 +29,13 @@ let editCategoryModal = new bootstrap.Modal(document.getElementById('editProduct
 
 editCategoryModal._element.addEventListener('show.bs.modal', function (event) {
 
+	console.log("hola")
 	let button = event.relatedTarget;
 
 	let row = button.closest('tr');
 
 	let id = dataTable.cell(row, 0).data();
-
+	console.log(id)
 
 	$.ajax({
 		url: '../models/getProduct.php',
@@ -42,7 +43,7 @@ editCategoryModal._element.addEventListener('show.bs.modal', function (event) {
 		data: { id },
 		dataType: `JSON`,
 		success: function (response) {
-			
+			console.log(response)
 			
 			// Aquí cargas los datos del cliente en los campos del formulario en el modal
 			let datos = response ;

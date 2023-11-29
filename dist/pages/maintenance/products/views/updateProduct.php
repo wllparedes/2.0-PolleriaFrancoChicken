@@ -36,7 +36,7 @@
                     <div class="col-lg-4 mb-1">
                         <label for="category">Categoria</label>
                         <div class="form-group position-relative">
-                            <select class="categories form-control" id="categories">
+                            <select class="categories form-control" id="category">
                             </select>
                         </div>
                     </div>
