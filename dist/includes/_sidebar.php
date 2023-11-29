@@ -61,10 +61,10 @@
                     </a>
                     <ul class="submenu">
                         <li class="submenu-item">
-                            <a href="form-editor-quill.html">Nuevo producto</a>
+                            <a href="./../../../maintenance/products/views/newProduct.php">Nuevo producto</a>
                         </li>
                         <li class="submenu-item">
-                            <a href="form-editor-ckeditor.html">Lista de productos</a>
+                            <a href="./../../../maintenance/products/views/listProducts.php">Lista de productos</a>
                         </li>
                     </ul>
                 </li>
