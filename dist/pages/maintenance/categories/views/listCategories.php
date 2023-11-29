@@ -1,0 +1,114 @@
+<?php
+
+include("./../../../../php/empezar_session.php");
+include("./../../../../php/verificar_session.php");
+
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Lista de categorias - Almacenero</title>
+    <link rel="stylesheet" href="./../../../../assets/vendors/choices.js/choices.min.css" />
+    <?php include('./../../../../includes/_head.php'); ?>
+    <link rel="stylesheet" href="./../../../../assets/vendors/datatable/datatable.min.css">
+    <link rel="stylesheet" href="./../../../../assets/vendors/simple-datatables/style.css">
+    <link rel="stylesheet" href="./../../../../assets/vendors/sweetalert2/sweetalert2.min.css">
+</head>
+
+<body>
+    <div id="app">
+
+        <!-- start sidebar -->
+
+        <?php include('./../../../../includes/_sidebar.php'); ?>
+
+        <!-- end sidebar -->
+
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <div class="page-heading">
+                <div class="page-title">
+                    <div class="row">
+                        <div class="col-12 col-md-6 order-md-1 order-last">
+                            <h3> Lista de categorias </h3>
+                            <p class="text-subtitle text-muted">Página donde podremos vizualizar la lista de categorias
+                                con los que contamos, podrás editar, eliminar y buscar a una categoria en específico.
+                            </p>
+                        </div>
+                        <div class="col-12 col-md-6 order-md-2 order-first">
+                            <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Input Group</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- * DATA TABLES -->
+              
+                <section class="section">
+                    <div class="card">
+                        <div class="card-header">
+                            Lista de Categorias
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-striped" id="table-categories">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombres</th>
+                                        <th>Descripcion</th>
+                                        <th>Opciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- ¨* dataTable -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- * DATA TABLES -->
+
+            </div>
+
+            <?php include("./editCategory.php") ?>
+
+            <!-- start footer -->
+            <?php include('./../../../../includes/_footer.php') ?>
+            <!-- end footer -->
+
+        </div>
+    </div>
+    <script src="./../../../../assets/vendors/jquery/jquery.min.js"></script>
+    <script src="./../../../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./../../../../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="./../../../../assets/vendors/choices.js/choices.min.js"></script>
+    <!-- !! -->
+    <script src="./../../../../assets/vendors/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="./../../../../assets/js/pages/modules-sweetalert.js"></script>
+    <script src="./../../../../assets/js/underscore-min.js"></script>
+    <!-- <script src="./../../../../assets/vendors/simple-datatables/simple-datatables.js"></script> -->
+    <script src="./../../../../assets/vendors/datatable/datatable.min.js"></script>
+
+    <!-- * -->
+    <script src="./../controllers/listCategories.js" type="module"></script>
+    <script src="./../../../../assets/js/main.js"></script>
+    <script src="./../controllers/updateCategory.js" type="module"></script>
+    <script src="./../controllers/deleteCategory.js" type="module"></script>
+
+
+</body>
+
+</html>

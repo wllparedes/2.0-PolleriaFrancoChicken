@@ -9,8 +9,8 @@ export const expresiones = {
 	ruc: /^\d{11}$/, // 7 a 14 numeros.
 
 	// * Categoria
-	nombre: /^[a-zA-Z\_\- ]{4,20}$/,
-	descripcion: /^[a-zA-Z0-9\_\-\.\s][^@]{5,90}$/,
+	nameCategory: /^[a-zA-Z\_\- ]{4,20}$/,
+	description: /^[a-zA-Z0-9\_\-\.\s][^@]{5,90}$/,
 
 	// * Consumible
 	consumible: /^[a-zA-Z0-9\_\-\. ][^@]{5,35}$/,

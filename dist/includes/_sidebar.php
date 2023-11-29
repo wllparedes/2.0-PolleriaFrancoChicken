@@ -46,10 +46,10 @@
                     </a>
                     <ul class="submenu">
                         <li class="submenu-item">
-                            <a href="form-editor-quill.html">Nuevo categoria</a>
+                            <a href="./../../../maintenance/categories/views/newCategory.php">Nuevo categoria</a>
                         </li>
                         <li class="submenu-item">
-                            <a href="form-editor-ckeditor.html">Lista de categorias</a>
+                            <a href="./../../../maintenance/categories/views/listCategories.php">Lista de categorias</a>
                         </li>
                     </ul>
                 </li>

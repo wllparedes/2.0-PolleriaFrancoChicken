@@ -8,8 +8,8 @@ export const campos = {
 	ruc: false,
 	phone: false,
 	// * Categoria
-	nombre: false,
-	descripcion: false,
+	nameCategory: false,
+	description: false,
 	// * Consumible
 	precio: false,
 	consumible: false,
