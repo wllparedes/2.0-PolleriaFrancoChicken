@@ -32,7 +32,7 @@ inputs.forEach((input) => {
 $('#editProduct').on('click', '.actualizar', function (e) {
     e.preventDefault();
     // Almacena los elementos seleccionados una vez
-    let select_categoria = $('#categories');
+    let select_categoria = $('#category');
 
     if (campos.name && campos.price && select_categoria.val()) {
         // Datos para la actualización

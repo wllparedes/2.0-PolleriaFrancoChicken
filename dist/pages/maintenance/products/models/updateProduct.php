@@ -11,7 +11,7 @@ try {
     // Actualizar datos en la base de datos
     $sql = "UPDATE products SET name = ?, price = ?, id_category = ? WHERE id = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssi", $name, $price, $id_category);
+    $stmt->bind_param("sdii", $name, $price, $id_category, $id);
     $stmt->execute();
 
     $stmt->close();
