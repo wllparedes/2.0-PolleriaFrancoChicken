@@ -1,5 +1,5 @@
 <?php
-
+//dd
 include("./../../../../php/empezar_session.php");
 include("./../../../../php/verificar_session.php");
 
