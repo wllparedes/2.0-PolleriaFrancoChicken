@@ -81,9 +81,6 @@ include("./../../../../php/verificar_session.php");
                                         <th>Opciones</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                
-                                </tbody>
                             </table>
                         </div>
                     </div>

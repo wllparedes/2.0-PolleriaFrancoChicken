@@ -1,7 +1,8 @@
 /** @format */
 
 export const language = {
-	processing: 'Procesando...',
+	processing:
+		'<div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div>',
 	lengthMenu: 'Mostrar _MENU_ registros',
 	zeroRecords: 'No se encontraron resultados',
 	emptyTable: 'Ningún dato disponible en esta tabla',
