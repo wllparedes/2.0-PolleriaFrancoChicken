@@ -2,9 +2,9 @@
 import { language } from './../../../../assets/js/global/esDatatable.js';
 import {validarCampo, campos} from '../../../../assets/js/global/validarCampos.js';
 
-let tableCategories = document.querySelector('#table-categories');
+let tableCategories = $('#table-categories');
 
-export const dataTable = new DataTable(tableCategories, {
+export const dataTable = tableCategories.DataTable({
     ajax: {
         url: '../models/listCategories.php',
         method: 'GET',
@@ -20,6 +20,9 @@ export const dataTable = new DataTable(tableCategories, {
             '<button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editCategory"><i class="bi bi-pen-fill"></i></button> &nbsp;<button class="btn btn-sm btn-danger eliminar"> <i class="bi bi-trash"></i> </button>',
         },
     ],
+    responsive: true,
+	autoWidth: false,
+	processing: true,
     language: language,
 });
 
