@@ -65,7 +65,7 @@ include("./../../../../php/verificar_session.php");
                                                     <label for="name">Producto</label>
                                                     <div class="form-group position-relative has-icon-left">
                                                         <input type="text" id="name" name="name" class="form-control"
-                                                            placeholder="escribe el nombre del producto">
+                                                            placeholder="Pollo a la Parrilla">
                                                         <div class="form-control-icon">
                                                             <i class="bi bi-box-seam "></i>
                                                         </div>
@@ -75,7 +75,7 @@ include("./../../../../php/verificar_session.php");
                                                     <label for="price">Precio</label>
                                                     <div class="form-group position-relative has-icon-left">
                                                         <input type="text" id="price" name="price"
-                                                            class="form-control" placeholder="S/.">
+                                                            class="form-control" placeholder="S/. 15.99">
                                                         <div class="form-control-icon">
                                                             <i class="bi bi-cash "></i>
                                                         </div>
