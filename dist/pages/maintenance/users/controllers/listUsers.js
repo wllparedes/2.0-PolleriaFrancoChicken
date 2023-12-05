@@ -1,10 +1,13 @@
 /** @format */
 import { language } from './../../../../assets/js/global/esDatatable.js';
-import {validarCampo, campos} from '../../../../assets/js/global/validarCampos.js';
+import {
+	validarCampo,
+	campos,
+} from '../../../../assets/js/global/validarCampos.js';
 
-let tableUsers = document.querySelector('#table-users');
+let tableUsers = $('#table-users');
 
-export const dataTable = new DataTable(tableUsers, {
+export const dataTable = tableUsers.DataTable({
 	ajax: {
 		url: '../models/listUsers.php',
 		method: 'GET',
@@ -22,23 +25,25 @@ export const dataTable = new DataTable(tableUsers, {
 		{ data: 'charge' },
 		{
 			defaultContent:
-			'<button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editUser"><i class="bi bi-pen-fill"></i></button> &nbsp;<button class="eliminar btn btn-sm btn-danger "> <i class="bi bi-trash"></i> </button>',
+				'<button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editUser"><i class="bi bi-pen-fill"></i></button> &nbsp;<button class="eliminar btn btn-sm btn-danger "> <i class="bi bi-trash"></i> </button>',
 		},
 	],
+	responsive: true,
+	autoWidth: false,
+	processing: true,
 	language: language,
 });
 
-
-let editCategoryModal = new bootstrap.Modal(document.getElementById('editUser'));
+let editCategoryModal = new bootstrap.Modal(
+	document.getElementById('editUser')
+);
 
 editCategoryModal._element.addEventListener('show.bs.modal', function (event) {
-
 	let button = event.relatedTarget;
 
 	let row = button.closest('tr');
 
 	let id = dataTable.cell(row, 0).data();
-
 
 	$.ajax({
 		url: '../models/getUser.php',
@@ -46,15 +51,13 @@ editCategoryModal._element.addEventListener('show.bs.modal', function (event) {
 		data: { id },
 		dataType: `JSON`,
 		success: function (response) {
-			
-			
 			// Aquí cargas los datos del cliente en los campos del formulario en el modal
-			let datos = response ;
-			let usuario = datos["user"][0];
-			let cargos = datos["charge"];
+			let datos = response;
+			let usuario = datos['user'][0];
+			let cargos = datos['charge'];
 
 			//console.log(response)
-			
+
 			//const cargos = usuario['cargo'];
 			//const datos = usuario['usuario'][0];
 
@@ -68,16 +71,12 @@ editCategoryModal._element.addEventListener('show.bs.modal', function (event) {
 			$('#password').val(usuario.password);
 
 			const chargeSelect = new Choices('#charges', {
-				choices: cargos
-				
-			  });
+				choices: cargos,
+			});
 			chargeSelect.setChoiceByValue(usuario.id_charge);
-			Object.keys(campos).forEach(campo => { campos[campo] = true; });
-
-		}
+			Object.keys(campos).forEach((campo) => {
+				campos[campo] = true;
+			});
+		},
 	});
-
 });
-
-
-

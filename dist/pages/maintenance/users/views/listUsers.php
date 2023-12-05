@@ -12,9 +12,13 @@ include("./../../../../php/verificar_session.php");
     <title>Lista de usuarios - Almacenero</title>
     <link rel="stylesheet" href="./../../../../assets/vendors/choices.js/choices.min.css" />
     <?php include('./../../../../includes/_head.php'); ?>
-    <link rel="stylesheet" href="./../../../../assets/vendors/datatable/datatable.min.css">
     <link rel="stylesheet" href="./../../../../assets/vendors/simple-datatables/style.css">
     <link rel="stylesheet" href="./../../../../assets/vendors/sweetalert2/sweetalert2.min.css">
+    <!-- * datatable -->
+    <link rel="stylesheet"
+        href="./../../../../assets/vendors/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet"
+        href="./../../../../assets/vendors/datatables/Responsive-2.2.1/css/responsive.bootstrap4.min.css">
 
 </head>
 
@@ -78,7 +82,7 @@ include("./../../../../php/verificar_session.php");
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <!-- ¨* dataTable -->
+                                
                                 </tbody>
                             </table>
                         </div>
@@ -105,9 +109,15 @@ include("./../../../../php/verificar_session.php");
     <script src="./../../../../assets/js/pages/modules-sweetalert.js"></script>
     <script src="./../../../../assets/js/underscore-min.js"></script>
     <!-- <script src="./../../../../assets/vendors/simple-datatables/simple-datatables.js"></script> -->
-    <script src="./../../../../assets/vendors/datatable/datatable.min.js"></script>
+    <!--* data table -->
+    <script src="./../../../../assets/vendors/datatables/datatables.min.js"></script>
+    <script src="./../../../../assets/vendors/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
+    <script src="./../../../../assets/vendors/datatables/Responsive-2.2.1/js/dataTables.responsive.min.js"></script>
+    <script src="./../../../../assets/vendors/datatables/Responsive-2.2.1/js/responsive.bootstrap4.min.js"></script>
+
+    <!--* data table -->
     <!-- Modal Actualziar Cliente -->
-    
+
     <!-- * -->
     <script src="./../controllers/listUsers.js" type="module"></script>
     <script src="./../../../../assets/js/main.js"></script>
