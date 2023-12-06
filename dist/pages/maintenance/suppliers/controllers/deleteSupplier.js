@@ -2,7 +2,6 @@ import { dataTable } from "./listSuppliers.js";
 
 // ? Eliminar
 $(document).on('click', '.eliminar', function () {
-    console.log("hola")
     alerta_confirmacion().then((resultado) => {
         if (resultado) {
             // Accede a la fila correspondiente en la tabla DataTable

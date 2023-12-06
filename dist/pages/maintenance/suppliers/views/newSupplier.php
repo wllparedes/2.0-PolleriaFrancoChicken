@@ -66,7 +66,8 @@ include("./../../../../php/verificar_session.php");
                                                 <div class="col-lg-12 mb-1">
                                                     <label for="razon_social">Razon Social</label>
                                                     <div class="form-group position-relative has-icon-left">
-                                                        <input type="text" id="razon_social" name="razon_social" class="form-control" placeholder="Gallinas y Alas SRL">
+                                                        <input type="text" id="razon_social" name="razon_social"
+                                                            class="form-control" placeholder="Gallinas y Alas SRL">
                                                         <div class="form-control-icon">
                                                             <i class="bi bi-bookmark-heart"></i>
                                                         </div>
@@ -75,8 +76,10 @@ include("./../../../../php/verificar_session.php");
                                                 <div class="col-lg-12 mb-1">
                                                     <label for="direccion">Dirección</label>
                                                     <div class="form-group position-relative has-icon-left">
-                                                        <input type="text" id="direccion" name="direccion" rows="5" class="form-control" placeholder="Av. Exquisitamente 606, Lima">
-                                                        <div class="form-control-icon">    
+                                                        <input type="text" id="direccion" name="direccion" rows="5"
+                                                            class="form-control"
+                                                            placeholder="Av. Exquisitamente 606, Lima">
+                                                        <div class="form-control-icon">
                                                             <i class="bi bi-card-text"></i>
                                                         </div>
                                                     </div>
@@ -84,8 +87,9 @@ include("./../../../../php/verificar_session.php");
                                                 <div class="col-lg-12 mb-1">
                                                     <label for="ruc">Ruc</label>
                                                     <div class="form-group position-relative has-icon-left">
-                                                        <input type="text" id="ruc" name="ruc" rows="5" class="form-control" placeholder="20538856674">
-                                                        <div class="form-control-icon">    
+                                                        <input type="text" id="ruc" name="ruc" rows="5"
+                                                            class="form-control" placeholder="20538856674">
+                                                        <div class="form-control-icon">
                                                             <i class="bi bi-card-text"></i>
                                                         </div>
                                                     </div>
@@ -93,8 +97,9 @@ include("./../../../../php/verificar_session.php");
                                                 <div class="col-lg-12 mb-1">
                                                     <label for="phone">Telefono</label>
                                                     <div class="form-group position-relative has-icon-left">
-                                                        <input type="text" id="phone" name="phone" rows="5" class="form-control" placeholder="+51 985 987 685">
-                                                        <div class="form-control-icon">    
+                                                        <input type="text" id="phone" name="phone" rows="5"
+                                                            class="form-control" placeholder="+51 985 987 685">
+                                                        <div class="form-control-icon">
                                                             <i class="bi bi-card-text"></i>
                                                         </div>
                                                     </div>
@@ -102,17 +107,33 @@ include("./../../../../php/verificar_session.php");
                                                 <div class="col-lg-12 mb-1">
                                                     <label for="email">Email</label>
                                                     <div class="form-group position-relative has-icon-left">
-                                                        <input type="text" id="email" name="email" rows="5" class="form-control" placeholder="gallinas_alas@gmail.com">
-                                                        <div class="form-control-icon">    
+                                                        <input type="text" id="email" name="email" rows="5"
+                                                            class="form-control" placeholder="gallinas_alas@gmail.com">
+                                                        <div class="form-control-icon">
                                                             <i class="bi bi-card-text"></i>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            <!-- = Message Error -->
+
+                                            <div class="row">
+                                                <div class="form-group col-md-12 contenedor__mensaje"
+                                                    id="contenedor__mensaje">
+                                                    <div class="formulario__mensaje bg-danger shadow-danger">
+                                                        <i class="bi bi-exclamation-triangle-fill"></i></span> <b
+                                                            class="p-1">Rellene el formulario
+                                                            correctamente.</b>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                             <!--? Container btns -->
                                             <div class="row justify-content-center">
                                                 <div class="form-group col-lg-4 col-md-8 d-flex justify-content-around">
-                                                    <button id="registrar" type="submit" name="registrar" class="btn btn-sm btn-success ">
+                                                    <button id="registrar" type="submit" name="registrar"
+                                                        class="btn btn-sm btn-success ">
                                                         &nbsp;<b>Registrar</b>
                                                     </button>
                                                 </div>
@@ -128,7 +149,7 @@ include("./../../../../php/verificar_session.php");
                 <!-- Basic Inputs Groups end -->
 
             </div>
-            
+
             <?php include('./editSupplier.php') ?>
             <!-- start footer -->
             <?php include('./../../../../includes/_footer.php') ?>
@@ -141,12 +162,13 @@ include("./../../../../php/verificar_session.php");
     <script src="./../../../../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="./../../../../assets/vendors/choices.js/choices.min.js"></script>
     <script src="./../../../../assets/js/main.js"></script>
+    <script src="./../../../../assets/js/global/login/redirect.js"></script>
     <!-- !! -->
     <script src="./../../../../assets/vendors/sweetalert2/sweetalert2.all.min.js"></script>
     <script src="./../../../../assets/js/pages/modules-sweetalert.js"></script>
     <script src="../controllers/NewSupplier.js" type="module"></script>
     <script src="../../../../assets/js/underscore-min.js"></script>
-    
+
 </body>
 
 </html>
