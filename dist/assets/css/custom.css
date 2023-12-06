@@ -1,0 +1,109 @@
+/** New Add */
+
+.formulario__label {
+    /* display: block; */
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.formulario__grupo-input {
+    position: relative;
+}
+
+.formulario__input {
+    width: 100%;
+    line-height: 45px;
+}
+
+.formulario__input-error {
+    font-size: 12px;
+    color: #ff356e;
+    margin-bottom: 0px;
+    display: none;
+    padding: 10px;
+}
+
+.formulario__input-error-activo {
+    display: block;
+}
+
+.formulario__validacion-estado {
+    position: absolute;
+    right: 25px;
+    bottom: 12px;
+    z-index: 9;
+    font-size: 18px;
+    opacity: 0;
+}
+
+.contenedor__mensaje {
+    display: none;
+}
+
+.contenedor__mensaje-activo {
+    display: block;
+    padding: 10px;
+}
+
+.formulario__mensaje {
+    color: #fcfcfc;
+    text-align: center;
+    line-height: 20px;
+    padding: 15px;
+    background-color: #B33030E3;
+    border-radius: 4px;
+}
+
+
+/* Validacion */
+
+.formulario__grupo-correcto .formulario__validacion-estado {
+    color: #1ed12d;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+    color: #ff356e;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+    color: #ff356e;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+    border: 1px solid #ff356e;
+}
+
+/* Modal */
+
+/* 
+.modal-backdrop.fade{
+  opacity: 0;
+} */
+
+
+/* Table */
+
+.table__seleccionados {
+    display: none;
+}
+
+.table__seleccionados-activo {
+    display: block;
+}
+
+.table__seleccionados_dos {
+    display: none;
+}
+
+.table__seleccionados_dos-activo {
+    display: block;
+}
+
+
+/*  */
+
+.mensaje__advertencia {
+    color: white;
+}

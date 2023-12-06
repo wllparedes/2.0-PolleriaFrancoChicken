@@ -31,11 +31,11 @@ export const dataTable = tableSuppliers.DataTable({
 let editCategoryModal = new bootstrap.Modal(document.getElementById('editSupplier'));
 
 editCategoryModal._element.addEventListener('show.bs.modal', function (event) {
-
+    
 	let button = event.relatedTarget;
 
-	let row = button.closest('tr');
-
+    let row = button.closest('tr');
+    
 	let id = dataTable.cell(row, 0).data();
 	
 
@@ -47,8 +47,7 @@ editCategoryModal._element.addEventListener('show.bs.modal', function (event) {
 		success: function (response) {
 			
 			// Aquí cargas los datos del cliente en los campos del formulario en el modal
-			let datos = response ;
-			let proveedor = datos["supplier"][0];
+			let proveedor = response;;
 
 			//console.log(response)
 			
