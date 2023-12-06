@@ -5,7 +5,7 @@ export const expresiones = {
 	razon_social: /^[a-zA-Z\_\- ]{5,20}$/, // Letras, numeros, guion y guion_bajo
 	direccion: /^[a-zA-Z0-9\_\-\. ][^@]{10,50}$/, // Letras y espacios, pueden llevar acentos.
 	email: /^[a-zA-Z0-9_.+-]+@([gmail]|[hotmail])+\.[a-zA-Z0-9-.]+$/,
-	phone: /^\+51\s\d{3}\s\d{3}\s\d{3}$/, // 7 a 14 numeros.
+	phone: /^9\d{8}$/, // 7 a 14 numeros.
 	ruc: /^\d{11}$/, // 7 a 14 numeros.
 
 	// * Categoria

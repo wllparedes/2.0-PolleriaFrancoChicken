@@ -51,9 +51,7 @@ $(document).ready(() => {
 
 	$('#formulario').submit(function (e) {
 		e.preventDefault();
-
-		let select_cargo = $('#charges');
-
+		let select_cargo = $('#select-charges');
 		if (
 			campos.name &&
 			campos.surnames &&
@@ -76,13 +74,14 @@ $(document).ready(() => {
 				id_charge: select_cargo.val(),
 			};
 
+			console.log(postData);
+
 			$.ajax({
 				url: '../models/newUser.php',
 				type: 'POST',
 				data: postData,
-                success: function (response) {
-                    let respuesta = response.trim();
-                    console.log(respuesta)
+				success: function (response) {
+					let respuesta = response.trim();
 					if (respuesta === 'error') {
 						no_registrado('usuario');
 					} else {
@@ -94,12 +93,14 @@ $(document).ready(() => {
 							});
 						si_registrado();
 						$('#formulario').trigger('reset');
-						// redireccionar('lista-usuarios');
+						contenedor_mensaje.classList.add('contenedor__mensaje');
+						contenedor_mensaje.classList.remove('contenedor__mensaje-activo');
+						redireccionar('listUsers');
 					}
 				},
 			});
 		} else {
-			// contenedor_mensaje.classList.add('contenedor__mensaje-activo');
+			contenedor_mensaje.classList.add('contenedor__mensaje-activo');
 		}
 	});
 });

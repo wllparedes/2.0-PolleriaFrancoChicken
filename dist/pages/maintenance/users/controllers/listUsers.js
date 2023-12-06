@@ -56,11 +56,6 @@ editCategoryModal._element.addEventListener('show.bs.modal', function (event) {
 			let usuario = datos['user'][0];
 			let cargos = datos['charge'];
 
-			//console.log(response)
-
-			//const cargos = usuario['cargo'];
-			//const datos = usuario['usuario'][0];
-
 			$('#id_usuario').val(usuario.id);
 			$('#name').val(usuario.names);
 			$('#surnames').val(usuario.surnames);
@@ -70,10 +65,15 @@ editCategoryModal._element.addEventListener('show.bs.modal', function (event) {
 			$('#email').val(usuario.email);
 			$('#password').val(usuario.password);
 
-			const chargeSelect = new Choices('#charges', {
-				choices: cargos,
+			const element = document.getElementById('select-charges');
+			VirtualSelect.init({
+				ele: element,
+				options: cargos,
+				required: true,
+				placeholder: 'Seleccione un cargo',
+				selectedValue: usuario.id_charge,
 			});
-			chargeSelect.setChoiceByValue(usuario.id_charge);
+
 			Object.keys(campos).forEach((campo) => {
 				campos[campo] = true;
 			});

@@ -12,7 +12,6 @@ include("./../../../../php/verificar_session.php");
     <title>Lista de proveedores - Almacenero</title>
     <link rel="stylesheet" href="./../../../../assets/vendors/choices.js/choices.min.css" />
     <?php include('./../../../../includes/_head.php'); ?>
-    <link rel="stylesheet" href="./../../../../assets/vendors/datatable/datatable.min.css">
     <link rel="stylesheet" href="./../../../../assets/vendors/simple-datatables/style.css">
     <link rel="stylesheet" href="./../../../../assets/vendors/sweetalert2/sweetalert2.min.css">
     <!-- * datatable -->
@@ -59,7 +58,7 @@ include("./../../../../php/verificar_session.php");
                 </div>
 
                 <!-- * DATA TABLES -->
-              
+
                 <section class="section">
                     <div class="card">
                         <div class="card-header">
@@ -78,9 +77,6 @@ include("./../../../../php/verificar_session.php");
                                         <th>Opciones</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <!-- ¨* dataTable -->
-                                </tbody>
                             </table>
                         </div>
                     </div>

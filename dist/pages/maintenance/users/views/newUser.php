@@ -10,7 +10,7 @@ include("./../../../../php/verificar_session.php");
 
 <head>
     <title>Crear usuario - Almacenero</title>
-    <link rel="stylesheet" href="./../../../../assets/vendors/choices.js/choices.min.css" />
+    <link rel="stylesheet" href="./../../../../assets/vendors/virtual-select/virtual-select.min.css">
     <?php include('./../../../../includes/_head.php'); ?>
     <link rel="stylesheet" href="./../../../../assets/vendors/sweetalert2/sweetalert2.min.css">
 </head>
@@ -83,10 +83,10 @@ include("./../../../../php/verificar_session.php");
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4 mb-1">
-                                                    <label for="phone">Phone</label>
+                                                    <label for="phone">Telefono</label>
                                                     <div class="form-group position-relative has-icon-left">
                                                         <input type="text" id="phone" name="phone" class="form-control"
-                                                            placeholder="+51 902 124 544">
+                                                            placeholder="900111000">
                                                         <div class="form-control-icon">
                                                             <i class="bi bi-phone"></i>
                                                         </div>
@@ -139,11 +139,29 @@ include("./../../../../php/verificar_session.php");
                                                 <div class="col-lg-4 mb-1">
                                                     <label for="charge">Cargo</label>
                                                     <div class="form-group position-relative">
-                                                        <select class="charges form-control" id="charges">
-                                                        </select>
+                                                        <!-- <select class="charges form-control" id="charges">
+                                                        </select> -->
+
+                                                        <div class="charges form-control" id="select-charges">
+
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            <!-- = Message Error -->
+
+                                            <div class="row">
+                                                <div class="form-group col-md-12 contenedor__mensaje"
+                                                    id="contenedor__mensaje">
+                                                    <div class="formulario__mensaje bg-danger shadow-danger">
+                                                        <i class="bi bi-exclamation-triangle-fill"></i></span> <b
+                                                            class="p-1">Rellene el formulario
+                                                            correctamente.</b>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                             <!--? Container btns -->
                                             <div class="row justify-content-center">
                                                 <div class="form-group col-lg-4 col-md-8 d-flex justify-content-around">
@@ -173,11 +191,14 @@ include("./../../../../php/verificar_session.php");
     <script src="./../../../../assets/vendors/jquery/jquery.min.js"></script>
     <script src="./../../../../assets/js/bootstrap.bundle.min.js"></script>
     <script src="./../../../../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="./../../../../assets/vendors/choices.js/choices.min.js"></script>
+    <!-- <script src="./../../../../assets/vendors/choices.js/choices.min.js"></script> -->
+    <script src="./../../../../assets/vendors/virtual-select/virtual-select.min.js"></script>
+
     <script src="./../../../../assets/js/main.js"></script>
     <!-- !! -->
     <script src="./../../../../assets/vendors/sweetalert2/sweetalert2.all.min.js"></script>
     <script src="./../../../../assets/js/pages/modules-sweetalert.js"></script>
+    <script src="./../../../../assets/js/global/login/redirect.js"></script>
     <script src="../tasks/charges.js"></script>
     <script src="../controllers/NewUser.js" type="module"></script>
     <script src="../../../../assets/js/underscore-min.js"></script>

@@ -14,6 +14,8 @@ include("./../../../../php/verificar_session.php");
     <?php include('./../../../../includes/_head.php'); ?>
     <link rel="stylesheet" href="./../../../../assets/vendors/simple-datatables/style.css">
     <link rel="stylesheet" href="./../../../../assets/vendors/sweetalert2/sweetalert2.min.css">
+    <link rel="stylesheet" href="./../../../../assets/vendors/virtual-select/virtual-select.min.css">
+
     <!-- * datatable -->
     <link rel="stylesheet"
         href="./../../../../assets/vendors/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
@@ -67,7 +69,7 @@ include("./../../../../php/verificar_session.php");
                             Lista de usuarios
                         </div>
                         <div class="card-body">
-                            <table class="table table-striped" id="table-users">
+                            <table class="table table-hover" id="table-users">
                                 <thead>
                                     <tr>
                                         <th>ID</th>
@@ -100,7 +102,8 @@ include("./../../../../php/verificar_session.php");
     <script src="./../../../../assets/vendors/jquery/jquery.min.js"></script>
     <script src="./../../../../assets/js/bootstrap.bundle.min.js"></script>
     <script src="./../../../../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="./../../../../assets/vendors/choices.js/choices.min.js"></script>
+    <!-- <script src="./../../../../assets/vendors/choices.js/choices.min.js"></script> -->
+    <script src="./../../../../assets/vendors/virtual-select/virtual-select.min.js"></script>
     <!-- !! -->
     <script src="./../../../../assets/vendors/sweetalert2/sweetalert2.all.min.js"></script>
     <script src="./../../../../assets/js/pages/modules-sweetalert.js"></script>
