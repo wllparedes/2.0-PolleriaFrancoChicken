@@ -114,7 +114,7 @@ include("./../../../../php/verificar_session.php");
     <script src="./../controllers/listSuppliers.js" type="module"></script>
     <script src="./../../../../assets/js/main.js"></script>
     <script src="./../controllers/updateSupplier.js" type="module"></script>
-    <!-- <script src="./../controllers/deleteSupplier.js" type="module"></script> -->
+    <script src="./../controllers/deleteSupplier.js" type="module"></script>
 
 
 </body>
