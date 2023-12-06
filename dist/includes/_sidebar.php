@@ -76,10 +76,10 @@
                     </a>
                     <ul class="submenu">
                         <li class="submenu-item">
-                            <a href="form-editor-quill.html">Nuevo proveedor</a>
+                            <a href="./../../../maintenance/suppliers/views/newSupplier.php">Nuevo proveedor</a>
                         </li>
                         <li class="submenu-item">
-                            <a href="form-editor-ckeditor.html">Lista de proveedores</a>
+                            <a href="./../../../maintenance/suppliers/views/listSuppliers.php">Lista de proveedores</a>
                         </li>
                     </ul>
                 </li>
