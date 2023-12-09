@@ -18,16 +18,18 @@ if (isset($_POST['name'])) {
         $stmt->bind_param("sssssssi", $name, $surnames, $phone, $dni, $userName, $email, $password, $id_charge);
         $stmt->execute();
         $stmt->close();
-        echo 'correcto';
+
+        $status = true;
+
     } catch (Exception $e) {
-        echo "Error: " . $e->getMessage();
+        $status = false;
     }
     
 }
 $conn->close();
 
-
-// TODO:
-    // ? Si el session:id == id_user { alert (usted no puede eliminarse a si mismo) } 
+echo json_encode([
+    "status"=> $status,
+]);
 
 ?>

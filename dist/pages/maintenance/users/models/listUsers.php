@@ -8,7 +8,7 @@ $stmt = $conn->prepare($query);
 $stmt->execute();
 $result = $stmt->get_result();
 
-$json = array();
+$users = array();
 
 while ($row = $result->fetch_assoc()) {
 
@@ -20,7 +20,7 @@ while ($row = $result->fetch_assoc()) {
     $rowx = $resultx->fetch_assoc();
     $name_charge = $rowx['name'];
 
-    $json[] = array(
+    $users[] = array(
         'id_user' => "" . $row['id'] . "",
         'names' => $row['names'],
         'surnames' => $row['surnames'],
@@ -30,9 +30,11 @@ while ($row = $result->fetch_assoc()) {
         'email' => $row['email'],
         'charge' => $name_charge,
     );
+
+
 }
 
-$jsonstring = json_encode($json);
+$jsonstring = json_encode($users);
 echo $jsonstring;
 
 ?>

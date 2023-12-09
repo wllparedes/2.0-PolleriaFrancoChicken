@@ -4,14 +4,13 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="myModalLabel33">Formulario para editar categoria </h4>
+                <h4 class="modal-title" id="myModalLabel33">Formulario para editar usuario </h4>
                 <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <i data-feather="x"></i>
                 </button>
             </div>
             <div class='modal-body'>
                 <form id="editUser">
-                    <input type="hidden" id="id_usuario" name="id_usuario" value="">
                     <div class="row">
                         <div class="col-lg-4 mb-1">
                             <label for="name">Nombres</label>
@@ -87,10 +86,10 @@
                         </div>
                         <div class="col-lg-4 mb-1">
                             <label for="charge">Cargo</label>
-                            <div class="form-group position-relative">
-                                <div class="charges form-control" id="select-charges">
+                            <div class="form-group position-relative" id="parent-charges">
+                                <!-- <div class="charges form-control" id="select-charges">
 
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -110,7 +109,7 @@
                         <button type="button" class="btn btn-danger close-modal" data-bs-dismiss="modal">
                             Cerrar
                         </button>
-                        <button type="button" class="btn btn-success ml-1 actualizar">
+                        <button type="button" class="btn btn-success ml-1 update">
                             Actualizar
                         </button>
                     </div>

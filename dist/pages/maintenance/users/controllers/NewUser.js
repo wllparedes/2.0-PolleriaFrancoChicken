@@ -74,29 +74,29 @@ $(document).ready(() => {
 				id_charge: select_cargo.val(),
 			};
 
-			console.log(postData);
-
 			$.ajax({
 				url: '../models/newUser.php',
 				type: 'POST',
 				data: postData,
+				dataType: 'JSON',
 				success: function (response) {
-					let respuesta = response.trim();
-					if (respuesta === 'error') {
+
+					if (!response.status) {
 						no_registrado('usuario');
-					} else {
-						//
-						document
-							.querySelectorAll('#formulario input')
-							.forEach((i) => {
-								i.classList.remove('is-valid', 'is-invalid');
-							});
-						si_registrado();
-						$('#formulario').trigger('reset');
-						contenedor_mensaje.classList.add('contenedor__mensaje');
-						contenedor_mensaje.classList.remove('contenedor__mensaje-activo');
-						redireccionar('listUsers');
+						return;
 					}
+					document
+						.querySelectorAll('#formulario input')
+						.forEach((i) => {
+							i.classList.remove('is-valid', 'is-invalid');
+						});
+					si_registrado();
+					$('#formulario').trigger('reset');
+					contenedor_mensaje.classList.add('contenedor__mensaje');
+					contenedor_mensaje.classList.remove(
+						'contenedor__mensaje-activo'
+					);
+					redireccionar('listUsers');
 				},
 			});
 		} else {

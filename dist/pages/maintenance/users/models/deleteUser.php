@@ -13,9 +13,18 @@ if (!empty($id)) {
 
         $stmt->close();
         $conn->close();
-        echo 'correcto';
+
+        $status = true;
+
     } catch (Exception $e) {
-        echo 'error';
+
+        $status = false;
+
     }
 }
+
+echo json_encode([
+    'status' => $status
+])
+
 ?>

@@ -53,8 +53,12 @@ $(document).ready(function () {
 		input.addEventListener('blur', validarFormulario);
 	});
 
-	$('#editUser').on('click', '.actualizar', function (e) {
+	$('#editUser').on('click', '.update', function (e) {
 		e.preventDefault();
+
+		let target = e.target;
+		let id = target.getAttribute('data-id');
+
 		// Almacena los elementos seleccionados una vez
 		let select_cargo = $('#select-charges');
 
@@ -70,7 +74,7 @@ $(document).ready(function () {
 		) {
 			// Datos para la actualización
 			const newData = {
-				id: $('#id_usuario').val(),
+				id: id,
 				name: $('#name').val(),
 				surnames: $('#surnames').val(),
 				phone: $('#phone').val(),
@@ -86,19 +90,22 @@ $(document).ready(function () {
 				url: '../models/updateUser.php',
 				type: 'POST',
 				data: newData,
+				dataType: 'JSON',
 				success: function (response) {
-					let respuesta = response.trim();
-					if (respuesta === 'error') {
+
+					if (!response.status) {
 						error();
-					} else {
-						$('#editUser').modal('hide');
-						si_actualizado();
-						dataTable.ajax.reload();
-						contenedor_mensaje.classList.add('contenedor__mensaje');
-						contenedor_mensaje.classList.remove(
-							'contenedor__mensaje-activo'
-						);
+						return;
 					}
+
+					$('#editUser').modal('hide');
+					si_actualizado();
+					dataTable.ajax.reload();
+					contenedor_mensaje.classList.add('contenedor__mensaje');
+					contenedor_mensaje.classList.remove(
+						'contenedor__mensaje-activo'
+					);
+
 				},
 				complete: function () {
 					document
