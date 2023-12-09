@@ -16,8 +16,6 @@ include("./../../../../php/verificar_session.php");
     <link rel="stylesheet" href="./../../../../assets/vendors/sweetalert2/sweetalert2.min.css">
     <link rel="stylesheet" href="./../../../../assets/vendors/virtual-select/virtual-select.min.css">
 
-    <link rel="stylesheet" href="./../../../../assets/vendors/@fortawesome/fontawesome-free/css/all.min.css">
-
     <!-- * datatable -->
     <link rel="stylesheet"
         href="./../../../../assets/vendors/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">

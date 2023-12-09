@@ -92,7 +92,6 @@ $(document).ready(function () {
 				data: newData,
 				dataType: 'JSON',
 				success: function (response) {
-
 					if (!response.status) {
 						error();
 						return;
@@ -105,7 +104,6 @@ $(document).ready(function () {
 					contenedor_mensaje.classList.remove(
 						'contenedor__mensaje-activo'
 					);
-
 				},
 				complete: function () {
 					document

@@ -92,6 +92,7 @@ $(document).ready(() => {
 						});
 					si_registrado();
 					$('#formulario').trigger('reset');
+					
 					contenedor_mensaje.classList.add('contenedor__mensaje');
 					contenedor_mensaje.classList.remove(
 						'contenedor__mensaje-activo'

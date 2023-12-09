@@ -1,6 +1,8 @@
 <?php
 include("./../../../../databases/db.php");
 
+include("./../../../../php/verifySizeImage.php");
+
 if (isset($_POST['name'])) {
 
     $name = $_POST['name'];
@@ -8,22 +10,45 @@ if (isset($_POST['name'])) {
     $id_category = (int) $_POST['id_category'];
 
 
-    try {
-        $query = "INSERT INTO products (name, price,id_category)  VALUES (?, ?, ?)";
-        $stmt = $conn->prepare($query);
-        $stmt->bind_param("ssi", $name, $price, $id_category);
-        $stmt->execute();
-        $stmt->close();
-        echo 'correcto';
-    } catch (Exception $e) {
-        echo "Error: " . $e->getMessage();
+    $uploadDirectory = "./../../../../assets/images/products/";
+    $image = $_FILES['image'];
+    $nameImage = $image['name'];
+    $pdfFilePath = $uploadDirectory . $nameImage;
+
+    $sizeImage = verifySizeImage($image['size']);
+
+    if (!$sizeImage) {
+
+        $status = 'sizeError';
+
+    } else {
+
+        try {
+            $query = "INSERT INTO products (name, price, id_category, image)  VALUES (?, ?, ?, ?)";
+            $stmt = $conn->prepare($query);
+            $stmt->bind_param("ssis", $name, $price, $id_category, $nameImage);
+            $stmt->execute();
+            $stmt->close();
+
+            if (move_uploaded_file($image['tmp_name'], $pdfFilePath)) {
+                $status = true;
+            } else {
+                $status = false;
+            }
+
+        } catch (Exception $e) {
+            $status = false;
+        }
     }
-    
+
+
 }
+
 $conn->close();
 
 
-// TODO:
-    // ? Si el session:id == id_user { alert (usted no puede eliminarse a si mismo) } 
+echo json_encode([
+    'status' => $status,
+])
 
-?>
+    ?>

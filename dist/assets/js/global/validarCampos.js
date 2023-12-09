@@ -12,6 +12,7 @@ export const campos = {
 	description: false,
 	// * Consumible
 	precio: false,
+	price: false,
 	consumible: false,
 
 	// * Pedido

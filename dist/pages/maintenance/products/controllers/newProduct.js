@@ -29,51 +29,67 @@ $(document).ready(() => {
 		input.addEventListener('blur', validarFormulario);
 	});
 
-	// End
+	let imageFile;
 
-	// Cuando se de Submit en el Btn Registrar
+	$('input[type=file]').on('change', function () {
+		let imagenProduct = $(this)[0];
+		let file = imagenProduct.files[0];
+		imageFile = file;
+	});
 
-	$('#formulario').submit(function (p) {
-		p.preventDefault();
+	$('#formulario').submit(function (e) {
+
+		e.preventDefault();
 
 		let select_categoria = $('#category');
 
 		if (
 			campos.name &&
 			campos.price &&
-			select_categoria.val()
+			select_categoria.val() && imageFile
 		) {
 			// Ajax
-			const postData = {
-				name: $('#name').val(),
-				price: $('#price').val(),
-				id_category: select_categoria.val(),
-			};
+
+			let postData = new FormData();
+			postData.append('name', $('#name').val());
+			postData.append('price', $('#price').val());
+			postData.append('id_category', select_categoria.val());
+			postData.append('image', imageFile);
 
 			$.ajax({
 				url: '../models/newProduct.php',
 				type: 'POST',
 				data: postData,
-                success: function (response) {
-                    let respuesta = response.trim();
-                    console.log(respuesta)
-					if (respuesta === 'error') {
-						no_registrado('producto');
-					} else {
-						//
-						document
-							.querySelectorAll('#formulario input')
-							.forEach((i) => {
-								i.classList.remove('is-valid', 'is-invalid');
-							});
-						si_registrado();
-						$('#formulario').trigger('reset');
-						// redireccionar('lista-usuarios');
+				contentType: false,
+				processData: false,
+				dataType: 'JSON',
+				success: function (response) {
+
+					if (response.status === 'sizeError') {
+						sizeError('producto');
+						return;
 					}
+
+					if (!response.status) {
+						no_registrado('producto');
+						return;
+					}
+					document
+						.querySelectorAll('#formulario input')
+						.forEach((i) => {
+							i.classList.remove('is-valid', 'is-invalid');
+						});
+					si_registrado();
+					$('#formulario').trigger('reset');
+					contenedor_mensaje.classList.add('contenedor__mensaje');
+					contenedor_mensaje.classList.remove(
+						'contenedor__mensaje-activo'
+					);
+					redireccionar('listProducts');
 				},
 			});
 		} else {
-			// contenedor_mensaje.classList.add('contenedor__mensaje-activo');
+			contenedor_mensaje.classList.add('contenedor__mensaje-activo');
 		}
 	});
 });

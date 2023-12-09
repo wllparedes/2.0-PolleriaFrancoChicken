@@ -21,7 +21,7 @@ export const dataTable = tableUsers.DataTable({
 		{
 			render: function (data, type, row) {
 				return `<div class="btn-group btn-group-sm">
-					<button class="edit btn btn-sm btn-warning" data-id="${row.id_user}" data-id="id_user" data-bs-toggle="modal" data-bs-target="#editUser">
+					<button class="edit btn btn-sm btn-warning" data-id="${row.id_user}" data-bs-toggle="modal" data-bs-target="#editUser">
 						<i class="fas fa-pen"></i>
 					</button> 
 					&nbsp;
