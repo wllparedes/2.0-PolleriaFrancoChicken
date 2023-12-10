@@ -5,6 +5,7 @@ import { verifyTarget } from '../../../../assets/js/global/verifyTarget.js';
 
 // ? seleccionamos la tabla
 let tableUsers = $('#table-users');
+let contenedor_mensaje = document.getElementById('contenedor__mensaje');
 
 // ? cuando se de click dentro de table-users en algun elemento de clase .edit
 tableUsers.on('click', '.edit', (e) => {

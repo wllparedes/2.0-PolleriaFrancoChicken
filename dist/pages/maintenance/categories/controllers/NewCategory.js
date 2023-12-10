@@ -3,6 +3,8 @@
 // ? MANTENIMIENTO DE CLIENTES
 import { expresiones } from '../../../../assets/js/global/exprecionesRegulares.js';
 import { validarCampo, campos } from '../../../../assets/js/global/validarCampos.js';
+import { no_registrado, si_registrado } from '../../../../assets/js/pages/modules-sweetalert.js';
+
 
 $(document).ready(() => {
 

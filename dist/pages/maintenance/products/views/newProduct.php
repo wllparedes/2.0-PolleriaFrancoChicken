@@ -10,10 +10,7 @@ include("./../../../../php/verificar_session.php");
 
 <head>
     <title>Registrar Producto</title>
-    <link rel="stylesheet" href="./../../../../assets/vendors/choices.js/choices.min.css" />
-    <?php include('./../../../../includes/_head.php'); ?>
-    <link rel="stylesheet" href="./../../../../assets/vendors/sweetalert2/sweetalert2.min.css">
-
+    <?php include('./../../../../includes/_links_for_page.php'); ?>
     <!-- virtual select -->
     <link rel="stylesheet" href="./../../../../assets/vendors/virtual-select/virtual-select.min.css">
     <!-- filepond css -->
@@ -158,12 +155,11 @@ include("./../../../../php/verificar_session.php");
 
         </div>
     </div>
-    <!-- escenciales -->
-    <script src="./../../../../assets/vendors/jquery/jquery.min.js"></script>
-    <script src="./../../../../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="./../../../../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="./../../../../assets/vendors/choices.js/choices.min.js"></script>
-    <script src="./../../../../assets/js/global/login/redirect.js"></script>
+
+
+    <?php include('./../../../../includes/_scripts_for_page.php') ?>
+
+    <!-- * plugins -->
 
     <!-- virtual select -->
     <script src="./../../../../assets/vendors/virtual-select/virtual-select.min.js"></script>
@@ -174,12 +170,9 @@ include("./../../../../php/verificar_session.php");
     <script src="./../../../../assets/vendors/filepond/plugin/filepond-preview.min.js"></script>
     <script src="./../../../../assets/vendors/filepond/filepond.min.js"></script>
 
-    <!-- !! extras -->
-    <script src="./../../../../assets/vendors/sweetalert2/sweetalert2.all.min.js"></script>
-    <script src="./../../../../assets/js/pages/modules-sweetalert.js"></script>
+    <!-- * parte de la pagina -->
     <script src="../tasks/categories.js"></script>
     <script src="../controllers/newProduct.js" type="module"></script>
-    <script src="../../../../assets/js/underscore-min.js"></script>
 
     <script>
         // register desired plugins...
@@ -206,7 +199,6 @@ include("./../../../../php/verificar_session.php");
         });
 
     </script>
-    <script src="./../../../../assets/js/main.js"></script>
 
 </body>
 

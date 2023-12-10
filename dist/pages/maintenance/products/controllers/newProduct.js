@@ -1,10 +1,10 @@
 /** @format */
 
 import { expresiones } from '../../../../assets/js/global/exprecionesRegulares.js';
-import {
-	validarCampo,
-	campos,
-} from '../../../../assets/js/global/validarCampos.js';
+import { validarCampo, campos } from '../../../../assets/js/global/validarCampos.js';
+
+import { si_registrado, no_registrado, sizeError } from '../../../../assets/js/pages/modules-sweetalert.js';
+
 
 $(document).ready(() => {
 	//  Seleccionar Elementos DOM ( contenedor__mensaje / all inputs )

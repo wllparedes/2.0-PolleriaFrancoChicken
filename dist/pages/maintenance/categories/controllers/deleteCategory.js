@@ -1,6 +1,8 @@
 /** @format */
 
 import { verifyTarget } from '../../../../assets/js/global/verifyTarget.js';
+import { alerta_confirmacion, no_eliminado, si_eliminado } from '../../../../assets/js/pages/modules-sweetalert.js';
+
 import { dataTable } from './listCategories.js';
 
 // ? Eliminar

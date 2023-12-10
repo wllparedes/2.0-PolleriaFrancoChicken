@@ -2,10 +2,8 @@
 
 // ? MANTENIMIENTO DE CLIENTES
 import { expresiones } from '../../../../assets/js/global/exprecionesRegulares.js';
-import {
-	validarCampo,
-	campos,
-} from '../../../../assets/js/global/validarCampos.js';
+import { validarCampo, campos } from '../../../../assets/js/global/validarCampos.js';
+import { no_registrado, si_registrado }  from '../../../../assets/js/pages/modules-sweetalert.js';
 
 $(document).ready(() => {
 	let contenedor_mensaje = document.getElementById('contenedor__mensaje');
@@ -58,7 +56,6 @@ $(document).ready(() => {
 				phone: $('#phone').val(),
 				email: $('#email').val(),
 			};
-			console.log(postData)
 
 			$.ajax({
 				url: '../models/newSupplier.php',
@@ -66,7 +63,6 @@ $(document).ready(() => {
 				data: postData,
 				dataType: 'JSON',
 				success: function (response) {
-					console.log(response)
 
 					if (!response.status) {
 						no_registrado('proveedor');

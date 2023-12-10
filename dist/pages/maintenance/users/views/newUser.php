@@ -10,9 +10,9 @@ include("./../../../../php/verificar_session.php");
 
 <head>
     <title>Crear usuario - Almacenero</title>
+    <?php include('./../../../../includes/_links_for_page.php'); ?>
     <link rel="stylesheet" href="./../../../../assets/vendors/virtual-select/virtual-select.min.css">
-    <?php include('./../../../../includes/_head.php'); ?>
-    <link rel="stylesheet" href="./../../../../assets/vendors/sweetalert2/sweetalert2.min.css">
+
 </head>
 
 <body>
@@ -188,21 +188,15 @@ include("./../../../../php/verificar_session.php");
 
         </div>
     </div>
-    <script src="./../../../../assets/vendors/jquery/jquery.min.js"></script>
-    <script src="./../../../../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="./../../../../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <!-- <script src="./../../../../assets/vendors/choices.js/choices.min.js"></script> -->
-    <script src="./../../../../assets/vendors/virtual-select/virtual-select.min.js"></script>
 
-    <script src="./../../../../assets/js/main.js"></script>
-    <!-- !! -->
-    <script src="./../../../../assets/vendors/sweetalert2/sweetalert2.all.min.js"></script>
-    <script src="./../../../../assets/js/pages/modules-sweetalert.js"></script>
-    <script src="./../../../../assets/js/global/login/redirect.js"></script>
+
+    <?php include('./../../../../includes/_scripts_for_page.php') ?>
+
+    <!-- * plugins -->
+    <script src="./../../../../assets/vendors/virtual-select/virtual-select.min.js"></script>
+    <!-- * parte de la pagina -->
     <script src="../tasks/charges.js"></script>
     <script src="../controllers/NewUser.js" type="module"></script>
-    <script src="../../../../assets/js/underscore-min.js"></script>
-
 </body>
 
 </html>

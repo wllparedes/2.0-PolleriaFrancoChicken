@@ -2,70 +2,7 @@
 
 'use strict';
 
-// $("#swal-1").click(function() {
-// 	swal('Hello');
-// });
 
-// $("#swal-2").click(function() {
-// 	swal('Good Job', 'You clicked the button!', 'success');
-// });
-
-// $("#swal-3").click(function() {
-// 	swal('Good Job', 'You clicked the button!', 'warning');
-// });
-
-// $("#swal-4").click(function() {
-// 	swal('Good Job', 'You clicked the button!', 'info');
-// });
-
-// $("#swal-5").click(function() {
-// 	swal('Good Job', 'You clicked the button!', 'error');
-// });
-
-// $("#swal-6").click(function() {
-//   swal({
-//       title: 'Are you sure?',
-//       text: 'Once deleted, you will not be able to recover this imaginary file!',
-//       icon: 'warning',
-//       buttons: true,
-//       dangerMode: true,
-//     })
-//     .then((willDelete) => {
-//       if (willDelete) {
-//       swal('Poof! Your imaginary file has been deleted!', {
-//         icon: 'success',
-//       });
-//       } else {
-//       swal('Your imaginary file is safe!');
-//       }
-//     });
-// });
-
-// $("#swal-7").click(function() {
-//   swal({
-//     title: 'What is your name?',
-//     content: {
-//     element: 'input',
-//     attributes: {
-//       placeholder: 'Type your name',
-//       type: 'text',
-//     },
-//     },
-//   }).then((data) => {
-//     swal('Hello, ' + data + '!');
-//   });
-// });
-
-// $("#swal-8").click(function() {
-//   swal('This modal will disappear soon!', {
-//     buttons: false,
-//     timer: 3000,
-//   });
-// });
-
-// ? ALERTAS PROPIAS
-
-//
 const si_registrado = () => {
 	Swal.fire({
 		position: 'center',
@@ -159,27 +96,6 @@ const error = () => {
 	});
 };
 
-//
-// const no_actualizado = () => {
-//     const Toast = Swal.mixin({
-//         toast: true,
-//         position: 'top-end',
-//         showConfirmButton: false,
-//         timer: 3000,
-//         timerProgressBar: true,
-//         didOpen: (toast) => {
-//             toast.addEventListener('mouseenter', Swal.stopTimer)
-//             toast.addEventListener('mouseleave', Swal.resumeTimer)
-//         }
-//     });
-//     Toast.fire({
-//         icon: 'error',
-//         title: 'Actualización fallida.',
-//         text: 'Digite los datos correctos.'
-//     });
-// };
-
-//
 
 const si_actualizado = () => {
 	const Toast = Swal.mixin({
@@ -204,4 +120,17 @@ const usuario_now = () => {
 		showConfirmButton: false,
 		timer: 5000,
 	});
+};
+
+
+export {
+	si_registrado,
+	no_registrado,
+	sizeError,
+	alerta_confirmacion,
+	si_eliminado,
+	no_eliminado,
+	error,
+	si_actualizado,
+	usuario_now,
 };

@@ -1,10 +1,8 @@
 /** @format */
 
 import { expresiones } from '../../../../assets/js/global/exprecionesRegulares.js';
-import {
-	validarCampo,
-	campos,
-} from '../../../../assets/js/global/validarCampos.js';
+import { validarCampo, campos } from '../../../../assets/js/global/validarCampos.js';
+import { si_actualizado, error } from '../../../../assets/js/pages/modules-sweetalert.js';
 import { dataTable } from './listCategories.js';
 
 $(document).ready(function () {

@@ -4,6 +4,8 @@
 
 import { verifyTarget } from '../../../../assets/js/global/verifyTarget.js';
 import { dataTable } from './listUsers.js';
+import  {no_eliminado, si_eliminado, alerta_confirmacion}  from '../../../../assets/js/pages/modules-sweetalert.js';
+
 let tableUsers = $('#table-users');
 
 tableUsers.on('click', '.delete', (e) => {
@@ -29,7 +31,6 @@ tableUsers.on('click', '.delete', (e) => {
 				},
 				error: function (error) {
 					console.error('Error al eliminar:', error);
-					// Manejar errores según sea necesario
 				},
 			});
 		}

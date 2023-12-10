@@ -2,6 +2,8 @@
 
 import { verifyTarget } from '../../../../assets/js/global/verifyTarget.js';
 import { dataTable } from './listProducts.js';
+import  { alerta_confirmacion ,no_eliminado, si_eliminado}  from '../../../../assets/js/pages/modules-sweetalert.js';
+
 
 // ? Eliminar
 $(document).on('click', '.delete', (e) => {

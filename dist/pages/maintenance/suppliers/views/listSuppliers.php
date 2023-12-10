@@ -10,10 +10,8 @@ include("./../../../../php/verificar_session.php");
 
 <head>
     <title>Lista de proveedores - Almacenero</title>
-    <link rel="stylesheet" href="./../../../../assets/vendors/choices.js/choices.min.css" />
-    <?php include('./../../../../includes/_head.php'); ?>
-    <link rel="stylesheet" href="./../../../../assets/vendors/simple-datatables/style.css">
-    <link rel="stylesheet" href="./../../../../assets/vendors/sweetalert2/sweetalert2.min.css">
+    <?php include('./../../../../includes/_links_for_page.php'); ?>
+
     <!-- * datatable -->
     <link rel="stylesheet"
         href="./../../../../assets/vendors/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
@@ -95,25 +93,19 @@ include("./../../../../php/verificar_session.php");
 
         </div>
     </div>
-    <script src="./../../../../assets/vendors/jquery/jquery.min.js"></script>
-    <script src="./../../../../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="./../../../../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="./../../../../assets/vendors/choices.js/choices.min.js"></script>
-    <script src="./../../../../assets/vendors/@fortawesome/fontawesome-free/js/all.min.js"></script>
-    <!-- !! -->
-    <script src="./../../../../assets/vendors/sweetalert2/sweetalert2.all.min.js"></script>
-    <script src="./../../../../assets/js/pages/modules-sweetalert.js"></script>
-    <script src="./../../../../assets/js/underscore-min.js"></script>
-    <!-- <script src="./../../../../assets/vendors/simple-datatables/simple-datatables.js"></script> -->
+
+    <?php include('./../../../../includes/_scripts_for_page.php'); ?>
+    
+    <!-- * plugins -->
+
     <!--* data table -->
     <script src="./../../../../assets/vendors/datatables/datatables.min.js"></script>
     <script src="./../../../../assets/vendors/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
     <script src="./../../../../assets/vendors/datatables/Responsive-2.2.1/js/dataTables.responsive.min.js"></script>
     <script src="./../../../../assets/vendors/datatables/Responsive-2.2.1/js/responsive.bootstrap4.min.js"></script>
 
-    <!-- * -->
+    <!-- * parte de la pagina  -->
     <script src="./../controllers/listSuppliers.js" type="module"></script>
-    <script src="./../../../../assets/js/main.js"></script>
     <script src="./../controllers/getSupplier.js" type="module"></script>
     <script src="./../controllers/updateSupplier.js" type="module"></script>
     <script src="./../controllers/deleteSupplier.js" type="module"></script>

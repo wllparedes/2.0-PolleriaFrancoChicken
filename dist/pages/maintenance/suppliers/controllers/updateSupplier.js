@@ -1,12 +1,10 @@
 /** @format */
 
 import { expresiones } from '../../../../assets/js/global/exprecionesRegulares.js';
-import {
-	validarCampo,
-	campos,
-} from '../../../../assets/js/global/validarCampos.js';
+import { validarCampo, campos } from '../../../../assets/js/global/validarCampos.js';
 import { dataTable } from './listSuppliers.js';
-// ? ACTUALIZAR
+import { error, si_actualizado }  from '../../../../assets/js/pages/modules-sweetalert.js';
+
 
 $(document).ready(() => {
 	let contenedor_mensaje = document.getElementById('contenedor__mensaje');
