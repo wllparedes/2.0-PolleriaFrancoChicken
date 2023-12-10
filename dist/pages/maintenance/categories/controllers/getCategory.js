@@ -1,12 +1,15 @@
 /** @format */
 
-import { campos } from '../../../../assets/js/global/validarCampos.js';
 import { verifyTarget } from '../../../../assets/js/global/verifyTarget.js';
+import { ValidarFormulario } from '../../../../assets/vendors/@wallace-validate/validarFormulario.js';
+import { limpiarModal } from '../../../../assets/js/global/limpiarModal.js';
+import { expresiones } from '../../../../assets/js/global/exprecionesRegulares.js';
+
 
 // ? seleccionamos la tabla
 let tableCategories = $('#table-categories');
-let contenedor_mensaje = document.getElementById('contenedor__mensaje');
-
+export let contenedor_mensaje = document.getElementById('contenedor__mensaje');
+export let validadorFormulario;
 // ? cuando se de click dentro de table-users en algun elemento de clase .edit
 tableCategories.on('click', '.edit', (e) => {
 	let target = verifyTarget(e);
@@ -23,15 +26,20 @@ tableCategories.on('click', '.edit', (e) => {
 			$('#nameCategory').val(category.name);
 			$('#description').val(category.description);
 
-			Object.keys(campos).forEach((campo) => {
-				campos[campo] = true;
+			// * inicializar el validador del los inputs del form
+
+			const inputs = document.querySelectorAll('#editCategory .input-form');
+			validadorFormulario = new ValidarFormulario();
+
+			validadorFormulario.validarFormulario(inputs, {
+				nameCategory: expresiones.nameCategory,
+				description: expresiones.description,
 			});
+
 		},
 		complete: function () {
 			document.querySelector('.update').setAttribute('data-id', id);
-			document.querySelector('.update').setAttribute('data-id', id);
-			contenedor_mensaje.classList.remove('contenedor__mensaje-activo');
-			contenedor_mensaje.classList.add('contenedor__mensaje');
+			limpiarModal('#editCategory', contenedor_mensaje);
 		},
 	});
 });

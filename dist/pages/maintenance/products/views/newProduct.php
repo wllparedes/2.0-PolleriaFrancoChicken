@@ -67,17 +67,17 @@ include("./../../../../php/verificar_session.php");
                                                 <div class="col-lg-6 mb-1">
                                                     <label for="name">Producto</label>
                                                     <div class="form-group position-relative has-icon-left">
-                                                        <input type="text" id="name" name="name" class="form-control"
+                                                        <input type="text" id="name" name="name" class="form-control input-form"
                                                             placeholder="Pollo a la Parrilla">
                                                         <div class="form-control-icon">
-                                                            <i class="bi bi-box-seam "></i>
+                                                            <i class="bi bi-box-seam"></i>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 mb-1">
                                                     <label for="price">Precio</label>
                                                     <div class="form-group position-relative has-icon-left">
-                                                        <input type="text" id="price" name="price" class="form-control"
+                                                        <input type="text" id="price" name="price" class="form-control input-form"
                                                             placeholder="S/. 15.99">
                                                         <div class="form-control-icon">
                                                             <i class="bi bi-cash "></i>

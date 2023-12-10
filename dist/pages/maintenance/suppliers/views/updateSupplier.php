@@ -16,14 +16,14 @@
                             <label>Razon social: </label>
                             <div class="form-group">
                                 <input type="text" id="razon_social" name="razon_social"
-                                    placeholder="Nombre de la razon social" class="form-control">
+                                    placeholder="Nombre de la razon social" class="form-control input-form">
                             </div>
                         </div>
                         <div class="col-lg-12 mb-1">
                             <label>Dirección: </label>
                             <div class="form-group">
                                 <input type="text" id="direccion" name="direccion" placeholder="Direccion"
-                                    class="form-control">
+                                    class="form-control input-form">
                             </div>
                         </div>
                     </div>
@@ -32,13 +32,13 @@
                             <label>Ruc: </label>
                             <div class="form-group">
                                 <input type="text" id="ruc" name="ruc" placeholder="Ruc del proveedor"
-                                    class="form-control">
+                                    class="form-control input-form">
                             </div>
                         </div>
                         <div class="col-lg-12 mb-1">
                             <label>Teléfono: </label>
                             <div class="form-group">
-                                <input type="text" id="phone" name="phone" placeholder="Telefono" class="form-control">
+                                <input type="text" id="phone" name="phone" placeholder="Telefono" class="form-control input-form">
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@
                             <label>Email: </label>
                             <div class="form-group">
                                 <input type="text" id="email" name="email" placeholder="Email de contacto"
-                                    class="form-control">
+                                    class="form-control input-form">
                             </div>
                         </div>
                     </div>

@@ -65,7 +65,7 @@ include("./../../../../php/verificar_session.php");
                                                 <div class="col-lg-4 mb-1">
                                                     <label for="name">Nombres</label>
                                                     <div class="form-group position-relative has-icon-left">
-                                                        <input type="text" id="name" name="name" class="form-control"
+                                                        <input type="text" id="name" name="name" class="form-control input-form"
                                                             placeholder="John Adam">
                                                         <div class="form-control-icon">
                                                             <i class="bi bi-person"></i>
@@ -76,7 +76,7 @@ include("./../../../../php/verificar_session.php");
                                                     <label for="surnames">Apellidos</label>
                                                     <div class="form-group position-relative has-icon-left">
                                                         <input type="text" id="surnames" name="surnames"
-                                                            class="form-control" placeholder="Doe Villa">
+                                                            class="form-control input-form" placeholder="Doe Villa">
                                                         <div class="form-control-icon">
                                                             <i class="bi bi-person"></i>
                                                         </div>
@@ -85,7 +85,7 @@ include("./../../../../php/verificar_session.php");
                                                 <div class="col-lg-4 mb-1">
                                                     <label for="phone">Telefono</label>
                                                     <div class="form-group position-relative has-icon-left">
-                                                        <input type="text" id="phone" name="phone" class="form-control"
+                                                        <input type="text" id="phone" name="phone" class="form-control input-form"
                                                             placeholder="900111000">
                                                         <div class="form-control-icon">
                                                             <i class="bi bi-phone"></i>
@@ -97,7 +97,7 @@ include("./../../../../php/verificar_session.php");
                                                 <div class="col-lg-4 mb-1">
                                                     <label for="dni">DNI</label>
                                                     <div class="form-group position-relative has-icon-left">
-                                                        <input type="text" id="dni" name="dni" class="form-control"
+                                                        <input type="text" id="dni" name="dni" class="form-control input-form"
                                                             placeholder="12235492">
                                                         <div class="form-control-icon">
                                                             <i class="bi bi-hash"></i>
@@ -108,7 +108,7 @@ include("./../../../../php/verificar_session.php");
                                                     <label for="user_name">Nombre del usuario</label>
                                                     <div class="form-group position-relative has-icon-left">
                                                         <input type="text" id="userName" name="userName"
-                                                            class="form-control" placeholder="John Adam Doe Villa">
+                                                            class="form-control input-form" placeholder="John Adam Doe Villa">
                                                         <div class="form-control-icon">
                                                             <i class="bi bi-people"></i>
                                                         </div>
@@ -117,7 +117,7 @@ include("./../../../../php/verificar_session.php");
                                                 <div class="col-lg-4 mb-1">
                                                     <label for="email">Email</label>
                                                     <div class="form-group position-relative has-icon-left">
-                                                        <input type="text" id="email" name="email" class="form-control"
+                                                        <input type="text" id="email" name="email" class="form-control input-form"
                                                             placeholder="John Adam Doe Villa">
                                                         <div class="form-control-icon">
                                                             <i class="bi bi-at"></i>
@@ -130,7 +130,7 @@ include("./../../../../php/verificar_session.php");
                                                     <label for="password">Contraseña</label>
                                                     <div class="form-group position-relative has-icon-left">
                                                         <input type="password" id="password" name="password"
-                                                            class="form-control" placeholder="************">
+                                                            class="form-control input-form" placeholder="************">
                                                         <div class="form-control-icon">
                                                             <i class="bi bi-hash"></i>
                                                         </div>

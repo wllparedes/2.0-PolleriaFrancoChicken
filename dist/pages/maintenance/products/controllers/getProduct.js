@@ -1,13 +1,18 @@
 /** @format */
 
-import { campos } from '../../../../assets/js/global/validarCampos.js';
+import { expresiones } from '../../../../assets/js/global/exprecionesRegulares.js';
+import { limpiarModal } from '../../../../assets/js/global/limpiarModal.js';
 import { verifyTarget } from '../../../../assets/js/global/verifyTarget.js';
+import { ValidarFormulario } from '../../../../assets/vendors/@wallace-validate/validarFormulario.js';
 
 // ? seleccionamos la tabla
 let tableProducts = $('#table-products');
-let contenedor_mensaje = document.getElementById('contenedor__mensaje');
+export let contenedor_mensaje = document.getElementById('contenedor__mensaje');
+export let validadorFormulario;
 // ? cuando se de click dentro de table-products en algun elemento de clase .edit
+
 tableProducts.on('click', '.edit', (e) => {
+
 	let target = verifyTarget(e);
 	let id = target.getAttribute('data-id');
 
@@ -18,7 +23,7 @@ tableProducts.on('click', '.edit', (e) => {
 		dataType: `JSON`,
 		success: function (response) {
 			let datos = response;
-			let producto = datos['product'][0];
+			let producto = datos['product'];
 			let category = datos['category'];
 
 			$('#name').val(producto.name);
@@ -43,16 +48,25 @@ tableProducts.on('click', '.edit', (e) => {
 				required: true,
 				placeholder: 'Seleccione una categoria',
 				selectedValue: producto.id_category,
+				search: true,
+				noSearchResultsText: 'No se encontraron categorias',
+				searchPlaceholderText: 'Buscar categoria',
 			});
 
-			Object.keys(campos).forEach((campo) => {
-				campos[campo] = true;
+			// * inicializar el validador del los inputs del form
+
+			const inputs = document.querySelectorAll('#editProduct .input-form');
+			validadorFormulario = new ValidarFormulario();
+
+			validadorFormulario.validarFormulario(inputs, {
+				name: expresiones.name,
+				price: expresiones.price,
 			});
+
 		},
 		complete: function () {
 			document.querySelector('.update').setAttribute('data-id', id);
-			contenedor_mensaje.classList.remove('contenedor__mensaje-activo');
-			contenedor_mensaje.classList.add('contenedor__mensaje');
+			limpiarModal('#editProduct', contenedor_mensaje);
 		},
 	});
 });

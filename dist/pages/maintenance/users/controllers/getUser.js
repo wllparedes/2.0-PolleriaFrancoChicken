@@ -1,13 +1,17 @@
 /** @format */
 
-import { campos } from '../../../../assets/js/global/validarCampos.js';
 import { verifyTarget } from '../../../../assets/js/global/verifyTarget.js';
+import { ValidarFormulario } from '../../../../assets/vendors/@wallace-validate/validarFormulario.js';
+import { expresiones } from '../../../../assets/js/global/exprecionesRegulares.js';
+import { limpiarModal } from '../../../../assets/js/global/limpiarModal.js';
 
 // ? seleccionamos la tabla
 let tableUsers = $('#table-users');
-let contenedor_mensaje = document.getElementById('contenedor__mensaje');
+export let contenedor_mensaje = document.getElementById('contenedor__mensaje');
+export let validadorFormulario;
 
 // ? cuando se de click dentro de table-users en algun elemento de clase .edit
+
 tableUsers.on('click', '.edit', (e) => {
 	let target = verifyTarget(e);
 	let id = target.getAttribute('data-id');
@@ -20,7 +24,7 @@ tableUsers.on('click', '.edit', (e) => {
 		success: function (response) {
 			// Aquí cargas los datos del cliente en los campos del formulario en el modal
 			let datos = response;
-			let usuario = datos['user'][0];
+			let usuario = datos['user'];
 			let cargos = datos['charge'];
 
 			$('#name').val(usuario.names);
@@ -55,14 +59,27 @@ tableUsers.on('click', '.edit', (e) => {
 				searchPlaceholderText: 'Buscar cargo',
 			});
 
-			Object.keys(campos).forEach((campo) => {
-				campos[campo] = true;
+			// * inicializar el validador del los inputs del form
+
+			const inputs = document.querySelectorAll('#editUser .input-form');
+			validadorFormulario = new ValidarFormulario();
+
+			validadorFormulario.validarFormulario(inputs, {
+				name: expresiones.name,
+				surnames: expresiones.surnames,
+				phone: expresiones.phone,
+				dni: expresiones.dni,
+				userName: expresiones.userName,
+				email: expresiones.email,
+				password: expresiones.password,
 			});
+
+
 		},
 		complete: function () {
 			document.querySelector('.update').setAttribute('data-id', id);
-			contenedor_mensaje.classList.remove('contenedor__mensaje-activo');
-			contenedor_mensaje.classList.add('contenedor__mensaje');
+			limpiarModal('#editUser', contenedor_mensaje);
 		},
 	});
 });
+

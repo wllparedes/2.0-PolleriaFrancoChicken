@@ -65,7 +65,7 @@ include("./../../../../php/verificar_session.php");
                                                     <label for="razon_social">Razon Social</label>
                                                     <div class="form-group position-relative has-icon-left">
                                                         <input type="text" id="razon_social" name="razon_social"
-                                                            class="form-control" placeholder="Gallinas y Alas SRL">
+                                                            class="form-control input-form" placeholder="Gallinas y Alas SRL">
                                                         <div class="form-control-icon">
                                                             <i class="bi bi-bookmark-heart"></i>
                                                         </div>
@@ -75,7 +75,7 @@ include("./../../../../php/verificar_session.php");
                                                     <label for="direccion">Dirección</label>
                                                     <div class="form-group position-relative has-icon-left">
                                                         <input type="text" id="direccion" name="direccion" rows="5"
-                                                            class="form-control"
+                                                            class="form-control input-form"
                                                             placeholder="Av. Exquisitamente 606, Lima">
                                                         <div class="form-control-icon">
                                                             <i class="bi bi-card-text"></i>
@@ -89,7 +89,7 @@ include("./../../../../php/verificar_session.php");
                                                     <label for="ruc">Ruc</label>
                                                     <div class="form-group position-relative has-icon-left">
                                                         <input type="text" id="ruc" name="ruc" rows="5"
-                                                            class="form-control" placeholder="20538856674">
+                                                            class="form-control input-form" placeholder="20538856674">
                                                         <div class="form-control-icon">
                                                             <i class="bi bi-card-text"></i>
                                                         </div>
@@ -99,7 +99,7 @@ include("./../../../../php/verificar_session.php");
                                                     <label for="phone">Telefono</label>
                                                     <div class="form-group position-relative has-icon-left">
                                                         <input type="text" id="phone" name="phone" rows="5"
-                                                            class="form-control" placeholder="+51 985 987 685">
+                                                            class="form-control input-form" placeholder="+51 985 987 685">
                                                         <div class="form-control-icon">
                                                             <i class="bi bi-card-text"></i>
                                                         </div>
@@ -111,7 +111,7 @@ include("./../../../../php/verificar_session.php");
                                                     <label for="email">Email</label>
                                                     <div class="form-group position-relative has-icon-left">
                                                         <input type="text" id="email" name="email" rows="5"
-                                                            class="form-control" placeholder="gallinas_alas@gmail.com">
+                                                            class="form-control input-form" placeholder="gallinas_alas@gmail.com">
                                                         <div class="form-control-icon">
                                                             <i class="bi bi-card-text"></i>
                                                         </div>

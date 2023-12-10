@@ -14,7 +14,7 @@
                         <div class="col-lg-12 mb-1">
                             <label for="name">Producto</label>
                             <div class="form-group position-relative has-icon-left">
-                                <input type="text" id="name" name="name" class="form-control"
+                                <input type="text" id="name" name="name" class="form-control input-form"
                                     placeholder="escribe el nombre del producto">
                                 <div class="form-control-icon">
                                     <i class="bi bi-box-seam "></i>
@@ -26,7 +26,7 @@
                         <div class="col-lg-12 mb-1">
                             <label for="price">Precio</label>
                             <div class="form-group position-relative has-icon-left">
-                                <input type="text" id="price" name="price" class="form-control" placeholder="S/.">
+                                <input type="text" id="price" name="price" class="form-control input-form" placeholder="S/.">
                                 <div class="form-control-icon">
                                     <i class="bi bi-cash "></i>
                                 </div>

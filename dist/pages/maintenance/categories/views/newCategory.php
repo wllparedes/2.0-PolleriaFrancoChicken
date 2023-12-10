@@ -65,7 +65,7 @@ include("./../../../../php/verificar_session.php");
                                                     <label for="name">Nombre</label>
                                                     <div class="form-group position-relative has-icon-left">
                                                         <input type="text" id="nameCategory" name="nameCategory"
-                                                            class="form-control" placeholder="Productos Derivados">
+                                                            class="form-control input-form" placeholder="Productos Derivados">
                                                         <div class="form-control-icon">
                                                             <i class="bi bi-bookmark-heart"></i>
                                                         </div>
@@ -75,7 +75,7 @@ include("./../../../../php/verificar_session.php");
                                                     <label for="description">Descripción</label>
                                                     <div class="form-group position-relative has-icon-left">
                                                         <input type="text" id="description" name="description" rows="5"
-                                                            class="form-control"
+                                                            class="form-control input-form"
                                                             placeholder="Acompañamientos para el pollo, como papas fritas, ensaladas y arroz.">
                                                         <div class="form-control-icon">
                                                             <i class="bi bi-card-text"></i>

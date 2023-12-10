@@ -1,6 +1,5 @@
 /** @format */
 import { language } from './../../../../assets/js/global/esDatatable.js';
-import {validarCampo, campos} from '../../../../assets/js/global/validarCampos.js';
 
 let tableProducts = $('#table-products');
 

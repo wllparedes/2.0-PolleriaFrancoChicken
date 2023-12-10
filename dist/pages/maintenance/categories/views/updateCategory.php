@@ -16,7 +16,7 @@
                             <label>Nombre: </label>
                             <div class="form-group">
                                 <input type="text" id="nameCategory" name="nameCategory"
-                                    placeholder="Nombre de la categoria" class="form-control">
+                                    placeholder="Nombre de la categoria" class="form-control input-form">
                             </div>
                         </div>
                     </div>
@@ -25,7 +25,7 @@
                             <label>Descripción: </label>
                             <div class="form-group">
                                 <input type="text" id="description" name="description"
-                                    placeholder="Descripcion de la categoria" class="form-control">
+                                    placeholder="Descripcion de la categoria" class="form-control input-form">
                             </div>
                         </div>
                     </div>

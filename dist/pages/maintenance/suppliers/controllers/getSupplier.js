@@ -1,14 +1,18 @@
 /** @format */
 
-import { campos } from '../../../../assets/js/global/validarCampos.js';
 import { verifyTarget } from '../../../../assets/js/global/verifyTarget.js';
+import { ValidarFormulario } from '../../../../assets/vendors/@wallace-validate/validarFormulario.js';
+import { expresiones } from '../../../../assets/js/global/exprecionesRegulares.js';
+import { limpiarModal } from '../../../../assets/js/global/limpiarModal.js';
 
 // ? seleccionamos la tabla
 let tableSuppliers = $('#table-suppliers');
-let contenedor_mensaje = document.getElementById('contenedor__mensaje');
+export let contenedor_mensaje = document.getElementById('contenedor__mensaje');
+export let validadorFormulario;
 
 // ? cuando se de click dentro de table-users en algun elemento de clase .edit
 tableSuppliers.on('click', '.edit', (e) => {
+
 	let target = verifyTarget(e);
 	let id = target.getAttribute('data-id');
 
@@ -26,14 +30,22 @@ tableSuppliers.on('click', '.edit', (e) => {
 			$('#phone').val(supplier.phone);
 			$('#email').val(supplier.email);
 
-			Object.keys(campos).forEach((campo) => {
-				campos[campo] = true;
+			// * inicializar el validador del los inputs del form
+
+			const inputs = document.querySelectorAll('#editSupplier .input-form');
+			validadorFormulario = new ValidarFormulario();
+
+			validadorFormulario.validarFormulario(inputs, {
+				razon_social: expresiones.razon_social,
+				direccion: expresiones.direccion,
+				ruc: expresiones.ruc,	
+				phone: expresiones.phone,
+				email: expresiones.email,
 			});
 		},
 		complete: function () {
 			document.querySelector('.update').setAttribute('data-id', id);
-			contenedor_mensaje.classList.remove('contenedor__mensaje-activo');
-			contenedor_mensaje.classList.add('contenedor__mensaje');
+			limpiarModal('#editSupplier', contenedor_mensaje);
 		},
 	});
 });

@@ -14,7 +14,7 @@ export const expresiones = {
 
 	// * Consumible
 	consumible: /^[a-zA-Z0-9\_\-\. ][^@]{5,35}$/,
-	precio: /^\d+(\.\d{1,2})?$/,
+	price: /^\d+(\.\d{1,2})?$/,
 
 	// * Pedido
 	observacion: /^[a-zA-Z0-9\_\-\. ][^@]{10,50}$/,

@@ -14,7 +14,7 @@
                         <div class="col-lg-4 mb-1">
                             <label for="name">Nombres</label>
                             <div class="form-group position-relative has-icon-left">
-                                <input type="text" id="name" name="name" class="form-control" placeholder="John Adam">
+                                <input type="text" id="name" name="name" class="form-control input-form" placeholder="John Adam">
                                 <div class="form-control-icon">
                                     <i class="bi bi-person"></i>
                                 </div>
@@ -23,7 +23,7 @@
                         <div class="col-lg-4 mb-1">
                             <label for="surnames">Apellidos</label>
                             <div class="form-group position-relative has-icon-left">
-                                <input type="text" id="surnames" name="surnames" class="form-control"
+                                <input type="text" id="surnames" name="surnames" class="form-control input-form"
                                     placeholder="Doe Villa">
                                 <div class="form-control-icon">
                                     <i class="bi bi-person"></i>
@@ -33,8 +33,8 @@
                         <div class="col-lg-4 mb-1">
                             <label for="phone">Phone</label>
                             <div class="form-group position-relative has-icon-left">
-                                <input type="text" id="phone" name="phone" class="form-control"
-                                    placeholder="+51 902 124 544">
+                                <input type="text" id="phone" name="phone" class="form-control input-form"
+                                    placeholder="901901901">
                                 <div class="form-control-icon">
                                     <i class="bi bi-phone"></i>
                                 </div>
@@ -45,7 +45,7 @@
                         <div class="col-lg-4 mb-1">
                             <label for="dni">DNI</label>
                             <div class="form-group position-relative has-icon-left">
-                                <input type="text" id="dni" name="dni" class="form-control" placeholder="12235492">
+                                <input type="text" id="dni" name="dni" class="form-control input-form" placeholder="12235492">
                                 <div class="form-control-icon">
                                     <i class="bi bi-hash"></i>
                                 </div>
@@ -54,7 +54,7 @@
                         <div class="col-lg-4 mb-1">
                             <label for="user_name">Nombre del usuario</label>
                             <div class="form-group position-relative has-icon-left">
-                                <input type="text" id="userName" name="userName" class="form-control"
+                                <input type="text" id="userName" name="userName" class="form-control input-form"
                                     placeholder="John Adam Doe Villa">
                                 <div class="form-control-icon">
                                     <i class="bi bi-people"></i>
@@ -64,7 +64,7 @@
                         <div class="col-lg-4 mb-1">
                             <label for="email">Email</label>
                             <div class="form-group position-relative has-icon-left">
-                                <input type="text" id="email" name="email" class="form-control"
+                                <input type="text" id="email" name="email" class="form-control input-form"
                                     placeholder="John Adam Doe Villa">
                                 <div class="form-control-icon">
                                     <i class="bi bi-at"></i>
@@ -76,7 +76,7 @@
                         <div class="col-lg-4 mb-1">
                             <label for="password">Contraseña</label>
                             <div class="form-group position-relative has-icon-left">
-                                <input type="password" id="password" name="password" class="form-control"
+                                <input type="password" id="password" name="password" class="form-control input-form"
                                     placeholder="************">
                                 <div class="form-control-icon">
                                     <i class="bi bi-hash"></i>
