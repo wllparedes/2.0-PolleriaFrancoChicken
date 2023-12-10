@@ -24,7 +24,7 @@ if (isset($_POST['name'])) {
     } else {
 
         try {
-            $query = "INSERT INTO products (name, price, id_category, image)  VALUES (?, ?, ?, ?)";
+            $query = "INSERT INTO products (name, price, id_category, url_image)  VALUES (?, ?, ?, ?)";
             $stmt = $conn->prepare($query);
             $stmt->bind_param("ssis", $name, $price, $id_category, $nameImage);
             $stmt->execute();
