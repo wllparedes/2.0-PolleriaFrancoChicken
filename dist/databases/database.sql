@@ -16,6 +16,7 @@ create table products(
     name VARCHAR(20) NOT NULL,
     price DECIMAL(8,2) NOT NULL,
     id_category INT NOT NULL,
+    url_image VARCHAR(100) NOT NULL,
     FOREIGN KEY (id_category) REFERENCES categories(id)
 );
 
@@ -30,8 +31,8 @@ create table users( -- empleado
     surnames VARCHAR(40) NOT NULL,
     phone VARCHAR(15) NOT NULL,
     dni VARCHAR(8) UNIQUE NOT NULL,
-    user_name VARCHAR(40) NOT NULL,
-    email VARCHAR(40) UNIQUE NOT NULL,
+    user_name VARCHAR(80) NOT NULL,
+    email VARCHAR(80) UNIQUE NOT NULL,
     password VARCHAR(256) NOT NULL,
     id_charge INT NOT NULL,
     FOREIGN KEY (id_charge) REFERENCES charges(id)
@@ -59,10 +60,10 @@ create table products_requirements(
 create table suppliers(
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     company_name VARCHAR(60) NOT NULL,
-    address VARCHAR(100) NOT NULL,
+    address VARCHAR(200) NOT NULL,
     ruc VARCHAR(20) NOT NULL,
-    phone VARCHAR(20) NOT NULL,
-    email VARCHAR(60) NOT NULL
+    phone VARCHAR(15) NOT NULL,
+    email VARCHAR(80) NOT NULL
 );
 
 create table purchase_orders(
@@ -79,7 +80,7 @@ create table purchase_orders(
 
 create table proofs_of_purchase(
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    description VARCHAR(100),
+    description VARCHAR(200),
     file VARCHAR(100) NOT NULL, -- URL DEL PDF
     date_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
     id_purchase_order INT NOT NULL,

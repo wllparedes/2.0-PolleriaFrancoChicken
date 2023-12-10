@@ -1,6 +1,5 @@
 /** @format */
 
-// ? MANTENIMIENTO DE CLIENTES
 import { expresiones } from '../../../../assets/js/global/exprecionesRegulares.js';
 import { limpiarFormularioYRedirigirA } from '../../../../assets/js/global/limpiarFormularioYRedirigir.js';
 import { no_registrado, si_registrado} from '../../../../assets/js/pages/modules-sweetalert.js';
