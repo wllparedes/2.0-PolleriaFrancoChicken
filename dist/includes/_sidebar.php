@@ -93,10 +93,10 @@
                     </a>
                     <ul class="submenu">
                         <li class="submenu-item">
-                            <a href="ui-widgets-chatbox.html">Nuevo requerimiento</a>
+                            <a href="./../../../supplying/purchase-requirements/views/newRequirement.php">Nuevo requerimiento</a>
                         </li>
                         <li class="submenu-item">
-                            <a href="ui-widgets-pricing.html">Lista de requerimientos</a>
+                            <a href="./../../../supplying/purchase-requirements/views/listRequirements.php">Lista de requerimientos</a>
                         </li>
                     </ul>
                 </li>

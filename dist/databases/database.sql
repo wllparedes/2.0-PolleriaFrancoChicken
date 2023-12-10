@@ -101,7 +101,7 @@ insert into categories values (1,'Pollo Entero','Productos que incluyen pollos e
 
 -- Insercion de productos
 
-INSERT INTO products (name, price, id_category) VALUES ('Pollo Asado Premium', 15.99, 1);
+-- INSERT INTO products (name, price, id_category) VALUES ('Pollo Asado Premium', 15.99, 1);
 
 -- Insercion de proveedores
 INSERT INTO suppliers (company_name, address, ruc, phone, email)
