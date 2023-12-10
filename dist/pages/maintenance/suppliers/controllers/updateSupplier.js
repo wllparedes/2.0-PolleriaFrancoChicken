@@ -58,8 +58,12 @@ $(document).ready(() => {
 
 	//? Cuando se de click al boton actualizar
 
-	$('#editSupplier').on('click', '.actualizar', function (e) {
+	$('#editSupplier').on('click', '.update', function (e) {
 		e.preventDefault();
+
+		let target = e.target;
+		let id = target.getAttribute('data-id');
+
 		if (
 			campos.razon_social &&
 			campos.direccion &&
@@ -69,7 +73,7 @@ $(document).ready(() => {
 		) {
 			// Ajax
 			const newData = {
-				id: $('#id_supplier').val(),
+				id: id,
 				razon_social: $('#razon_social').val(),
 				direccion: $('#direccion').val(),
 				ruc: $('#ruc').val(),
@@ -80,24 +84,20 @@ $(document).ready(() => {
 				url: '../models/updateSupplier.php',
 				type: 'POST',
 				data: newData,
+				dataType: 'JSON',
 				success: function (response) {
-					let respuesta = response.trim();
-					if (respuesta === 'error') {
+					if (!response.status) {
 						error();
-					} else {
-						$('#editUser').modal('hide');
-						$('#editSupplier').modal('hide');
-						si_actualizado();
-						dataTable.ajax.reload();
-						/*fetchCategorias(); */
-						/* document.getElementById("search").value = ""; */
-						/* $('#categorias-result').hide(); */
-						//
-						/* document.querySelectorAll('.formulariogrupo-correcto').forEach((i) => {
-                            i.classList.remove('formulariogrupo-correcto')
-                        }) */
-						/* contenedor_mensaje.classList.remove('contenedor__mensaje-activo'); */
+						return;
 					}
+
+					si_actualizado();
+					dataTable.ajax.reload();
+					contenedor_mensaje.classList.add('contenedor__mensaje');
+					contenedor_mensaje.classList.remove(
+						'contenedor__mensaje-activo'
+					);
+
 				},
 				complete: function () {
 					document
@@ -110,6 +110,7 @@ $(document).ready(() => {
 					contenedor_mensaje.classList.remove(
 						'contenedor__mensaje-activo'
 					);
+					$('#editSupplier').modal('toggle');
 				},
 			});
 		} else {

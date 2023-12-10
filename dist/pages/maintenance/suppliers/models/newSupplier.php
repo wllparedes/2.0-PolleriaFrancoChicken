@@ -11,25 +11,27 @@ if (isset($_POST['razon_social'])) {
     $email = $_POST['email'];
 
     try {
-        // Preparar la consulta
-        $query = "INSERT INTO suppliers (company_name, address, ruc, phone, email)
-        VALUES (?, ?, ?, ?, ?)";
 
-        // Crear una declaración preparada
+        $query = "INSERT INTO suppliers (company_name, address, ruc, phone, email) VALUES (?, ?, ?, ?, ?)";
+
         $stmt = $conn->prepare($query);
 
-        // Vincular los parámetros
         $stmt->bind_param("sssss", $razon_social, $direccion, $ruc, $phone, $email);
 
-        // Ejecutar la consulta
         $stmt->execute();
-        // Cerrar
         $stmt->close();
-        $conn->close();
 
-        echo "correcto";
+        $status = true;
     } catch (Exception $e) {
-        echo "error";
+        $status = false;
     }
 }
+
+$conn->close();
+echo json_encode([
+    'status' => $status
+]);
+
+
+
 ?>

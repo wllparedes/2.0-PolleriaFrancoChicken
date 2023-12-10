@@ -121,7 +121,6 @@ include("./../../../../php/verificar_session.php");
 
             </div>
 
-            <?php include('./editCategory.php') ?>
             <!-- start footer -->
             <?php include('./../../../../includes/_footer.php') ?>
             <!-- end footer -->

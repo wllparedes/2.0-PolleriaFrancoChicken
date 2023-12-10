@@ -41,7 +41,7 @@ include("./../../../../php/verificar_session.php");
                 <div class="page-title">
                     <div class="row">
                         <div class="col-12 col-md-6 order-md-1 order-last">
-                            <h3> Lista de categorias </h3>
+                            <h3> Lista de proveedores</h3>
                             <p class="text-subtitle text-muted">Página donde podremos vizualizar la lista de proveedores
                                 con los que contamos, podrás editar, eliminar y buscar a un proveedor en específico.
                             </p>
@@ -87,7 +87,7 @@ include("./../../../../php/verificar_session.php");
 
             </div>
 
-            <?php include("./editSupplier.php") ?>
+            <?php include("./updateSupplier.php") ?>
 
             <!-- start footer -->
             <?php include('./../../../../includes/_footer.php') ?>
@@ -99,6 +99,7 @@ include("./../../../../php/verificar_session.php");
     <script src="./../../../../assets/js/bootstrap.bundle.min.js"></script>
     <script src="./../../../../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="./../../../../assets/vendors/choices.js/choices.min.js"></script>
+    <script src="./../../../../assets/vendors/@fortawesome/fontawesome-free/js/all.min.js"></script>
     <!-- !! -->
     <script src="./../../../../assets/vendors/sweetalert2/sweetalert2.all.min.js"></script>
     <script src="./../../../../assets/js/pages/modules-sweetalert.js"></script>
@@ -113,6 +114,7 @@ include("./../../../../php/verificar_session.php");
     <!-- * -->
     <script src="./../controllers/listSuppliers.js" type="module"></script>
     <script src="./../../../../assets/js/main.js"></script>
+    <script src="./../controllers/getSupplier.js" type="module"></script>
     <script src="./../controllers/updateSupplier.js" type="module"></script>
     <script src="./../controllers/deleteSupplier.js" type="module"></script>
 

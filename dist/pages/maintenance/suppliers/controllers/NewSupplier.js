@@ -8,11 +8,8 @@ import {
 } from '../../../../assets/js/global/validarCampos.js';
 
 $(document).ready(() => {
-	//  Seleccionar Elementos DOM ( contenedor__mensaje / all inputs )
-
 	let contenedor_mensaje = document.getElementById('contenedor__mensaje');
 	const inputs = document.querySelectorAll('#formulario input');
-	// Start Validación del formulario
 
 	const validarFormulario = (e) => {
 		switch (e.target.name) {
@@ -43,10 +40,6 @@ $(document).ready(() => {
 		input.addEventListener('blur', validarFormulario);
 	});
 
-	// End
-
-	// Cuando se de Submit en el Btn Registrar
-
 	$('#formulario').submit(function (e) {
 		e.preventDefault();
 
@@ -65,31 +58,32 @@ $(document).ready(() => {
 				phone: $('#phone').val(),
 				email: $('#email').val(),
 			};
+			console.log(postData)
 
 			$.ajax({
 				url: '../models/newSupplier.php',
 				type: 'POST',
 				data: postData,
+				dataType: 'JSON',
 				success: function (response) {
-					let respuesta = response.trim();
-					console.log(respuesta);
-					if (respuesta === 'error') {
+					console.log(response)
+
+					if (!response.status) {
 						no_registrado('proveedor');
-					} else {
-						//
-						document
-							.querySelectorAll('#formulario input')
-							.forEach((i) => {
-								i.classList.remove('is-valid', 'is-invalid');
-							});
-						si_registrado();
-						$('#formulario').trigger('reset');
-						redireccionar('listSuppliers');
-						contenedor_mensaje.classList.remove(
-							'contenedor__mensaje-activo'
-						);
-						contenedor_mensaje.classList.add('contenedor__mensaje');
+						return;
 					}
+					document
+						.querySelectorAll('#formulario input')
+						.forEach((i) => {
+							i.classList.remove('is-valid', 'is-invalid');
+						});
+					si_registrado();
+					$('#formulario').trigger('reset');
+					contenedor_mensaje.classList.remove(
+						'contenedor__mensaje-activo'
+					);
+					contenedor_mensaje.classList.add('contenedor__mensaje');
+					redireccionar('listSuppliers');
 				},
 			});
 		} else {

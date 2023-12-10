@@ -17,11 +17,15 @@ try {
     $stmt->execute();
     // Cerrar el stmt y la connexión
     $stmt->close();
-    $conn->close();
-    echo 'correcto';
+    $status = true;
 } catch (Exception $e) {
-    echo 'error';
+    $status = false;
 }
 
+$conn->close();
+
+echo json_encode([
+    'status' => $status,
+]);
 
 ?>

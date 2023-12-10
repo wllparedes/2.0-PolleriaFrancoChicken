@@ -63,7 +63,7 @@ include("./../../../../php/verificar_session.php");
                                         <!--Empiezo del form-->
                                         <form action="forms-sample form-supplier" id="formulario">
                                             <div class="row">
-                                                <div class="col-lg-12 mb-1">
+                                                <div class="col-lg-6 mb-1">
                                                     <label for="razon_social">Razon Social</label>
                                                     <div class="form-group position-relative has-icon-left">
                                                         <input type="text" id="razon_social" name="razon_social"
@@ -73,7 +73,7 @@ include("./../../../../php/verificar_session.php");
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-12 mb-1">
+                                                <div class="col-lg-6 mb-1">
                                                     <label for="direccion">Dirección</label>
                                                     <div class="form-group position-relative has-icon-left">
                                                         <input type="text" id="direccion" name="direccion" rows="5"
@@ -84,7 +84,10 @@ include("./../../../../php/verificar_session.php");
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-12 mb-1">
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-lg-6 mb-1">
                                                     <label for="ruc">Ruc</label>
                                                     <div class="form-group position-relative has-icon-left">
                                                         <input type="text" id="ruc" name="ruc" rows="5"
@@ -94,7 +97,7 @@ include("./../../../../php/verificar_session.php");
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-12 mb-1">
+                                                <div class="col-lg-6 mb-1">
                                                     <label for="phone">Telefono</label>
                                                     <div class="form-group position-relative has-icon-left">
                                                         <input type="text" id="phone" name="phone" rows="5"
@@ -104,7 +107,9 @@ include("./../../../../php/verificar_session.php");
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-12 mb-1">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-6 mb-1">
                                                     <label for="email">Email</label>
                                                     <div class="form-group position-relative has-icon-left">
                                                         <input type="text" id="email" name="email" rows="5"
@@ -150,7 +155,6 @@ include("./../../../../php/verificar_session.php");
 
             </div>
 
-            <?php include('./editSupplier.php') ?>
             <!-- start footer -->
             <?php include('./../../../../includes/_footer.php') ?>
             <!-- end footer -->

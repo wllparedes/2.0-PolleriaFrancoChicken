@@ -60,6 +60,8 @@ tableUsers.on('click', '.edit', (e) => {
 		},
 		complete: function () {
 			document.querySelector('.update').setAttribute('data-id', id);
+			contenedor_mensaje.classList.remove('contenedor__mensaje-activo');
+			contenedor_mensaje.classList.add('contenedor__mensaje');
 		},
 	});
 });

@@ -58,11 +58,11 @@ create table products_requirements(
 
 create table suppliers(
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    company_name VARCHAR(20) NOT NULL,
-    address VARCHAR(40) NOT NULL,
+    company_name VARCHAR(60) NOT NULL,
+    address VARCHAR(100) NOT NULL,
     ruc VARCHAR(20) NOT NULL,
     phone VARCHAR(20) NOT NULL,
-    email VARCHAR(20) NOT NULL
+    email VARCHAR(60) NOT NULL
 );
 
 create table purchase_orders(

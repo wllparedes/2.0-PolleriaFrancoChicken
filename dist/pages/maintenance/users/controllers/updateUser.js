@@ -94,8 +94,6 @@ $(document).ready(function () {
 						error();
 						return;
 					}
-
-					$('#editUser').modal('hide');
 					si_actualizado();
 					dataTable.ajax.reload();
 					contenedor_mensaje.classList.add('contenedor__mensaje');
