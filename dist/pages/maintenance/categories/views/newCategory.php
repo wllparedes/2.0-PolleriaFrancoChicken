@@ -66,7 +66,8 @@ include("./../../../../php/verificar_session.php");
                                                 <div class="col-lg-12 mb-1">
                                                     <label for="name">Nombre</label>
                                                     <div class="form-group position-relative has-icon-left">
-                                                        <input type="text" id="nameCategory" name="nameCategory" class="form-control" placeholder="Productos Derivados">
+                                                        <input type="text" id="nameCategory" name="nameCategory"
+                                                            class="form-control" placeholder="Productos Derivados">
                                                         <div class="form-control-icon">
                                                             <i class="bi bi-bookmark-heart"></i>
                                                         </div>
@@ -75,17 +76,35 @@ include("./../../../../php/verificar_session.php");
                                                 <div class="col-lg-12 mb-1">
                                                     <label for="description">Descripción</label>
                                                     <div class="form-group position-relative has-icon-left">
-                                                        <input type="text" id="description" name="description" rows="5" class="form-control" placeholder="Acompañamientos para el pollo, como papas fritas, ensaladas y arroz.">
-                                                        <div class="form-control-icon">    
+                                                        <input type="text" id="description" name="description" rows="5"
+                                                            class="form-control"
+                                                            placeholder="Acompañamientos para el pollo, como papas fritas, ensaladas y arroz.">
+                                                        <div class="form-control-icon">
                                                             <i class="bi bi-card-text"></i>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            <!-- = Message Error -->
+
+                                            <div class="row">
+                                                <div class="form-group col-md-12 contenedor__mensaje"
+                                                    id="contenedor__mensaje">
+                                                    <div class="formulario__mensaje bg-danger shadow-danger">
+                                                        <i class="bi bi-exclamation-triangle-fill"></i></span> <b
+                                                            class="p-1">Rellene el formulario
+                                                            correctamente.</b>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
                                             <!--? Container btns -->
                                             <div class="row justify-content-center">
                                                 <div class="form-group col-lg-4 col-md-8 d-flex justify-content-around">
-                                                    <button id="registrar" type="submit" name="registrar" class="btn btn-sm btn-success ">
+                                                    <button id="registrar" type="submit" name="registrar"
+                                                        class="btn btn-sm btn-success ">
                                                         &nbsp;<b>Registrar</b>
                                                     </button>
                                                 </div>
@@ -101,7 +120,7 @@ include("./../../../../php/verificar_session.php");
                 <!-- Basic Inputs Groups end -->
 
             </div>
-            
+
             <?php include('./editCategory.php') ?>
             <!-- start footer -->
             <?php include('./../../../../includes/_footer.php') ?>
@@ -114,12 +133,14 @@ include("./../../../../php/verificar_session.php");
     <script src="./../../../../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="./../../../../assets/vendors/choices.js/choices.min.js"></script>
     <script src="./../../../../assets/js/main.js"></script>
+
+    <script src="./../../../../assets/js/global/login/redirect.js"></script>
     <!-- !! -->
     <script src="./../../../../assets/vendors/sweetalert2/sweetalert2.all.min.js"></script>
     <script src="./../../../../assets/js/pages/modules-sweetalert.js"></script>
     <script src="../controllers/NewCategory.js" type="module"></script>
     <script src="../../../../assets/js/underscore-min.js"></script>
-    
+
 </body>
 
 </html>

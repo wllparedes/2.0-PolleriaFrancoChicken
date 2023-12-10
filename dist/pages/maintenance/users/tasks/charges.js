@@ -13,6 +13,9 @@ $(document).ready(() => {
 				options: response,
 				required: true,
 				placeholder: 'Seleccione un cargo',
+				search: true,
+				noSearchResultsText: 'No se encontraron cargos',
+				searchPlaceholderText: 'Buscar cargo',
 			});
 		},
 	});

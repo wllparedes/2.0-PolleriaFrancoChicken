@@ -41,7 +41,9 @@
 .vscomp-wrapper *::before,
 .vscomp-wrapper *::after {
     box-sizing: border-box;
-    font-family: Open Sans, sans-serif;
+    font-family: Nunito, sans-serif;
+    color: #607080;
+    font-size: 1rem;
 }
 
 .vscomp-wrapper:focus {

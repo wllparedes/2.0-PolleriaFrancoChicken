@@ -58,7 +58,6 @@ $('#editProduct').on('click', '.update', (e) => {
 			data: newData,
 			dataType: 'JSON',
 			success: function (response) {
-
 				if (!response.status) {
 					error();
 					return;
@@ -72,9 +71,14 @@ $('#editProduct').on('click', '.update', (e) => {
 					i.classList.remove('is-valid', 'is-invalid');
 				});
 				$('#editProduct').modal('toggle');
+				contenedor_mensaje.classList.remove(
+					'contenedor__mensaje-activo'
+				);
+				contenedor_mensaje.classList.add('contenedor__mensaje');
+				contenedor_mensaje.classList.remove('contenedor__mensaje-activo');
 			},
 		});
 	} else {
-		contenedor_mensaje.classList.add('contenedormensaje-activo');
+		contenedor_mensaje.classList.add('contenedor__mensaje-activo');
 	}
 });

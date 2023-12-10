@@ -69,7 +69,7 @@ include("./../../../../php/verificar_session.php");
                             Lista de usuarios
                         </div>
                         <div class="card-body">
-                            <table class="table table-hover" id="table-users">
+                            <table class="table table-striped" id="table-users">
                                 <thead>
                                     <tr>
                                         <th>ID</th>
@@ -77,7 +77,7 @@ include("./../../../../php/verificar_session.php");
                                         <th>Apellidos</th>
                                         <th>Telefono</th>
                                         <th>DNI</th>
-                                        <th>Nombre de usuario</th>
+                                        <th>N. Usuario</th>
                                         <th>Email</th>
                                         <th>Cargo</th>
                                         <th>Opciones</th>
@@ -92,7 +92,7 @@ include("./../../../../php/verificar_session.php");
                 <!-- * DATA TABLES -->
 
             </div>
-            <?php include("update-User.php") ?>
+            <?php include("updateUser.php") ?>
             <!-- start footer -->
             <?php include('./../../../../includes/_footer.php') ?>
             <!-- end footer -->

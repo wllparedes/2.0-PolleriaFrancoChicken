@@ -12,7 +12,6 @@ include("./../../../../php/verificar_session.php");
     <title>Lista de categorias - Almacenero</title>
     <link rel="stylesheet" href="./../../../../assets/vendors/choices.js/choices.min.css" />
     <?php include('./../../../../includes/_head.php'); ?>
-    <link rel="stylesheet" href="./../../../../assets/vendors/datatable/datatable.min.css">
     <link rel="stylesheet" href="./../../../../assets/vendors/simple-datatables/style.css">
     <link rel="stylesheet" href="./../../../../assets/vendors/sweetalert2/sweetalert2.min.css">
     <!-- * datatable -->
@@ -59,7 +58,7 @@ include("./../../../../php/verificar_session.php");
                 </div>
 
                 <!-- * DATA TABLES -->
-              
+
                 <section class="section">
                     <div class="card">
                         <div class="card-header">
@@ -75,9 +74,6 @@ include("./../../../../php/verificar_session.php");
                                         <th>Opciones</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <!-- ¨* dataTable -->
-                                </tbody>
                             </table>
                         </div>
                     </div>
@@ -88,7 +84,7 @@ include("./../../../../php/verificar_session.php");
 
             </div>
 
-            <?php include("./editCategory.php") ?>
+            <?php include("./updateCategory.php") ?>
 
             <!-- start footer -->
             <?php include('./../../../../includes/_footer.php') ?>
@@ -100,6 +96,7 @@ include("./../../../../php/verificar_session.php");
     <script src="./../../../../assets/js/bootstrap.bundle.min.js"></script>
     <script src="./../../../../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="./../../../../assets/vendors/choices.js/choices.min.js"></script>
+    <script src="./../../../../assets/vendors/@fortawesome/fontawesome-free/js/all.min.js"></script>
     <!-- !! -->
     <script src="./../../../../assets/vendors/sweetalert2/sweetalert2.all.min.js"></script>
     <script src="./../../../../assets/js/pages/modules-sweetalert.js"></script>
@@ -113,6 +110,7 @@ include("./../../../../php/verificar_session.php");
 
     <!-- * -->
     <script src="./../controllers/listCategories.js" type="module"></script>
+    <script src="./../controllers/getCategory.js" type="module"></script>
     <script src="./../../../../assets/js/main.js"></script>
     <script src="./../controllers/updateCategory.js" type="module"></script>
     <script src="./../controllers/deleteCategory.js" type="module"></script>

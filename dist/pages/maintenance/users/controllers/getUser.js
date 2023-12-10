@@ -49,6 +49,9 @@ tableUsers.on('click', '.edit', (e) => {
 				required: true,
 				placeholder: 'Seleccione un cargo',
 				selectedValue: usuario.id_charge,
+				search: true,
+				noSearchResultsText: 'No se encontraron cargos',
+				searchPlaceholderText: 'Buscar cargo',
 			});
 
 			Object.keys(campos).forEach((campo) => {
@@ -56,9 +59,7 @@ tableUsers.on('click', '.edit', (e) => {
 			});
 		},
 		complete: function () {
-			document
-				.querySelector('.update')
-				.setAttribute('data-id', id);
+			document.querySelector('.update').setAttribute('data-id', id);
 		},
 	});
 });

@@ -5,7 +5,7 @@ import { verifyTarget } from '../../../../assets/js/global/verifyTarget.js';
 
 // ? seleccionamos la tabla
 let tableProducts = $('#table-products');
-
+let contenedor_mensaje = document.getElementById('contenedor__mensaje');
 // ? cuando se de click dentro de table-products en algun elemento de clase .edit
 tableProducts.on('click', '.edit', (e) => {
 	let target = verifyTarget(e);
@@ -51,6 +51,8 @@ tableProducts.on('click', '.edit', (e) => {
 		},
 		complete: function () {
 			document.querySelector('.update').setAttribute('data-id', id);
+			contenedor_mensaje.classList.remove('contenedor__mensaje-activo');
+			contenedor_mensaje.classList.add('contenedor__mensaje');
 		},
 	});
 });

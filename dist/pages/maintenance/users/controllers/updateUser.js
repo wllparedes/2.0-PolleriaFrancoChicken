@@ -72,7 +72,6 @@ $(document).ready(function () {
 			campos.password &&
 			select_cargo.val()
 		) {
-			// Datos para la actualización
 			const newData = {
 				id: id,
 				name: $('#name').val(),
@@ -85,7 +84,6 @@ $(document).ready(function () {
 				id_charge: select_cargo.val(),
 			};
 
-			// Envía la solicitud de actualización
 			$.ajax({
 				url: '../models/updateUser.php',
 				type: 'POST',
@@ -115,7 +113,6 @@ $(document).ready(function () {
 				},
 			});
 		} else {
-			// Mostrar mensaje de validación
 			contenedor_mensaje.classList.add('contenedor__mensaje-activo');
 		}
 	});
