@@ -53,7 +53,7 @@ create table products_requirements(
 	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     id_requirement INT NOT NULL,
     id_product INT NOT NULL,
-    quantity DECIMAL(8,2) NOT NULL,
+    quantity INT NOT NULL,
     FOREIGN KEY (id_requirement) REFERENCES requirements(id),
     FOREIGN KEY (id_product) REFERENCES products(id)
 );
@@ -119,6 +119,8 @@ WHERE p.id_category = c.id;
 -- * sub total para el requerimiento de compra
 
 CREATE VIEW CALCULATE_SUBTOTAL_REQUIREMENT AS
-SELECT pr.id_req, SUM(pr.cantidad * p.precio) AS subtotal
-FROM products_requirements pr, products p
-WHERE pr.id_producto = p.id_producto
+SELECT pr.id_requirement, SUM(pr.quantity * p.price) AS subtotal
+FROM products_requirements pr
+JOIN products p ON pr.id_product = p.id
+GROUP BY pr.id_requirement;
+
