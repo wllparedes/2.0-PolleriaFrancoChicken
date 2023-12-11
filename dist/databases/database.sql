@@ -1,5 +1,5 @@
 --  BASE DE DATOS: "FRANCO CHICKEN IV"
-
+drop database Polleria_IV;
 create database Polleria_IV;
 use Polleria_IV;
 
@@ -112,8 +112,8 @@ VALUES ('Granja Pollo', 'Av. Plumas 123, Lima', '18765432168', '985768216', 'gra
 
 
 CREATE VIEW SELECTEDPRODUCTS AS
-SELECT p.id, p.name, p.price, p.description, p.id_category, c.name as category_name
-FROM products p, category c
+SELECT p.id, p.name, p.price, p.id_category, c.name as category_name
+FROM products p, categories c
 WHERE p.id_category = c.id;
 
 -- * sub total para el requerimiento de compra
