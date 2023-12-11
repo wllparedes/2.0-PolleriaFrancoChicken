@@ -42,8 +42,9 @@ create table users( -- empleado
 create table requirements(
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     date_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-    state BOOLEAN NOT NULL,
-    subtotal DECIMAL(8,2) NOT NULL,
+    description VARCHAR(300) NOT NULL,
+    state BOOLEAN NOT NULL DEFAULT 0,
+    subtotal DECIMAL(8,2) NULL,
     id_user INT NOT NULL,
     FOREIGN KEY (id_user) REFERENCES users(id)
 ); 
@@ -70,7 +71,7 @@ create table purchase_orders(
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     observation VARCHAR(100) NOT NULL,
     date_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-    state BOOLEAN NOT NULL,
+    state BOOLEAN NOT NULL DEFAULT 0,
     total DECIMAL(8,2) NOT NULL,
     id_supplier INT NOT NULL,
     id_requirement INT NOT NULL,
@@ -108,3 +109,16 @@ INSERT INTO suppliers (company_name, address, ruc, phone, email)
 VALUES ('Granja Pollo', 'Av. Plumas 123, Lima', '18765432168', '985768216', 'granja@gmail.com');
 
 -- delete FROm usuario where id_usuario = 1;
+
+
+CREATE VIEW SELECTEDPRODUCTS AS
+SELECT p.id, p.name, p.price, p.description, p.id_category, c.name as category_name
+FROM products p, category c
+WHERE p.id_category = c.id;
+
+-- * sub total para el requerimiento de compra
+
+CREATE VIEW CALCULATE_SUBTOTAL_REQUIREMENT AS
+SELECT pr.id_req, SUM(pr.cantidad * p.precio) AS subtotal
+FROM products_requirements pr, products p
+WHERE pr.id_producto = p.id_producto

@@ -60,18 +60,27 @@ include("./../../../../php/verificar_session.php");
                                 </div>
                                 <div class="card-content">
                                     <div class="card-body">
-                                        <form action="forms-sample form-requerimiento" id="formulario">
+                                        <form class="forms-sample form-requerimiento" id="formulario">
                                             <div class="row">
                                                 <div class="col-lg-4 mb-1">
                                                     <label for="name">Seleccionar productos a elegir</label>
                                                     <div class="form-group position-relative has-icon-left">
-                                                        <button type="button" href="#" class="btn icon icon-left btn-info">
+                                                        <button type="button" data-bs-toggle="modal" data-bs-target="#selectProducts"
+                                                            class="btn icon icon-left btn-info">
                                                             <i class="fas fa-seedling"></i>
                                                             Seleccionar productos
                                                         </button>
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            <div class="row">
+                                                <div class="col-12 table-responsive" id="table-products">
+
+                                                </div>
+                                            </div>
+
+
 
                                             <div class="row">
                                                 <div class="col-lg-6 mb-1">
@@ -120,6 +129,8 @@ include("./../../../../php/verificar_session.php");
 
             </div>
 
+            <?php include('selectProducts.php') ?>
+
             <!-- start footer -->
             <?php include('./../../../../includes/_footer.php') ?>
             <!-- end footer -->
@@ -133,6 +144,8 @@ include("./../../../../php/verificar_session.php");
     <!-- * plugins -->
     <script src="./../../../../assets/vendors/virtual-select/virtual-select.min.js"></script>
     <!-- * parte de la pagina -->
+    <script src="./../tasks/loadProducts.js" ></script>
+    <script src="./../controllers/newRequirement.js" type="module" ></script>
 
 </body>
 
