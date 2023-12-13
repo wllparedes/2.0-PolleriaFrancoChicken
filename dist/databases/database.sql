@@ -124,3 +124,7 @@ FROM products_requirements pr
 JOIN products p ON pr.id_product = p.id
 GROUP BY pr.id_requirement;
 
+CREATE VIEW SELECTPROFILE AS
+SELECT u.id, u.names, u.surnames, u.phone, u.dni, u.user_name, u.email, u.password, c.name as charge_user
+FROM users u, charges c
+WHERE c.id = u.id_charge;
