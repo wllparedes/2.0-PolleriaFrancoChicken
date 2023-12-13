@@ -1,6 +1,7 @@
 /** @format */
 
 import { limpiarFormularioYRedirigirA } from '../../../../assets/js/global/limpiarFormularioYRedirigir.js';
+import { limpiarProfile } from '../../../../assets/js/global/limpiarPerfil.js';
 import  { si_actualizado, error }  from '../../../../assets/js/pages/modules-sweetalert.js';
 import { validadorFormulario, contenedor_mensaje } from './getProfile.js';
 
@@ -32,7 +33,7 @@ $(document).ready(() => {
 					}
 
 					si_actualizado();
-					limpiarFormularioYRedirigirA(contenedor_mensaje);
+					limpiarProfile(contenedor_mensaje);
 				},
 			});
 		} else {
