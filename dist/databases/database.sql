@@ -94,7 +94,7 @@ INSERT INTO `charges` (`id`, `name`) VALUES (NULL, 'Almacenero');
 
 -- Insercion de usuarios
 
-insert users values (NULL ,'Adam', 'Milner', '922332', '34234', 'Adam  Milner', 'almacenero@gmail.com', 'almacenero', 1 );
+insert users values (NULL ,'Adam', 'Milner', '987268698', '94875898', 'Adam  Milner', 'almacenero@gmail.com', '@Almacenero123', 1 );
 
 -- Insercion de categorias
 

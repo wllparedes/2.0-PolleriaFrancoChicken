@@ -3,6 +3,6 @@ export const limpiarProfile = (contenedor_mensaje) => {
         i.classList.remove('is-valid', 'is-invalid');
     });
     // $('#formulario').trigger('reset');
-    contenedor_mensaje.classList.add('contenedormensaje');
-    contenedor_mensaje.classList.remove('contenedormensaje-activo');
+     contenedor_mensaje.classList.add('contenedor__mensaje');
+    contenedor_mensaje.classList.remove('contenedor__mensaje-activo')
 };
