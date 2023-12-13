@@ -39,13 +39,15 @@ if (!empty($_POST["email"]) and !empty($_POST["password"])) {
     if (isset($_SESSION["job_title_name"])) {
       switch ($_SESSION["job_title_name"]) {
         case 'Recepcionista':
-          $redirect = "dist/pages/home/recepcionista/views/inicio";
+          $redirect = "index";
+          $mensaje = "Usted no cuenta con los permisos necesarios";
+          break;
+        case 'Mesero':
+          $redirect = "index";
+          $mensaje = "Usted no cuenta con los permisos necesarios";
           break;
         case 'Almacenero':
           $redirect = "dist/pages/home/storekeeper/views/index";
-          break;
-        case 'Mesero':
-          $redirect = "dist/pages/home/mesero/views/inicio";
           break;
         default:
           $redirect = "index";
@@ -55,7 +57,12 @@ if (!empty($_POST["email"]) and !empty($_POST["password"])) {
       $redirect = "index"; // Set a default redirect if $_SESSION["job_title_name"] is not set
     }
 
-    echo $redirect;
+     // Imprime el mensaje si existe
+     if (isset($mensaje)) {
+      echo $mensaje;
+    } else {
+      echo $redirect;
+    }
 
   } else {
     echo 'error';

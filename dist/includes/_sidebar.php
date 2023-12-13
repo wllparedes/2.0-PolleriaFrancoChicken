@@ -134,7 +134,7 @@
                 <li class="sidebar-title">Perfil</li>
 
                 <li class="sidebar-item">
-                    <a href="https://zuramai.github.io/mazer/docs" class="sidebar-link">
+                    <a href="./../../../maintenance/profile/views/viewProfile.php" class="sidebar-link">
                         <i class="bi bi-life-preserver"></i>
                         <span>Mi perfil</span>
                     </a>

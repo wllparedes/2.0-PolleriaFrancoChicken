@@ -28,17 +28,26 @@ $(document).ready(function () {
                         divMensaje.classList.remove('mensaje-error');
                         
                         divMensaje.style.opacity = 1 // ? cambiar
-                        break;
+                        break;  
                     default:
-                        divMensaje.innerHTML = '<span>Datos correctamente digitados, tenga un buen día</span>';
-                        btnIngresar.innerText = 'Ingresando...';
-
-                        divMensaje.classList.add('mensaje-success');
-                        divMensaje.classList.remove('mensaje-warning');
-                        divMensaje.classList.remove('mensaje-error');
-                        divMensaje.style.opacity = 1 // ? cambiar
-                        redireccionar(respuesta);
-                        break;
+                        if (respuesta.includes('Usted no cuenta con los permisos necesarios')) {
+                            // Aquí puedes personalizar el manejo del mensaje para Mesero o Recepcionista
+                            divMensaje.innerHTML = '<span>' + respuesta + '</span>';
+                            // Puedes cambiar el estilo o realizar otras acciones según tu necesidad
+                            divMensaje.classList.add('mensaje-primary');
+                            divMensaje.classList.remove('mensaje-success');
+                            divMensaje.classList.remove('mensaje-error');
+                            divMensaje.style.opacity = 1;
+                          } else {
+                            divMensaje.innerHTML = '<span>Datos correctamente digitados, tenga un buen día</span>';
+                            btnIngresar.innerText = 'Ingresando...';
+                            divMensaje.classList.add('mensaje-success');
+                            divMensaje.classList.remove('mensaje-warning');
+                            divMensaje.classList.remove('mensaje-error');
+                            divMensaje.style.opacity = 1;
+                            redireccionar(respuesta);
+                          }
+                          break;
                 };
             }
         });

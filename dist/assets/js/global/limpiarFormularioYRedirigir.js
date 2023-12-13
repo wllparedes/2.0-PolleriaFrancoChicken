@@ -6,12 +6,16 @@
  * @returns {void} - Redirecciona a la vista indicada
  */
 
-export const limpiarFormularioYRedirigirA = (contenedor_mensaje, url) => {
+export const limpiarFormularioYRedirigirA = (contenedor_mensaje, url = false) => {
 	document.querySelectorAll('#formulario input').forEach((i) => {
 		i.classList.remove('is-valid', 'is-invalid');
 	});
 	$('#formulario').trigger('reset');
 	contenedor_mensaje.classList.add('contenedor__mensaje');
 	contenedor_mensaje.classList.remove('contenedor__mensaje-activo');
+
+	if(!url){
+		return ;
+	}
 	redireccionar(url);
 };
