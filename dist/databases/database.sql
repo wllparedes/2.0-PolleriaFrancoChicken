@@ -54,7 +54,7 @@ create table products_requirements(
     id_requirement INT NOT NULL,
     id_product INT NOT NULL,
     quantity INT NOT NULL,
-    FOREIGN KEY (id_requirement) REFERENCES requirements(id),
+    FOREIGN KEY (id_requirement) REFERENCES requirements(id) ON DELETE CASCADE,
     FOREIGN KEY (id_product) REFERENCES products(id)
 );
 
@@ -128,3 +128,18 @@ CREATE VIEW SELECTPROFILE AS
 SELECT u.id, u.names, u.surnames, u.phone, u.dni, u.user_name, u.email, u.password, c.name as charge_user
 FROM users u, charges c
 WHERE c.id = u.id_charge;
+-- * Boton Ver del listar requerimientos.
+
+CREATE VIEW VIEW_REQUIREMENT AS
+SELECT r.id , u.id as id_user , concat(u.names, ' ' ,u.surnames) as name, r.date_time, r.description, r.state,
+r.subtotal
+FROM requirements r, products_requirements pr, products p, categories c, users u
+WHERE pr.id_requirement = r.id
+AND r.id_user = u.id;
+
+CREATE VIEW PRODUCT_REQUIREMENT AS
+SELECT r.id, pr.id as pr_id, p.name, c.name as category_name, p.price, pr.quantity
+FROM requirements r, products_requirements pr, products p, categories c
+WHERE r.id = pr.id_requirement
+AND pr.id_product = p.id
+AND p.id_category = c.id;
