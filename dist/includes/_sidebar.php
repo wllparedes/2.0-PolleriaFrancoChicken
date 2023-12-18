@@ -108,10 +108,10 @@
                     </a>
                     <ul class="submenu">
                         <li class="submenu-item">
-                            <a href="ui-icons-bootstrap-icons.html">Nueva orden</a>
+                            <a href="./../../../supplying/purchase-orders/views/newOrder.php">Nueva orden</a>
                         </li>
                         <li class="submenu-item">
-                            <a href="ui-icons-fontawesome.html">Lista de ordenes</a>
+                            <a href="./../../../supplying/purchase-orders/views/listOrders.php">Lista de ordenes</a>
                         </li>
                     </ul>
                 </li>
