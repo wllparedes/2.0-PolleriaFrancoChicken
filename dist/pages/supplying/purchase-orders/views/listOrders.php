@@ -62,14 +62,15 @@ include("./../../../../php/verificar_session.php");
                             Lista de Ordenes
                         </div>
                         <div class="card-body">
-                            <table class="table table-striped" id="table-requirements">
+                            <table class="table table-striped" id="table-orders">
                                 <thead>
                                     <tr>
-                                        <th>ID Orden</th>
-                                        <th>ID Requerimiento</th>
+                                        <th>ID</th>
                                         <th>Proveedor</th>
+                                        <th>Observación</th>
                                         <th>Fecha</th>
                                         <th>Hora</th>
+                                        <th>Subtotal</th>
                                         <th>Total</th>
                                         <th>Estado</th>
                                         <th>Opciones</th>
@@ -107,9 +108,9 @@ include("./../../../../php/verificar_session.php");
 
     <!-- * parte de la pagina  
     <script src="./../controllers/deleteCategory.js" type="module"></script>-->
-    <script src="./../controllers/listRequirements.js" type="module"></script>
-    <script src="./../controllers/getRequirements.js" type="module"></script>
-    <script src="./../controllers/deleteRequirements.js" type="module"></script>
+    <script src="./../controllers/listOrders.js" type="module"></script>
+    <!-- <script src="./../controllers/getRequirements.js" type="module"></script> -->
+    <!-- <script src="./../controllers/deleteRequirements.js" type="module"></script> -->
 
 
 </body>

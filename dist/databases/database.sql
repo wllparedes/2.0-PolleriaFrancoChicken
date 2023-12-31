@@ -143,3 +143,9 @@ FROM requirements r, products_requirements pr, products p, categories c
 WHERE r.id = pr.id_requirement
 AND pr.id_product = p.id
 AND p.id_category = c.id;
+
+CREATE OR REPLACE VIEW VIEW_ORDER AS 
+SELECT po.id, po.id_requirement, s.company_name, po.state, po.observation, po.date_time, r.subtotal, po.total
+FROM purchase_orders po, suppliers s, requirements r
+WHERE po.id_supplier = s.id
+AND po.id_requirement = r.id;
