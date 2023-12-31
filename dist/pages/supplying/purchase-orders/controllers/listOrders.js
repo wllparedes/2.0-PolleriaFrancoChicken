@@ -38,3 +38,11 @@ export const dataTable = tableOrders.DataTable({
 	processing: true,
 	language: language,
 });
+
+// inicializar el datatable de productos
+export let tableProducts = $('#table-product').DataTable({
+	responsive: true,
+	autoWidth: false,
+	processing: true,
+	language: language,
+});

@@ -70,8 +70,8 @@ include("./../../../../php/verificar_session.php");
                                         <th>Observación</th>
                                         <th>Fecha</th>
                                         <th>Hora</th>
-                                        <th>Subtotal</th>
-                                        <th>Total</th>
+                                        <th>Subtotal (S/.)</th>
+                                        <th>Total (S/.)</th>
                                         <th>Estado</th>
                                         <th>Opciones</th>
                                     </tr>
@@ -86,7 +86,7 @@ include("./../../../../php/verificar_session.php");
 
             </div>
 
-            <!--?php include("./viewRequirements.php") ?-->
+            <?php include("./viewOrders.php") ?>
             
             <!-- start footer -->
             <?php include('./../../../../includes/_footer.php') ?>
@@ -106,10 +106,9 @@ include("./../../../../php/verificar_session.php");
     <script src="./../../../../assets/vendors/datatables/Responsive-2.2.1/js/dataTables.responsive.min.js"></script>
     <script src="./../../../../assets/vendors/datatables/Responsive-2.2.1/js/responsive.bootstrap4.min.js"></script>
 
-    <!-- * parte de la pagina  
-    <script src="./../controllers/deleteCategory.js" type="module"></script>-->
+    <!-- * parte de la pagina  -->
     <script src="./../controllers/listOrders.js" type="module"></script>
-    <!-- <script src="./../controllers/getRequirements.js" type="module"></script> -->
+    <script src="./../controllers/getOrder.js" type="module"></script>
     <!-- <script src="./../controllers/deleteRequirements.js" type="module"></script> -->
 
 

@@ -62,7 +62,6 @@ $(document).ready(() => {
 				data: postData,
 				dataType: 'JSON',
 				success: function (response) {
-					console.log(response);
 
 					if (!response.status) {
 						no_registrado('order de compra');

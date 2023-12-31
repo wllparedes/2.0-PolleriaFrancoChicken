@@ -28,8 +28,8 @@ while ($row = $result->fetch_assoc()) {
         'observation' => $row['observation'],
         'date' => $date,
         'hour' => $hour,
-        'subtotal' => 'S/. ' . $row['subtotal'],
-        'total' => 'S/. ' . $row['total']
+        'subtotal' => $row['subtotal'],
+        'total' => $row['total']
     ];
 }
 
