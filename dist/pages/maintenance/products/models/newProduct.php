@@ -9,38 +9,18 @@ if (isset($_POST['name'])) {
     $price = $_POST['price'];
     $id_category = (int) $_POST['id_category'];
 
+    try {
+        $query = "INSERT INTO products (name, price, id_category)  VALUES (?, ?, ?)";
+        $stmt = $conn->prepare($query);
+        $stmt->bind_param("ssi", $name, $price, $id_category);
+        $stmt->execute();
+        $stmt->close();
 
-    $uploadDirectory = "./../../../../assets/images/products/";
-    $image = $_FILES['image'];
-    $nameImage = $image['name'];
-    $pdfFilePath = $uploadDirectory . $nameImage;
+        $status = true;
 
-    $sizeImage = verifySizeImage($image['size']);
-
-    if (!$sizeImage) {
-
-        $status = 'sizeError';
-
-    } else {
-
-        try {
-            $query = "INSERT INTO products (name, price, id_category, url_image)  VALUES (?, ?, ?, ?)";
-            $stmt = $conn->prepare($query);
-            $stmt->bind_param("ssis", $name, $price, $id_category, $nameImage);
-            $stmt->execute();
-            $stmt->close();
-
-            if (move_uploaded_file($image['tmp_name'], $pdfFilePath)) {
-                $status = true;
-            } else {
-                $status = false;
-            }
-
-        } catch (Exception $e) {
-            $status = false;
-        }
+    } catch (Exception $e) {
+        $status = false;
     }
-
 
 }
 
@@ -51,4 +31,4 @@ echo json_encode([
     'status' => $status,
 ])
 
-    ?>
+?>

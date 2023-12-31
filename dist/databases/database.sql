@@ -16,7 +16,6 @@ create table products(
     name VARCHAR(20) NOT NULL,
     price DECIMAL(8,2) NOT NULL,
     id_category INT NOT NULL,
-    url_image VARCHAR(100) NOT NULL,
     FOREIGN KEY (id_category) REFERENCES categories(id)
 );
 
