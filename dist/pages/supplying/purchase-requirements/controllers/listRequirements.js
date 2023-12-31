@@ -2,7 +2,6 @@
 import { language } from './../../../../assets/js/global/esDatatable.js';
 
 let tableRequirements = $('#table-requirements');
-
 export const dataTable = tableRequirements.DataTable({
 	ajax: {
 		url: '../models/listRequirements.php',
@@ -32,6 +31,14 @@ export const dataTable = tableRequirements.DataTable({
 			},
 		},
 	],
+	responsive: true,
+	autoWidth: false,
+	processing: true,
+	language: language,
+});
+
+// inicializar el datatable de productos
+export let tableProducts = $('#table-product').DataTable({
 	responsive: true,
 	autoWidth: false,
 	processing: true,

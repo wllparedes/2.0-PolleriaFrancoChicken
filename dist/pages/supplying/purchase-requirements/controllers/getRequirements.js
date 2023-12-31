@@ -1,7 +1,7 @@
 /** @format */
 
-import { language } from './../../../../assets/js/global/esDatatable.js';
 import { verifyTarget } from '../../../../assets/js/global/verifyTarget.js';
+import { tableProducts } from './listRequirements.js';
 
 let tableRequirements = $('#table-requirements');
 tableRequirements.on('click', '.view', (e) => {
@@ -32,13 +32,6 @@ tableRequirements.on('click', '.view', (e) => {
 			$('#description').text(requerimientos.description);
             $('#state').html(state);
             $('#subtotal').text(requerimientos.subtotal);
-
-            let tableProducts = $('#table-product').DataTable({
-				responsive: true,
-				autoWidth: false,
-				processing: true,
-				language: language,
-			});
 
             tableProducts.clear().draw();
             productos.forEach((product) => {
