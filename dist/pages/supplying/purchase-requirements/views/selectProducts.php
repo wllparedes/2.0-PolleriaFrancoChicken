@@ -26,7 +26,7 @@
                         <button type="button" class="btn btn-danger close-modal" data-bs-dismiss="modal">
                             Cerrar
                         </button>
-                        <button type="button" class="btn btn-success ml-1 selectedProducts" data-bs-dismiss="modal">
+                        <button type="button" class="btn btn-success ml-1 selected" data-bs-dismiss="modal">
                             Seleccionar
                         </button>
                     </div>

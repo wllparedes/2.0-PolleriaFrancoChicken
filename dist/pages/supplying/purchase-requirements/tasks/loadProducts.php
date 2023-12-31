@@ -8,7 +8,7 @@ $stmt = $conn->prepare($query);
 $stmt->execute();
 $result = $stmt->get_result();
 
-$products;
+$products = [];
 
 while ($row = $result->fetch_assoc()) {
 

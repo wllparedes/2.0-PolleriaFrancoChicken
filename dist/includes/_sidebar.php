@@ -116,7 +116,7 @@
                     </ul>
                 </li>
 
-                <li class="sidebar-item has-sub">
+                <!-- <li class="sidebar-item has-sub">
                     <a href="#" class="sidebar-link">
                         <i class="bi bi-bar-chart-fill"></i>
                         <span>Comprobante de compra</span>
@@ -129,7 +129,7 @@
                             <a href="ui-chart-apexcharts.html">Lista de comprobantes</a>
                         </li>
                     </ul>
-                </li>
+                </li> -->
 
                 <li class="sidebar-title">Perfil</li>
 
