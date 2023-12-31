@@ -55,7 +55,7 @@ create table products_requirements(
     id_product INT NOT NULL,
     quantity INT NOT NULL,
     FOREIGN KEY (id_requirement) REFERENCES requirements(id) ON DELETE CASCADE,
-    FOREIGN KEY (id_product) REFERENCES products(id)
+    FOREIGN KEY (id_product) REFERENCES products(id) ON DELETE CASCADE
 );
 
 create table suppliers(
@@ -75,8 +75,8 @@ create table purchase_orders(
     total DECIMAL(8,2) NOT NULL,
     id_supplier INT NOT NULL,
     id_requirement INT NOT NULL,
-    FOREIGN KEY (id_requirement) REFERENCES requirements(id),
-    FOREIGN KEY (id_supplier) REFERENCES suppliers(id)
+    FOREIGN KEY (id_requirement) REFERENCES requirements(id) ON DELETE CASCADE,
+    FOREIGN KEY (id_supplier) REFERENCES suppliers(id) ON DELETE CASCADE
 );
 
 create table proofs_of_purchase(
@@ -145,7 +145,7 @@ AND pr.id_product = p.id
 AND p.id_category = c.id;
 
 CREATE OR REPLACE VIEW VIEW_ORDER AS 
-SELECT po.id, po.id_requirement, s.company_name, po.state, po.observation, po.date_time, r.subtotal, po.total
+SELECT po.id, po.id_requirement, s.company_name, s.ruc, s.address, po.state, po.observation, po.date_time, r.subtotal, po.total, r.date_time as date_time_r
 FROM purchase_orders po, suppliers s, requirements r
 WHERE po.id_supplier = s.id
 AND po.id_requirement = r.id;

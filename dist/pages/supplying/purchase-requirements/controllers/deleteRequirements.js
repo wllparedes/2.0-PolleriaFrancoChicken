@@ -1,10 +1,8 @@
 /** @format */
 
-// ? Eliminar
-
 import { verifyTarget } from '../../../../assets/js/global/verifyTarget.js';
 import { dataTable } from './listRequirements.js';
-import  {no_eliminado, si_eliminado, alerta_confirmacion}  from '../../../../assets/js/pages/modules-sweetalert.js';
+import  {no_eliminado, si_eliminado, alerta_confirmacion, error}  from '../../../../assets/js/pages/modules-sweetalert.js';
 
 let tableUsers = $('#table-requirements');
 
@@ -21,8 +19,13 @@ tableUsers.on('click', '.delete', (e) => {
 				dataType: 'JSON',
                 success: function (response) {
 
-					if (!response.status) {
+					if (response.status === 'notDelete') {
 						no_eliminado();
+						return;
+					}
+
+					if (!response.status) {
+						error();
 						return;
 					}
 
