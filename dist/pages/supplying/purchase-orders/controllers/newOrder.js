@@ -62,7 +62,6 @@ $(document).ready(() => {
 				data: postData,
 				dataType: 'JSON',
 				success: function (response) {
-
 					if (!response.status) {
 						no_registrado('order de compra');
 						return;
@@ -83,6 +82,11 @@ $(document).ready(() => {
 					renderTable2.limpiarTabla({
 						select: '#select-requirements',
 						divRender: '#table-requirement',
+						classMain: {
+							messageEmpty: 'messageEmptyWallace-1',
+							items: 'itemsOnTable-1',
+							table: 'tableRenderWallace-1',
+						},
 					});
 
 					limpiarFormularioYRedirigirA(

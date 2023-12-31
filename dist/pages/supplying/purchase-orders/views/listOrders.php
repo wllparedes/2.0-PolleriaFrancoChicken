@@ -109,7 +109,7 @@ include("./../../../../php/verificar_session.php");
     <!-- * parte de la pagina  -->
     <script src="./../controllers/listOrders.js" type="module"></script>
     <script src="./../controllers/getOrder.js" type="module"></script>
-    <!-- <script src="./../controllers/deleteRequirements.js" type="module"></script> -->
+    <script src="./../controllers/deleteOrder.js" type="module"></script>
 
 
 </body>
