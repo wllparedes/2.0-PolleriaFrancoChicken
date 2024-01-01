@@ -108,15 +108,15 @@
                     </a>
                     <ul class="submenu">
                         <li class="submenu-item">
-                            <a href="ui-icons-bootstrap-icons.html">Nueva orden</a>
+                            <a href="./../../../supplying/purchase-orders/views/newOrder.php">Nueva orden</a>
                         </li>
                         <li class="submenu-item">
-                            <a href="ui-icons-fontawesome.html">Lista de ordenes</a>
+                            <a href="./../../../supplying/purchase-orders/views/listOrders.php">Lista de ordenes</a>
                         </li>
                     </ul>
                 </li>
 
-                <li class="sidebar-item has-sub">
+                <!-- <li class="sidebar-item has-sub">
                     <a href="#" class="sidebar-link">
                         <i class="bi bi-bar-chart-fill"></i>
                         <span>Comprobante de compra</span>
@@ -129,7 +129,7 @@
                             <a href="ui-chart-apexcharts.html">Lista de comprobantes</a>
                         </li>
                     </ul>
-                </li>
+                </li> -->
 
                 <li class="sidebar-title">Perfil</li>
 

@@ -18,6 +18,7 @@ $(document).on('click', '.delete', (e) => {
 				data: { id },
 				dataType: 'JSON',
 				success: function (response) {
+					
 					if (!response.status) {
 						no_eliminado();
 						return;

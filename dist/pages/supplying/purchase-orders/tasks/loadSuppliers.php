@@ -2,25 +2,26 @@
 
 include("./../../../../databases/db.php");
 
-$query = "SELECT id, name FROM products";
+$query = "SELECT id, company_name FROM suppliers";
 
 $stmt = $conn->prepare($query);
 $stmt->execute();
 $result = $stmt->get_result();
 
-$products = [];
+$suppliers = [];
 
 while ($row = $result->fetch_assoc()) {
 
-    $products[] = [
+    $suppliers[] = [
         'value' => $row['id'],
-        'label' => $row['name'],
+        'label' => $row['company_name'],
     ];
 
 }
 
-$products = json_encode($products);
-echo $products;
+echo json_encode($suppliers);
+
+$stmt->close();
 $conn->close();
 
 ?>

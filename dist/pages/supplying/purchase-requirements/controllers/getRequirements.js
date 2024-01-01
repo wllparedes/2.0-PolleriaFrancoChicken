@@ -1,20 +1,12 @@
 /** @format */
 
-import { language } from './../../../../assets/js/global/esDatatable.js';
-
 import { verifyTarget } from '../../../../assets/js/global/verifyTarget.js';
-import { ValidarFormulario } from '../../../../assets/vendors/@wallace-validate/validarFormulario.js';
-import { limpiarModal } from '../../../../assets/js/global/limpiarModal.js';
-import { expresiones } from '../../../../assets/js/global/exprecionesRegulares.js';
+import { tableProducts } from './listRequirements.js';
 
-
-// ? seleccionamos la tabla
 let tableRequirements = $('#table-requirements');
-// ? cuando se de click dentro de table-users en algun elemento de clase .edit
 tableRequirements.on('click', '.view', (e) => {
 	let target = verifyTarget(e);
 	let id = target.getAttribute('data-id');
-    console.log(e)
 
 	$.ajax({
 		url: '../models/getRequirements.php',
@@ -23,12 +15,10 @@ tableRequirements.on('click', '.view', (e) => {
 		dataType: `JSON`,
 		success: function (response) {
 
+            console.log(response)
             let productos = response['productos'];
             let requerimientos = response['requerimientos'][0];
             
-            console.log(productos)
-            console.log(requerimientos)
-
             let dateParts = requerimientos['date_time'].split(" ");
             let day = dateParts[0];
             let hour = dateParts[1];
@@ -43,8 +33,6 @@ tableRequirements.on('click', '.view', (e) => {
             $('#state').html(state);
             $('#subtotal').text(requerimientos.subtotal);
 
-            
-            let tableProducts = $('#table-product').DataTable();
             tableProducts.clear().draw();
             productos.forEach((product) => {
                 tableProducts.row.add([
@@ -55,7 +43,6 @@ tableRequirements.on('click', '.view', (e) => {
                     product.quantity
                 ]).draw(false);
             });
-
 
 		},
 	});

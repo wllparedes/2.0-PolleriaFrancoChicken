@@ -102,19 +102,6 @@ include("./../../../../php/verificar_session.php");
                                                 </div>
                                             </div>
 
-                                            <!-- * subir imagen -->
-                                            <div class="row">
-                                                <div class="col-6 mb-1">
-                                                    <label for="category">Imagen del producto</label>
-                                                    <div class="form-group position-relative">
-                                                        <input type="file" data-max-file-size="1MB"
-                                                            class="image-preview-filepond" id="file-image"
-                                                            name="file-image">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- * subir imagen -->
-
                                             <!-- = Message Error -->
 
                                             <div class="row">

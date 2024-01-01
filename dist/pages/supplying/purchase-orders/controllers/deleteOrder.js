@@ -1,19 +1,19 @@
 /** @format */
 
 import { verifyTarget } from '../../../../assets/js/global/verifyTarget.js';
-import { dataTable } from './listRequirements.js';
+import { dataTable } from './listOrders.js';
 import  {no_eliminado, si_eliminado, alerta_confirmacion, error}  from '../../../../assets/js/pages/modules-sweetalert.js';
 
-let tableUsers = $('#table-requirements');
+let tableOrders = $('#table-orders');
 
-tableUsers.on('click', '.delete', (e) => {
+tableOrders.on('click', '.delete', (e) => {
 	alerta_confirmacion().then((resultado) => {
 		if (resultado) {
 			let target = verifyTarget(e);
 			let id = target.getAttribute('data-id');
 
 			$.ajax({
-				url: '../models/deleteRequirements.php',
+				url: '../models/deleteOrder.php',
 				type: 'POST',
 				data: { id },
 				dataType: 'JSON',

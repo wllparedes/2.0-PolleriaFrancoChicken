@@ -2,25 +2,26 @@
 
 include("./../../../../databases/db.php");
 
-$query = "SELECT id, name FROM products";
+$query = "SELECT id, subtotal FROM requirements WHERE state = 0";
 
 $stmt = $conn->prepare($query);
 $stmt->execute();
 $result = $stmt->get_result();
 
-$products = [];
+$requirements = [];
 
 while ($row = $result->fetch_assoc()) {
 
-    $products[] = [
+    $requirements[] = [
         'value' => $row['id'],
-        'label' => $row['name'],
+        'label' => $row['subtotal'],
     ];
 
 }
 
-$products = json_encode($products);
-echo $products;
+echo json_encode($requirements);
+
+$stmt->close();
 $conn->close();
 
 ?>
