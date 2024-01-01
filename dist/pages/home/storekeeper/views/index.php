@@ -277,16 +277,16 @@ include("./../../../../php/verificar_session.php");
 						<div class="card">
 							<div class="card-body py-4 px-5">
 								<div class="d-flex align-items-center">
-									<div class="avatar avatar-xl">
+									<div class="avatar avatar-lg">
 										<img src="./../../../../assets/images/faces/1.jpg" alt="Face 1" />
 									</div>
-									<div class="ms-3 name">
-										<h5 class="font-bold">
+									<div class="ms-3 name text-truncate">
+										<h6 class="font-bold text-truncate">
 											<?php echo $_SESSION["user_name"] ?>
-										</h5>
-										<h6 class="text-muted mb-0">
-											<?php echo $_SESSION["email"] ?>
 										</h6>
+										<h8 class="text-muted mb-0 text-truncate">
+											<?php echo $_SESSION["email"] ?>
+										</h8>
 									</div>
 								</div>
 							</div>
