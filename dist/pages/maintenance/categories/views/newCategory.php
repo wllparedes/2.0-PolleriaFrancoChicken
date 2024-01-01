@@ -10,9 +10,7 @@ include("./../../../../php/verificar_session.php");
 
 <head>
     <title>Crear categoria - Almacenero</title>
-    <link rel="stylesheet" href="./../../../../assets/vendors/choices.js/choices.min.css" />
-    <?php include('./../../../../includes/_head.php'); ?>
-    <link rel="stylesheet" href="./../../../../assets/vendors/sweetalert2/sweetalert2.min.css">
+    <?php include('./../../../../includes/_links_for_page.php'); ?>
 </head>
 
 <body>
@@ -66,7 +64,8 @@ include("./../../../../php/verificar_session.php");
                                                 <div class="col-lg-12 mb-1">
                                                     <label for="name">Nombre</label>
                                                     <div class="form-group position-relative has-icon-left">
-                                                        <input type="text" id="nameCategory" name="nameCategory" class="form-control" placeholder="Productos Derivados">
+                                                        <input type="text" id="nameCategory" name="nameCategory"
+                                                            class="form-control input-form" placeholder="Productos Derivados">
                                                         <div class="form-control-icon">
                                                             <i class="bi bi-bookmark-heart"></i>
                                                         </div>
@@ -75,17 +74,35 @@ include("./../../../../php/verificar_session.php");
                                                 <div class="col-lg-12 mb-1">
                                                     <label for="description">Descripción</label>
                                                     <div class="form-group position-relative has-icon-left">
-                                                        <input type="text" id="description" name="description" rows="5" class="form-control" placeholder="Acompañamientos para el pollo, como papas fritas, ensaladas y arroz.">
-                                                        <div class="form-control-icon">    
+                                                        <input type="text" id="description" name="description" rows="5"
+                                                            class="form-control input-form"
+                                                            placeholder="Acompañamientos para el pollo, como papas fritas, ensaladas y arroz.">
+                                                        <div class="form-control-icon">
                                                             <i class="bi bi-card-text"></i>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            <!-- = Message Error -->
+
+                                            <div class="row">
+                                                <div class="form-group col-md-12 contenedor__mensaje"
+                                                    id="contenedor__mensaje">
+                                                    <div class="formulario__mensaje bg-danger shadow-danger">
+                                                        <i class="bi bi-exclamation-triangle-fill"></i></span> <b
+                                                            class="p-1">Rellene el formulario
+                                                            correctamente.</b>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
                                             <!--? Container btns -->
                                             <div class="row justify-content-center">
                                                 <div class="form-group col-lg-4 col-md-8 d-flex justify-content-around">
-                                                    <button id="registrar" type="submit" name="registrar" class="btn btn-sm btn-success ">
+                                                    <button id="registrar" type="submit" name="registrar"
+                                                        class="btn btn-sm btn-success ">
                                                         &nbsp;<b>Registrar</b>
                                                     </button>
                                                 </div>
@@ -101,25 +118,19 @@ include("./../../../../php/verificar_session.php");
                 <!-- Basic Inputs Groups end -->
 
             </div>
-            
-            <?php include('./editCategory.php') ?>
+
             <!-- start footer -->
             <?php include('./../../../../includes/_footer.php') ?>
             <!-- end footer -->
 
         </div>
     </div>
-    <script src="./../../../../assets/vendors/jquery/jquery.min.js"></script>
-    <script src="./../../../../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="./../../../../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="./../../../../assets/vendors/choices.js/choices.min.js"></script>
-    <script src="./../../../../assets/js/main.js"></script>
-    <!-- !! -->
-    <script src="./../../../../assets/vendors/sweetalert2/sweetalert2.all.min.js"></script>
-    <script src="./../../../../assets/js/pages/modules-sweetalert.js"></script>
+
+    <?php include('./../../../../includes/_scripts_for_page.php') ?>
+
+    <!-- * parte de la pagina -->
     <script src="../controllers/NewCategory.js" type="module"></script>
-    <script src="../../../../assets/js/underscore-min.js"></script>
-    
+
 </body>
 
 </html>

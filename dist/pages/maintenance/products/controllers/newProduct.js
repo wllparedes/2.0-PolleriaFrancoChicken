@@ -1,50 +1,34 @@
 /** @format */
 
 import { expresiones } from '../../../../assets/js/global/exprecionesRegulares.js';
+import { limpiarFormularioYRedirigirA } from '../../../../assets/js/global/limpiarFormularioYRedirigir.js';
 import {
-	validarCampo,
-	campos,
-} from '../../../../assets/js/global/validarCampos.js';
+	si_registrado,
+	no_registrado,
+	sizeError,
+	error,
+} from '../../../../assets/js/pages/modules-sweetalert.js';
+import { ValidarFormulario } from '../../../../assets/vendors/@wallace-validate/validarFormulario.js';
 
 $(document).ready(() => {
-	//  Seleccionar Elementos DOM ( contenedor__mensaje / all inputs )
-
 	let contenedor_mensaje = document.getElementById('contenedor__mensaje');
-	const inputs = document.querySelectorAll('#formulario input');
-	// Start Validación del formulario
+	const inputs = document.querySelectorAll('#formulario .input-form');
 
-	const validarFormulario = (e) => {
-		switch (e.target.name) {
-			case 'name':
-				validarCampo(expresiones.producto, 'name', e.target);
-				break;
-			case 'price':
-				validarCampo(expresiones.precio, 'price', e.target);
-				break;
-		}
-	};
+	let validadorFormulario = new ValidarFormulario();
 
-	inputs.forEach((input) => {
-		input.addEventListener('keyup', validarFormulario);
-		input.addEventListener('blur', validarFormulario);
+	validadorFormulario.validarFormulario(inputs, {
+		name: expresiones.name,
+		price: expresiones.price,
 	});
 
-	// End
-
-	// Cuando se de Submit en el Btn Registrar
-
-	$('#formulario').submit(function (p) {
-		p.preventDefault();
+	$('#formulario').submit(function (e) {
+		e.preventDefault();
 
 		let select_categoria = $('#category');
 
-		if (
-			campos.name &&
-			campos.price &&
-			select_categoria.val()
-		) {
-			// Ajax
-			const postData = {
+		if (validadorFormulario.estadoFormulario() && select_categoria.val()) {
+
+			let postData = {
 				name: $('#name').val(),
 				price: $('#price').val(),
 				id_category: select_categoria.val(),
@@ -54,26 +38,23 @@ $(document).ready(() => {
 				url: '../models/newProduct.php',
 				type: 'POST',
 				data: postData,
-                success: function (response) {
-                    let respuesta = response.trim();
-                    console.log(respuesta)
-					if (respuesta === 'error') {
-						no_registrado('producto');
-					} else {
-						//
-						document
-							.querySelectorAll('#formulario input')
-							.forEach((i) => {
-								i.classList.remove('is-valid', 'is-invalid');
-							});
-						si_registrado();
-						$('#formulario').trigger('reset');
-						// redireccionar('lista-usuarios');
+				dataType: 'JSON',
+				success: function (response) {
+
+					if (!response.status) {
+						error('producto');
+						return;
 					}
+
+					si_registrado();
+					limpiarFormularioYRedirigirA(
+						contenedor_mensaje,
+						'listProducts'
+					);
 				},
 			});
 		} else {
-			// contenedor_mensaje.classList.add('contenedor__mensaje-activo');
+			contenedor_mensaje.classList.add('contenedor__mensaje-activo');
 		}
 	});
 });

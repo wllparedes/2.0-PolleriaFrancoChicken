@@ -1,76 +1,21 @@
 /** @format */
 
-import { expresiones } from '../../../../assets/js/global/exprecionesRegulares.js';
-import {
-	validarCampo,
-	campos,
-} from '../../../../assets/js/global/validarCampos.js';
 import { dataTable } from './listUsers.js';
+import { error, si_actualizado } from '../../../../assets/js/pages/modules-sweetalert.js';
+import { validadorFormulario, contenedor_mensaje } from './getUser.js';
 
 $(document).ready(function () {
-	let contenedor_mensaje = document.getElementById('contenedor__mensaje');
-	const inputs = document.querySelectorAll('#editUser input');
 
-	document.querySelector('.close-modal').addEventListener('click', () => {
-		// * limpiar el mensaje de incorrecto
-		contenedor_mensaje.classList.remove('contenedor__mensaje-activo');
-		contenedor_mensaje.classList.add('contenedor__mensaje');
-
-		// * limpiar el color verde o rojo de los imputs
-		document.querySelectorAll('#editUser input').forEach((i) => {
-			i.classList.remove('is-valid', 'is-invalid');
-		});
-	});
-
-	const validarFormulario = (e) => {
-		switch (e.target.name) {
-			case 'name':
-				validarCampo(expresiones.name, 'name', e.target);
-				break;
-			case 'surnames':
-				validarCampo(expresiones.surnames, 'surnames', e.target);
-				break;
-			case 'phone':
-				validarCampo(expresiones.phone, 'phone', e.target);
-				break;
-			case 'dni':
-				validarCampo(expresiones.dni, 'dni', e.target);
-				break;
-			case 'userName':
-				validarCampo(expresiones.userName, 'userName', e.target);
-				break;
-			case 'email':
-				validarCampo(expresiones.email, 'email', e.target);
-				break;
-			case 'password':
-				validarCampo(expresiones.password, 'password', e.target);
-				break;
-		}
-	};
-
-	inputs.forEach((input) => {
-		input.addEventListener('keyup', validarFormulario);
-		input.addEventListener('blur', validarFormulario);
-	});
-
-	$('#editUser').on('click', '.actualizar', function (e) {
+	$('#editUser').on('click', '.update', function (e) {
 		e.preventDefault();
-		// Almacena los elementos seleccionados una vez
+
+		let target = e.target;
+		let id = target.getAttribute('data-id');
 		let select_cargo = $('#select-charges');
 
-		if (
-			campos.name &&
-			campos.surnames &&
-			campos.phone &&
-			campos.dni &&
-			campos.userName &&
-			campos.email &&
-			campos.password &&
-			select_cargo.val()
-		) {
-			// Datos para la actualización
+		if (validadorFormulario.estadoFormulario() == true && select_cargo.val()) {
 			const newData = {
-				id: $('#id_usuario').val(),
+				id: id,
 				name: $('#name').val(),
 				surnames: $('#surnames').val(),
 				phone: $('#phone').val(),
@@ -81,36 +26,26 @@ $(document).ready(function () {
 				id_charge: select_cargo.val(),
 			};
 
-			// Envía la solicitud de actualización
 			$.ajax({
 				url: '../models/updateUser.php',
 				type: 'POST',
 				data: newData,
+				dataType: 'JSON',
 				success: function (response) {
-					let respuesta = response.trim();
-					if (respuesta === 'error') {
+					if (!response.status) {
 						error();
-					} else {
-						$('#editUser').modal('hide');
-						si_actualizado();
-						dataTable.ajax.reload();
-						contenedor_mensaje.classList.add('contenedor__mensaje');
-						contenedor_mensaje.classList.remove(
-							'contenedor__mensaje-activo'
-						);
+						return;
 					}
+
+					si_actualizado();
+					dataTable.ajax.reload();
+
 				},
 				complete: function () {
-					document
-						.querySelectorAll('#editUser input')
-						.forEach((i) => {
-							i.classList.remove('is-valid', 'is-invalid');
-						});
 					$('#editUser').modal('toggle');
 				},
 			});
 		} else {
-			// Mostrar mensaje de validación
 			contenedor_mensaje.classList.add('contenedor__mensaje-activo');
 		}
 	});

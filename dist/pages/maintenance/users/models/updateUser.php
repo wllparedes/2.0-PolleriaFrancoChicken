@@ -22,11 +22,16 @@ try {
     $stmt->close();
 
     // Devolver un mensaje de éxito en formato JSON
-    echo 'correcto';
+    $status = true;
+
 } catch (Exception $e) {
-    echo 'error';
+    $status = false;
 }
 
 $conn->close();
+
+echo json_encode([
+    'status' => $status
+])
 
 ?>

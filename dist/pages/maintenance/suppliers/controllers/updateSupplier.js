@@ -1,75 +1,22 @@
 /** @format */
 
-import { expresiones } from '../../../../assets/js/global/exprecionesRegulares.js';
-import {
-	validarCampo,
-	campos,
-} from '../../../../assets/js/global/validarCampos.js';
 import { dataTable } from './listSuppliers.js';
-// ? ACTUALIZAR
+import { error, si_actualizado } from '../../../../assets/js/pages/modules-sweetalert.js';
+import { validadorFormulario, contenedor_mensaje } from './getSupplier.js';
+
 
 $(document).ready(() => {
-	let contenedor_mensaje = document.getElementById('contenedor__mensaje');
-	const inputs = document.querySelectorAll('#editSupplier input');
 
-	document.querySelector('.close-modal').addEventListener('click', () => {
-		// * limpiar el mensaje de incorrecto
-		contenedor_mensaje.classList.remove('contenedor__mensaje-activo');
-		contenedor_mensaje.classList.add('contenedor__mensaje');
+	$('#editSupplier').on('click', '.update', function (e) {
 
-		// * limpiar el color verde o rojo de los imputs
-		document.querySelectorAll('#editSupplier input').forEach((i) => {
-			i.classList.remove('is-valid', 'is-invalid');
-		});
-	});
-
-	// Start ValidaciÃ³n del formulario
-
-	const validarFormulario = (e) => {
-		switch (e.target.name) {
-			case 'razon_social':
-				validarCampo(
-					expresiones.razon_social,
-					'razon_social',
-					e.target
-				);
-				break;
-			case 'direccion':
-				validarCampo(expresiones.direccion, 'direccion', e.target);
-				break;
-			case 'ruc':
-				validarCampo(expresiones.ruc, 'ruc', e.target);
-				break;
-			case 'phone':
-				validarCampo(expresiones.phone, 'phone', e.target);
-				break;
-			case 'email':
-				validarCampo(expresiones.email, 'email', e.target);
-				break;
-		}
-	};
-
-	inputs.forEach((input) => {
-		input.addEventListener('keyup', validarFormulario);
-		input.addEventListener('blur', validarFormulario);
-	});
-
-	// End
-
-	//? Cuando se de click al boton actualizar
-
-	$('#editSupplier').on('click', '.actualizar', function (e) {
 		e.preventDefault();
-		if (
-			campos.razon_social &&
-			campos.direccion &&
-			campos.ruc &&
-			campos.phone &&
-			campos.email
-		) {
-			// Ajax
+
+		let target = e.target;
+		let id = target.getAttribute('data-id');
+
+		if (validadorFormulario.estadoFormulario() == true) {
 			const newData = {
-				id: $('#id_supplier').val(),
+				id: id,
 				razon_social: $('#razon_social').val(),
 				direccion: $('#direccion').val(),
 				ruc: $('#ruc').val(),
@@ -80,36 +27,18 @@ $(document).ready(() => {
 				url: '../models/updateSupplier.php',
 				type: 'POST',
 				data: newData,
+				dataType: 'JSON',
 				success: function (response) {
-					let respuesta = response.trim();
-					if (respuesta === 'error') {
+					if (!response.status) {
 						error();
-					} else {
-						$('#editUser').modal('hide');
-						$('#editSupplier').modal('hide');
-						si_actualizado();
-						dataTable.ajax.reload();
-						/*fetchCategorias(); */
-						/* document.getElementById("search").value = ""; */
-						/* $('#categorias-result').hide(); */
-						//
-						/* document.querySelectorAll('.formulariogrupo-correcto').forEach((i) => {
-                            i.classList.remove('formulariogrupo-correcto')
-                        }) */
-						/* contenedor_mensaje.classList.remove('contenedor__mensaje-activo'); */
+						return;
 					}
+
+					si_actualizado();
+					dataTable.ajax.reload();
 				},
 				complete: function () {
-					document
-						.querySelectorAll('#editSupplier input')
-						.forEach((i) => {
-							i.classList.remove('is-valid', 'is-invalid');
-						});
 					$('#editSupplier').modal('toggle');
-					contenedor_mensaje.classList.add('contenedor__mensaje');
-					contenedor_mensaje.classList.remove(
-						'contenedor__mensaje-activo'
-					);
 				},
 			});
 		} else {

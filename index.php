@@ -6,30 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <link rel="stylesheet" href="dist/assets/css/login/login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="dist/assets/img/login/icon.png" type="image/png">
     <title>Polleria | Franco Chicken </title>
 </head>
 
 <body>
-    <div class="container">
+    <!--Formulario-->
+    <div class="wrapper">
         <form id="form-login">
-            <h1 class="text-center">Bienvenido</h2>
-                <div id="mensaje" class="mensaje">
-                    <span>Complete los campos con los datos correspondientes</span>
-                </div>
-                <div class="input-group">
-                    <label class="label">Correo Electronico</label>
-                    <input autocomplete="off" name="email" id="email" class="input" type="email">
-                    <div></div>
-                </div>
+            <h1>Bienvenido</h1>
+            <div id="mensaje" class="mensaje">
+                <span>Complete los campos con los datos correspondientes</span>
+            </div>
+            <div class="input-box">
+                <input autocomplete="off" name="email" id="email" type="email" placeholder="Correo electronico">
+                <i class='bx bxs-envelope'></i>
+            </div>
+            <div class="input-box">
+                <input autocomplete="off" name="password" id="password" type="password" placeholder="Contraseña">
+                <i class='bx bxs-lock-alt'></i>
+            </div>
 
-                <div class="input-group">
-                    <label class="label">Contraseña</label>
-                    <input autocomplete="off" name="password" id="password" class="input" type="password">
-                    <div></div>
-                </div>
-
-                <button id="btnIngresar">Ingresar </button>
+            <button id="btnIngresar" class="btn">Ingresar</button>
         </form>
     </div>
 

@@ -1,37 +1,33 @@
-import { dataTable } from "./listSuppliers.js";
+/** @format */
+
+import { verifyTarget } from '../../../../assets/js/global/verifyTarget.js';
+import { dataTable } from './listSuppliers.js';
+import  { alerta_confirmacion ,no_eliminado, si_eliminado}  from '../../../../assets/js/pages/modules-sweetalert.js';
 
 // ? Eliminar
-$(document).on('click', '.eliminar', function () {
-    alerta_confirmacion().then((resultado) => {
-        if (resultado) {
-            // Accede a la fila correspondiente en la tabla DataTable
-            let row = $(this).closest('tr');
-            
-            // Obtén el ID de la categoría de la fila
-            let id = dataTable.cell(row, 0).data();
+$(document).on('click', '.delete', function (e) {
+	alerta_confirmacion().then((resultado) => {
+		let target = verifyTarget(e);
+		let id = target.getAttribute('data-id');
 
-            // Realiza la eliminación utilizando DataTables
-            dataTable.row(row).remove().draw();
-
-            // Realiza la solicitud AJAX para eliminar la categoría en el servidor
-            $.ajax({
-                url: '../models/deleteSupplier.php',
-                type: 'POST',
-                data: { id },
-                success: function (response) {
-                    let respuesta = response.trim();
-                    if (respuesta !== 'correcto') {
-                        no_eliminado();
-                    } else {
-                        si_eliminado();
-                        dataTable.ajax.reload();
-                    }
-                },
-                error: function (error) {
-                    console.error('Error al eliminar:', error);
-                    // Manejar errores según sea necesario
-                }
-            });
-        }
-    });
+		if (resultado) {
+			$.ajax({
+				url: '../models/deleteSupplier.php',
+				type: 'POST',
+				data: { id },
+				dataType: 'JSON',
+				success: function (response) {
+					if (!response.status) {
+						no_eliminado();
+						return;
+					}
+					si_eliminado();
+					dataTable.ajax.reload();
+				},
+				error: function (error) {
+					console.error('Error al eliminar:', error);
+				},
+			});
+		}
+	});
 });

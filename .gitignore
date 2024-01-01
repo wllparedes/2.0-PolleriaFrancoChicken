@@ -1,2 +1,7 @@
 node_modules
 .vscode
+dist/docs
+dist/assets/images/products/*.png
+dist/assets/images/products/*.jpg
+dist/assets/images/products/*.jfif
+dist/assets/images/products/*.jpeg

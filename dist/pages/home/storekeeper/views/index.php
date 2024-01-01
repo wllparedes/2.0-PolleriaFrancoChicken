@@ -2,8 +2,6 @@
 
 include("./../../../../php/empezar_session.php");
 include("./../../../../php/verificar_session.php");
-// include("./../../../../php/calcular-registros.php");
-// include("./../../../../php/ventas_compras.php");
 
 ?>
 
@@ -277,10 +275,10 @@ include("./../../../../php/verificar_session.php");
 						<div class="card">
 							<div class="card-body py-4 px-5">
 								<div class="d-flex align-items-center">
-									<div class="avatar avatar-xl">
+									<!-- <div class="avatar avatar-xl">
 										<img src="./../../../../assets/images/faces/1.jpg" alt="Face 1" />
-									</div>
-									<div class="ms-3 name">
+									</div> -->
+									<div class="ms-2 name">
 										<h5 class="font-bold">
 											<?php echo $_SESSION["user_name"] ?>
 										</h5>

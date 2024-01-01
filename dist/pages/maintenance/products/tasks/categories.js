@@ -4,17 +4,21 @@ $(document).ready(() => {
 	$.ajax({
 		url: '../tasks/categories.php',
 		type: 'GET',
+		dataType: 'JSON',
 		success: function (response) {
-			let data = JSON.parse(response);
-			const element = document.querySelector('.categories');
-			const choices = new Choices(element, {
-				searchEnabled: true,
-				searchChoices: true,
-				placeholder: true,
-				placeholderValue: 'Seleccionar categoria',
-				noResultsText: 'No hay resultados',
-				itemSelectText: 'Click para seleccionar',
-				choices: data, 
+			const element = document.getElementById('category');
+
+			VirtualSelect.init({
+				ele: element,
+				options: response,
+
+				search: true,
+				noSearchResultsText: 'No se encontraron categorias',
+				searchPlaceholderText: 'Buscar categoria',
+
+				required: true,
+				placeholder: 'Seleccione una categoria',
+				noOptionsText: 'No hay categorias registradas',
 			});
 		},
 	});

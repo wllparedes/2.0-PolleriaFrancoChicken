@@ -17,7 +17,7 @@ $json = array(
 );
 
 while ($row = $result->fetch_assoc()) {
-    $json['user'][] = array( 
+    $json['user'] = array( 
         'id' => $row['id'],
         'names' => $row['names'],
         'surnames' => $row['surnames'],

@@ -1,63 +1,31 @@
 /** @format */
 
-// ? MANTENIMIENTO DE CLIENTES
 import { expresiones } from '../../../../assets/js/global/exprecionesRegulares.js';
-import {
-	validarCampo,
-	campos,
-} from '../../../../assets/js/global/validarCampos.js';
+import { limpiarFormularioYRedirigirA } from '../../../../assets/js/global/limpiarFormularioYRedirigir.js';
+import { no_registrado, si_registrado} from '../../../../assets/js/pages/modules-sweetalert.js';
+import { ValidarFormulario } from '../../../../assets/vendors/@wallace-validate/validarFormulario.js';
+
 
 $(document).ready(() => {
-	//  Seleccionar Elementos DOM ( contenedor__mensaje / all inputs )
 
 	let contenedor_mensaje = document.getElementById('contenedor__mensaje');
-	const inputs = document.querySelectorAll('#formulario input');
-	// Start Validación del formulario
+	const inputs = document.querySelectorAll('#formulario .input-form');
 
-	const validarFormulario = (e) => {
-		switch (e.target.name) {
-			case 'razon_social':
-				validarCampo(
-					expresiones.razon_social,
-					'razon_social',
-					e.target
-				);
-				break;
-			case 'direccion':
-				validarCampo(expresiones.direccion, 'direccion', e.target);
-				break;
-			case 'ruc':
-				validarCampo(expresiones.ruc, 'ruc', e.target);
-				break;
-			case 'phone':
-				validarCampo(expresiones.phone, 'phone', e.target);
-				break;
-			case 'email':
-				validarCampo(expresiones.email, 'email', e.target);
-				break;
-		}
-	};
+	let validadorFormulario = new ValidarFormulario();
 
-	inputs.forEach((input) => {
-		input.addEventListener('keyup', validarFormulario);
-		input.addEventListener('blur', validarFormulario);
+	validadorFormulario.validarFormulario(inputs, {
+		razon_social: expresiones.razon_social,
+		direccion: expresiones.direccion,
+		ruc: expresiones.ruc,
+		phone: expresiones.phone,
+		email: expresiones.email
 	});
 
-	// End
-
-	// Cuando se de Submit en el Btn Registrar
 
 	$('#formulario').submit(function (e) {
 		e.preventDefault();
 
-		if (
-			campos.razon_social &&
-			campos.direccion &&
-			campos.ruc &&
-			campos.phone &&
-			campos.email
-		) {
-			// Ajax
+		if (validadorFormulario.estadoFormulario() === true) {
 			const postData = {
 				razon_social: $('#razon_social').val(),
 				direccion: $('#direccion').val(),
@@ -70,26 +38,17 @@ $(document).ready(() => {
 				url: '../models/newSupplier.php',
 				type: 'POST',
 				data: postData,
+				dataType: 'JSON',
 				success: function (response) {
-					let respuesta = response.trim();
-					console.log(respuesta);
-					if (respuesta === 'error') {
+
+					if (!response.status) {
 						no_registrado('proveedor');
-					} else {
-						//
-						document
-							.querySelectorAll('#formulario input')
-							.forEach((i) => {
-								i.classList.remove('is-valid', 'is-invalid');
-							});
-						si_registrado();
-						$('#formulario').trigger('reset');
-						redireccionar('listSuppliers');
-						contenedor_mensaje.classList.remove(
-							'contenedor__mensaje-activo'
-						);
-						contenedor_mensaje.classList.add('contenedor__mensaje');
+						return;
 					}
+
+					si_registrado();
+					limpiarFormularioYRedirigirA(contenedor_mensaje, 'listSuppliers');
+				
 				},
 			});
 		} else {

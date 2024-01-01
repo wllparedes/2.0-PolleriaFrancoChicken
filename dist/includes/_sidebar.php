@@ -3,7 +3,7 @@
         <div class="sidebar-header">
             <div class="d-flex justify-content-between">
                 <div class="logo">
-                    <a href="index.html"><img src="./../../../../assets/images/logo/logo.png" alt="Logo"
+                    <a href="./../../../home/storekeeper/views/index.php"><img src="./../../../../assets/images/logo/logo.png" alt="Logo"
                             srcset="" /></a>
                 </div>
                 <div class="toggler">
@@ -93,10 +93,10 @@
                     </a>
                     <ul class="submenu">
                         <li class="submenu-item">
-                            <a href="ui-widgets-chatbox.html">Nuevo requerimiento</a>
+                            <a href="./../../../supplying/purchase-requirements/views/newRequirement.php">Nuevo requerimiento</a>
                         </li>
                         <li class="submenu-item">
-                            <a href="ui-widgets-pricing.html">Lista de requerimientos</a>
+                            <a href="./../../../supplying/purchase-requirements/views/listRequirements.php">Lista de requerimientos</a>
                         </li>
                     </ul>
                 </li>
@@ -108,15 +108,15 @@
                     </a>
                     <ul class="submenu">
                         <li class="submenu-item">
-                            <a href="ui-icons-bootstrap-icons.html">Nueva orden</a>
+                            <a href="./../../../supplying/purchase-orders/views/newOrder.php">Nueva orden</a>
                         </li>
                         <li class="submenu-item">
-                            <a href="ui-icons-fontawesome.html">Lista de ordenes</a>
+                            <a href="./../../../supplying/purchase-orders/views/listOrders.php">Lista de ordenes</a>
                         </li>
                     </ul>
                 </li>
 
-                <li class="sidebar-item has-sub">
+                <!-- <li class="sidebar-item has-sub">
                     <a href="#" class="sidebar-link">
                         <i class="bi bi-bar-chart-fill"></i>
                         <span>Comprobante de compra</span>
@@ -129,12 +129,12 @@
                             <a href="ui-chart-apexcharts.html">Lista de comprobantes</a>
                         </li>
                     </ul>
-                </li>
+                </li> -->
 
                 <li class="sidebar-title">Perfil</li>
 
                 <li class="sidebar-item">
-                    <a href="https://zuramai.github.io/mazer/docs" class="sidebar-link">
+                    <a href="./../../../maintenance/profile/views/viewProfile.php" class="sidebar-link">
                         <i class="bi bi-life-preserver"></i>
                         <span>Mi perfil</span>
                     </a>

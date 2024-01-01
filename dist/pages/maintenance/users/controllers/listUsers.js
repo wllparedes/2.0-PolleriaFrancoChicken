@@ -1,10 +1,5 @@
 /** @format */
 import { language } from './../../../../assets/js/global/esDatatable.js';
-import {
-	validarCampo,
-	campos,
-} from '../../../../assets/js/global/validarCampos.js';
-
 let tableUsers = $('#table-users');
 
 export const dataTable = tableUsers.DataTable({
@@ -24,8 +19,17 @@ export const dataTable = tableUsers.DataTable({
 		{ data: 'email' },
 		{ data: 'charge' },
 		{
-			defaultContent:
-				'<button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editUser"><i class="bi bi-pen-fill"></i></button> &nbsp;<button class="eliminar btn btn-sm btn-danger "> <i class="bi bi-trash"></i> </button>',
+			render: function (data, type, row) {
+				return `<div class="btn-group btn-group-sm">
+					<button class="edit btn btn-sm btn-warning" data-id="${row.id_user}" data-bs-toggle="modal" data-bs-target="#editUser">
+						<i class="fas fa-pen"></i>
+					</button> 
+					&nbsp;
+					<button class="delete btn btn-sm btn-danger" data-id="${row.id_user}"> 
+						<i class="fas fa-trash"></i>
+					</button>
+				</div>`;
+			},
 		},
 	],
 	responsive: true,
@@ -34,49 +38,3 @@ export const dataTable = tableUsers.DataTable({
 	language: language,
 });
 
-let editCategoryModal = new bootstrap.Modal(
-	document.getElementById('editUser')
-);
-
-editCategoryModal._element.addEventListener('show.bs.modal', function (event) {
-	let button = event.relatedTarget;
-
-	let row = button.closest('tr');
-
-	let id = dataTable.cell(row, 0).data();
-
-	$.ajax({
-		url: '../models/getUser.php',
-		type: 'GET',
-		data: { id },
-		dataType: `JSON`,
-		success: function (response) {
-			// Aquí cargas los datos del cliente en los campos del formulario en el modal
-			let datos = response;
-			let usuario = datos['user'][0];
-			let cargos = datos['charge'];
-
-			$('#id_usuario').val(usuario.id);
-			$('#name').val(usuario.names);
-			$('#surnames').val(usuario.surnames);
-			$('#phone').val(usuario.phone);
-			$('#dni').val(usuario.dni);
-			$('#userName').val(usuario.user_name);
-			$('#email').val(usuario.email);
-			$('#password').val(usuario.password);
-
-			const element = document.getElementById('select-charges');
-			VirtualSelect.init({
-				ele: element,
-				options: cargos,
-				required: true,
-				placeholder: 'Seleccione un cargo',
-				selectedValue: usuario.id_charge,
-			});
-
-			Object.keys(campos).forEach((campo) => {
-				campos[campo] = true;
-			});
-		},
-	});
-});
