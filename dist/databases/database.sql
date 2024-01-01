@@ -54,7 +54,7 @@ create table products_requirements(
     id_product INT NOT NULL,
     quantity INT NOT NULL,
     FOREIGN KEY (id_requirement) REFERENCES requirements(id) ON DELETE CASCADE,
-    FOREIGN KEY (id_product) REFERENCES products(id) ON DELETE CASCADE
+    FOREIGN KEY (id_product) REFERENCES products(id) 
 );
 
 create table suppliers(
@@ -148,3 +148,5 @@ SELECT po.id, po.id_requirement, s.company_name, s.ruc, s.address, po.state, po.
 FROM purchase_orders po, suppliers s, requirements r
 WHERE po.id_supplier = s.id
 AND po.id_requirement = r.id;
+
+
