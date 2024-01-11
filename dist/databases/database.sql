@@ -32,7 +32,7 @@ INSERT INTO categories (name, description) VALUES
 
 create table products(
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    name VARCHAR(20) NOT NULL,
+    name VARCHAR(40) NOT NULL,
     price DECIMAL(8,2) NOT NULL,
     id_category INT NOT NULL,
     FOREIGN KEY (id_category) REFERENCES categories(id)
@@ -154,7 +154,7 @@ insert users values (NULL ,'Adam', 'Milner', '987268698', '94875898', 'Adam  Mil
 
 -- Insercion de categorias
 
-insert into categories values (1,'Pollo Entero','Productos que incluyen pollos enteros sin cortes');
+-- insert into categories values (1,'Pollo Entero','Productos que incluyen pollos enteros sin cortes');
 
 -- Insercion de productos
 
