@@ -5,3 +5,5 @@
 <script src="./../../../../assets/js/pages/dashboard.js"></script>
 
 <script src="./../../../../assets/js/main.js"></script>
+<script src="./../../../../assets/js/app.js"></script>
+<script src="./../../../../assets/js/dark.js"></script>
