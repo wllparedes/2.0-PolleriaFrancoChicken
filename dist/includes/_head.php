@@ -12,5 +12,3 @@
     <link rel="stylesheet" href="./../../../../assets/css/app.css" />
     <link rel="icon" href="./../../../../assets/images/login/icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./../../../../assets/css/custom.css" />
-    <link rel="stylesheet" href="./../../../../assets/css/app-dark.css" />
-    <link rel="stylesheet" href="./../../../../assets/css/iconly.css" />
