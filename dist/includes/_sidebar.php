@@ -5,7 +5,7 @@
             <div class="logo">
                 <a href="./../../../home/storekeeper/views/index.php"><img src="./../../../../assets/images/logo/logo.png" alt="Logo"></a>
             </div>
-            <div class="sidebar-toggler  x">
+            <div class="toggler">
                 <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
             </div>
         </div>
