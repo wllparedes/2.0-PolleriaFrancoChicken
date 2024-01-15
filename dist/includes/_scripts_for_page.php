@@ -7,4 +7,5 @@
     <script src="../../../../assets/js/underscore-min.js"></script>
     <script src="./../../../../assets/vendors/@fortawesome/fontawesome-free/js/all.min.js"></script>
     <script src="./../../../../assets/js/main.js"></script>
-
+    <script src="./../../../../assets/js/app.js"></script>
+    <script src="./../../../../assets/js/dark.js"></script>
