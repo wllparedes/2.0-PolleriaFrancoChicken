@@ -35,7 +35,7 @@ include("./../../../../php/verificar_session.php");
                 </a>
             </header>
 
-            <div class="page-heading">
+            <div class="page-heading" id="heading">
                 <div class="page-title">
                     <div class="row">
                         <div class="col-12 col-md-6 order-md-1 order-last">
@@ -58,9 +58,9 @@ include("./../../../../php/verificar_session.php");
                 <!-- * DATA TABLES -->
 
                 <section class="section">
-                    <div class="card">
-                        <div class="card-header">
-                            Lista de Proveedores
+                    <div class="card" id="dataTable">
+                        <div class="card-header" id="headerTable">
+                            Generar reportes de mantenimiento (EXCEL - PDF)
                         </div>
                         <div class="card-body">
                             <table class="table table-striped" id="table-suppliers">
@@ -96,13 +96,15 @@ include("./../../../../php/verificar_session.php");
 
     <?php include('./../../../../includes/_scripts_for_page.php'); ?>
     
-    <!-- * plugins -->
-
     <!--* data table -->
     <script src="./../../../../assets/vendors/datatables/datatables.min.js"></script>
     <script src="./../../../../assets/vendors/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
     <script src="./../../../../assets/vendors/datatables/Responsive-2.2.1/js/dataTables.responsive.min.js"></script>
     <script src="./../../../../assets/vendors/datatables/Responsive-2.2.1/js/responsive.bootstrap4.min.js"></script>
+
+    <!-- * plugins  -->
+    <script src="https://cdn.jsdelivr.net/npm/datatables-buttons-excel-styles@1.2.0/js/buttons.html5.styles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/datatables-buttons-excel-styles@1.2.0/js/buttons.html5.styles.templates.min.js"></script>
 
     <!-- * parte de la pagina  -->
     <script src="./../controllers/listSuppliers.js" type="module"></script>

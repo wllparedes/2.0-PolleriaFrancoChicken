@@ -1,5 +1,5 @@
 <div id="sidebar" class="active">
-    <div class="sidebar-wrapper active">
+    <div class="sidebar-wrapper active" id="nav">
             <div class="sidebar-header position-relative">
         <div class="d-flex justify-content-between align-items-center">
             <div class="logo">
@@ -144,6 +144,13 @@
                         <i class="bi bi-cash"></i>
                         <span>Salir</span>
                     </a>
+                </li>
+                <li class="sidebar-item d-flex align-items-center gap-3">
+                    <span class="mx-auto">Cambiar de modo</span>
+                    <button class="switch ml-auto" id="switch">
+                        <span></span>
+                        <span></span>
+                    </button>
                 </li>
             </ul>
         </div>

@@ -2,7 +2,7 @@
 <div class="modal fade" id="selectProducts" tabindex="-1" role="dialog" aria-labelledby="selectProducts"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-s" role="document">
-        <div class="modal-content">
+        <div class="modal-content" id="form">
             <div class="modal-header">
                 <h4 class="modal-title" id="myModalLabel33">Selecciona los productos
                     compra</h4>

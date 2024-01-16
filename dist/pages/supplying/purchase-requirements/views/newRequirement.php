@@ -31,7 +31,7 @@ include("./../../../../php/verificar_session.php");
                 </a>
             </header>
 
-            <div class="page-heading">
+            <div class="page-heading" id="heading">
                 <div class="page-title">
                     <div class="row">
                         <div class="col-12 col-md-6 order-md-1 order-last">
@@ -54,8 +54,8 @@ include("./../../../../php/verificar_session.php");
                 <section id="basic-input-groups">
                     <div class="row">
                         <div class="col-12">
-                            <div class="card">
-                                <div class="card-header">
+                            <div class="card" id="form">
+                                <div class="card-header" id="cardHeader">
                                     <h4 class="card-title">Nuevo requerimiento de compra</h4>
                                 </div>
                                 <div class="card-content">
@@ -74,7 +74,7 @@ include("./../../../../php/verificar_session.php");
                                                 </div>
                                             </div>
 
-                                            <div class="row">
+                                            <div class="row" id="dataTable">
                                                 <div class="col-12 table-responsive" id="table-products">
 
                                                 </div>

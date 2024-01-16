@@ -29,7 +29,7 @@ include("./../../../../php/verificar_session.php");
 				</a>
 			</header>
 
-			<div class="page-heading">
+			<div class="page-heading" id="heading">
 				<h3>Estadisticas</h3>
 			</div>
 			<div class="page-content">
@@ -37,7 +37,7 @@ include("./../../../../php/verificar_session.php");
 					<div class="col-12 col-lg-9">
 						<div class="row">
 							<div class="col-6 col-lg-3 col-md-6">
-								<div class="card">
+								<div class="card" id="card">
 									<div class="card-body px-3 py-4-5">
 										<div class="row">
 											<div class="col-md-4">
@@ -58,7 +58,7 @@ include("./../../../../php/verificar_session.php");
 								</div>
 							</div>
 							<div class="col-6 col-lg-3 col-md-6">
-								<div class="card">
+								<div class="card" id="card">
 									<div class="card-body px-3 py-4-5">
 										<div class="row">
 											<div class="col-md-4">
@@ -79,7 +79,7 @@ include("./../../../../php/verificar_session.php");
 								</div>
 							</div>
 							<div class="col-6 col-lg-3 col-md-6">
-								<div class="card">
+								<div class="card" id="card">
 									<div class="card-body px-3 py-4-5">
 										<div class="row">
 											<div class="col-md-4">
@@ -100,7 +100,7 @@ include("./../../../../php/verificar_session.php");
 								</div>
 							</div>
 							<div class="col-6 col-lg-3 col-md-6">
-								<div class="card">
+								<div class="card" id="card">
 									<div class="card-body px-3 py-4-5">
 										<div class="row">
 											<div class="col-md-4">
@@ -123,8 +123,8 @@ include("./../../../../php/verificar_session.php");
 						</div>
 						<div class="row">
 							<div class="col-12">
-								<div class="card">
-									<div class="card-header">
+								<div class="card" id="profile">
+									<div class="card-header" id="cardHeader">
 										<h4>Profile Visit</h4>
 									</div>
 									<div class="card-body">
@@ -134,12 +134,12 @@ include("./../../../../php/verificar_session.php");
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-12 col-xl-4">
-								<div class="card">
-									<div class="card-header">
+							<div class="col-12 col-xl-4" >
+								<div class="card" id="profile">
+									<div class="card-header" id="cardHeader">
 										<h4>Profile Visit</h4>
 									</div>
-									<div class="card-body">
+									<div class="card-body" id="cardBody">
 										<div class="row">
 											<div class="col-6">
 												<div class="d-flex align-items-center">
@@ -204,13 +204,13 @@ include("./../../../../php/verificar_session.php");
 								</div>
 							</div>
 							<div class="col-12 col-xl-8">
-								<div class="card">
-									<div class="card-header">
+								<div class="card" id="profile">
+									<div class="card-header" id="cardHeader">
 										<h4>Latest Comments</h4>
 									</div>
 									<div class="card-body">
 										<div class="table-responsive">
-											<table class="table table-hover table-lg">
+											<table class="table table-hover table-lg" id="table">
 												<thead>
 													<tr>
 														<th>Name</th>
@@ -272,7 +272,7 @@ include("./../../../../php/verificar_session.php");
 						</div>
 					</div>
 					<div class="col-12 col-lg-3">
-						<div class="card">
+						<div class="card" id="perfil">
 							<div class="card-body py-4 px-5">
 								<div class="d-flex align-items-center">
 									<div class="avatar avatar-xl">
@@ -289,8 +289,8 @@ include("./../../../../php/verificar_session.php");
 								</div>
 							</div>
 						</div>
-						<div class="card">
-							<div class="card-header">
+						<div class="card" id="profile">
+							<div class="card-header" id="cardHeader">
 								<h4>Recent Messages</h4>
 							</div>
 							<div class="card-content pb-4">
@@ -336,12 +336,12 @@ include("./../../../../php/verificar_session.php");
 								</div>
 							</div>
 						</div>
-						<div class="card">
-							<div class="card-header">
+						<div class="card" id="profile">
+							<div class="card-header" id="cardHeader">
 								<h4>Visitors Profile</h4>
 							</div>
 							<div class="card-body">
-								<div id="chart-visitors-profile"></div>
+								<div id="chart-visitors-profile" ></div>
 							</div>
 						</div>
 					</div>

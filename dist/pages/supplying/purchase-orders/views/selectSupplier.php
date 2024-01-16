@@ -2,7 +2,7 @@
 <div class="modal fade" id="selectSupplier" tabindex="-1" role="dialog" aria-labelledby="selectSupplier"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-s" role="document">
-        <div class="modal-content">
+        <div class="modal-content" id="form">
             <div class="modal-header">
                 <h4 class="modal-title" id="myModalLabel33">Seleccionar un proveedor</h4>
                 <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">

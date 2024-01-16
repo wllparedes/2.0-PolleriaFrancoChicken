@@ -34,7 +34,7 @@ include("./../../../../php/verificar_session.php");
                 </a>
             </header>
 
-            <div class="page-heading">
+            <div class="page-heading" id="heading">
                 <div class="page-title">
                     <div class="row">
                         <div class="col-12 col-md-6 order-md-1 order-last">
@@ -57,8 +57,8 @@ include("./../../../../php/verificar_session.php");
                 <!-- * DATA TABLES -->
 
                 <section class="section">
-                    <div class="card">
-                        <div class="card-header">
+                    <div class="card" id="dataTable">
+                        <div class="card-header" id="headerTable">
                             Lista de Requerimientos
                         </div>
                         <div class="card-body">
