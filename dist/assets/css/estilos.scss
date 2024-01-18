@@ -153,8 +153,7 @@ body.dark &{
 		height: 25px;
 		position: absolute;
 		background: #F1F1F1;
-		top: 0;
-		left: 0;
+		left: 2px;
 		right: unset;
 		border-radius: 100px;
 		transition: .3s ease all;
@@ -165,7 +164,7 @@ body.dark &{
 		color: #000;
 		&::after{
 			right: 0;
-			left: unset;
+			left: 34px;
 		}
 	}
 	span{
