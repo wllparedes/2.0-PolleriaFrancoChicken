@@ -1,7 +1,7 @@
 <?php
 
 include("./../../../../php/empezar_session.php");
-include('./../models/informationDashboard.php');
+include('./../models/InformationDashboard.php');
 include("./../../../../php/verificar_session.php");
 $informationDashboard = new InformationDashboard();
 ?>
