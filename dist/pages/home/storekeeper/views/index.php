@@ -1,9 +1,10 @@
 <?php
 
 include("./../../../../php/empezar_session.php");
-include("./../../../../php/verificar_session.php");
-include('./../models/calculateRecords.php')
-	?>
+include('./../models/calculateRecords.php');
+include('./../models/getUser.php');
+
+?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -317,11 +318,11 @@ include('./../models/calculateRecords.php')
 									</div>
 									<div class="ms-3 name text-truncate">
 										<h5 class="font-bold">
-											<?php echo $_SESSION["user_name"] ?>
-											</h6>
-											<span class="text-muted mb-0 text-truncate">
-												<?php echo $_SESSION["email"] ?>
-											</span>
+											<?php echo getUser('user_name') ?>
+										</h5>
+										<span class="text-muted mb-0 text-truncate">
+											<?php echo getUser('email') ?>
+										</span>
 									</div>
 								</div>
 							</div>

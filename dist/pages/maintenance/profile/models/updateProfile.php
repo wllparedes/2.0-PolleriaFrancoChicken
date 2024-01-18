@@ -13,7 +13,7 @@ $email = trim($_POST['email']);
 $password = trim($_POST['password']);
 
 try {
-    // Actualizar datos en la base de datos
+
     $sql = "UPDATE users SET names = ?, surnames = ?, phone = ?, dni = ?, user_name = ?, email = ?, password = ? WHERE id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("sssssssi", $name, $surnames, $phone, $dni, $userName, $email, $password, $id);
@@ -21,12 +21,12 @@ try {
 
     $stmt->close();
 
-    // Devolver un mensaje de éxito en formato JSON
     $status = true;
 
 } catch (Exception $e) {
     $status = false;
 }
+
 
 $conn->close();
 
