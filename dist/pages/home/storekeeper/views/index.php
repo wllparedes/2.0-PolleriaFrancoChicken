@@ -1,9 +1,9 @@
 <?php
 
 include("./../../../../php/empezar_session.php");
-include('./../models/calculateRecords.php');
-include('./../models/getUser.php');
-
+include('./../models/informationDashboard.php');
+include("./../../../../php/verificar_session.php");
+$informationDashboard = new InformationDashboard();
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +60,7 @@ include('./../models/getUser.php');
 													Productos
 												</h6>
 												<h6 class="font-extrabold mb-0">
-													<?php echo calculateRecords('products') ?>
+													<?php echo $informationDashboard->calculateRecords('products') ?>
 												</h6>
 											</div>
 										</div>
@@ -90,7 +90,7 @@ include('./../models/getUser.php');
 													Usuarios
 												</h6>
 												<h6 class="font-extrabold mb-0">
-													<?php echo calculateRecords('users') ?>
+													<?php echo $informationDashboard->calculateRecords('users') ?>
 												</h6>
 											</div>
 										</div>
@@ -120,7 +120,7 @@ include('./../models/getUser.php');
 													Proveedores
 												</h6>
 												<h6 class="font-extrabold mb-0">
-													<?php echo calculateRecords('suppliers') ?>
+													<?php echo $informationDashboard->calculateRecords('suppliers') ?>
 												</h6>
 											</div>
 										</div>
@@ -151,7 +151,7 @@ include('./../models/getUser.php');
 													Requerimientos
 												</h6>
 												<h6 class="font-extrabold mb-0">
-													<?php echo calculateRecords('requirements') ?>
+													<?php echo $informationDashboard->calculateRecords('requirements') ?>
 												</h6>
 											</div>
 										</div>
@@ -318,10 +318,10 @@ include('./../models/getUser.php');
 									</div>
 									<div class="ms-3 name text-truncate">
 										<h5 class="font-bold">
-											<?php echo getUser('user_name') ?>
+											<?php echo $informationDashboard->getUser('user_name') ?>
 										</h5>
 										<span class="text-muted mb-0 text-truncate">
-											<?php echo getUser('email') ?>
+											<?php echo $informationDashboard->getUser('email') ?>
 										</span>
 									</div>
 								</div>
