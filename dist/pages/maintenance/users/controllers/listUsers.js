@@ -37,4 +37,3 @@ export const dataTable = tableUsers.DataTable({
 	processing: true,
 	language: language,
 });
-
