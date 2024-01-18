@@ -39,7 +39,19 @@ include('./../models/calculateRecords.php')
 										<div class="row">
 											<div class="col-md-4">
 												<div class="stats-icon purple">
-													<svg class="icon-dashboard text-white" height="20" width="20" viewBox="0 0 512 512"><path d="M462.8 49.6a169.4 169.4 0 0 0 -239.5 0C187.8 85 160.1 128 160.1 192v85.8l-40.6 40.6c-9.7 9.7-24 11.1-36.8 6a60.3 60.3 0 0 0 -65 98.7C33 438.4 54.2 442.7 73.9 438.2c-4.5 19.6-.2 40.8 15.1 56.1a60.4 60.4 0 0 0 98.8-65c-5.1-12.7-3.7-27 6-36.8L234.4 352h85.9a187.9 187.9 0 0 0 61.9-10c-39.6-43.9-39.8-110.2 1.1-151.1 34.4-34.4 86.8-39.5 128.7-16.8 1.3-45-14.8-90.3-49.1-124.6z"/></svg>
+													<svg class="icon-dashboard icon icon-tabler icon-tabler-meat"
+														width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+														stroke="currentColor" fill="none" stroke-linecap="round"
+														stroke-linejoin="round">
+														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+														<path
+															d="M13.62 8.382l1.966 -1.967a2 2 0 1 1 3.414 -1.415a2 2 0 1 1 -1.413 3.414l-1.82 1.821" />
+														<path
+															d="M5.904 18.596c2.733 2.734 5.9 4 7.07 2.829c1.172 -1.172 -.094 -4.338 -2.828 -7.071c-2.733 -2.734 -5.9 -4 -7.07 -2.829c-1.172 1.172 .094 4.338 2.828 7.071z" />
+														<path d="M7.5 16l1 1" />
+														<path
+															d="M12.975 21.425c3.905 -3.906 4.855 -9.288 2.121 -12.021c-2.733 -2.734 -8.115 -1.784 -12.02 2.121" />
+													</svg>
 												</div>
 											</div>
 											<div class="col-md-8">
@@ -60,7 +72,16 @@ include('./../models/calculateRecords.php')
 										<div class="row">
 											<div class="col-md-4">
 												<div class="stats-icon blue">
-													<i class="fas fa-users"></i>
+													<svg class="icon-dashboard icon icon-tabler icon-tabler-users"
+														width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+														stroke="currentColor" fill="none" stroke-linecap="round"
+														stroke-linejoin="round">
+														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+														<path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+														<path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+														<path d="M16 3.13a4 4 0 0 1 0 7.75" />
+														<path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
+													</svg>
 												</div>
 											</div>
 											<div class="col-md-8">
@@ -81,7 +102,16 @@ include('./../models/calculateRecords.php')
 										<div class="row">
 											<div class="col-md-4">
 												<div class="stats-icon green">
-													<i class="iconly-boldAdd-User"></i>
+													<svg class="icon-dashboard icon icon-tabler icon-tabler-user-shield"
+														width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+														stroke="currentColor" fill="none" stroke-linecap="round"
+														stroke-linejoin="round">
+														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+														<path d="M6 21v-2a4 4 0 0 1 4 -4h2" />
+														<path
+															d="M22 16c0 4 -2.5 6 -3.5 6s-3.5 -2 -3.5 -6c1 0 2.5 -.5 3.5 -1.5c1 1 2.5 1.5 3.5 1.5z" />
+														<path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+													</svg>
 												</div>
 											</div>
 											<div class="col-md-8">
@@ -102,7 +132,17 @@ include('./../models/calculateRecords.php')
 										<div class="row">
 											<div class="col-md-4">
 												<div class="stats-icon red">
-													<i class="fas fa-sticky-note"></i>
+													<svg class="icon-dashboard icon icon-tabler icon-tabler-file-description"
+														width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+														stroke="currentColor" fill="none" stroke-linecap="round"
+														stroke-linejoin="round">
+														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+														<path d="M14 3v4a1 1 0 0 0 1 1h4" />
+														<path
+															d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+														<path d="M9 17h6" />
+														<path d="M9 13h6" />
+													</svg>
 												</div>
 											</div>
 											<div class="col-md-8">
