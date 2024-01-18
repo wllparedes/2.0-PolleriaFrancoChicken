@@ -2,14 +2,14 @@ body {
   transition: 0.3s ease all;
 }
 body.dark {
-  background: #111111;
+  background: #151521;
 }
 
 #nav {
   transition: 0.3s ease all;
 }
 body.dark #nav {
-  background: #222222;
+  background: #1E1E2D;
 }
 body.dark #nav li {
   color: #C8C8C8;
@@ -29,21 +29,21 @@ body.dark #heading h3 {
 }
 
 body.dark #card {
-  background: #222222;
+  background: #1E1E2D;
 }
 body.dark #card h6 {
   color: #C8C8C8;
 }
 
 body.dark #perfil {
-  background: #222222;
+  background: #1E1E2D;
 }
 body.dark #perfil h5 {
   color: #C8C8C8;
 }
 
 body.dark #profile {
-  background: #222222;
+  background: #1E1E2D;
 }
 body.dark #profile h4 {
   color: #C8C8C8;
@@ -52,30 +52,30 @@ body.dark #profile h5 {
   color: #C8C8C8;
 }
 body.dark #profile #cardHeader {
-  background: #222222;
+  background: #1E1E2D;
 }
 
 body.dark #form {
-  background: #222222;
+  background: #1E1E2D;
 }
 body.dark #form h4 {
   color: #C8C8C8;
 }
 body.dark #form #cardHeader {
-  background: #222222;
+  background: #1E1E2D;
 }
 body.dark #form label {
   color: #C8C8C8;
 }
 
 body.dark #formModal {
-  background: #222222;
+  background: #1E1E2D;
 }
 body.dark #formModal h4 {
   color: #C8C8C8;
 }
 body.dark #formModal #cardHeader {
-  background: #222222;
+  background: #1E1E2D;
 }
 body.dark #formModal #colModal {
   color: #C8C8C8;
@@ -93,10 +93,10 @@ body.dark #table td {
 }
 
 body.dark #dataTable {
-  background: #222222;
+  background: #1E1E2D;
 }
 body.dark #dataTable #headerTable {
-  background: #222222;
+  background: #1E1E2D;
   color: #C8C8C8;
 }
 body.dark #dataTable tr {

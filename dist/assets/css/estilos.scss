@@ -1,10 +1,10 @@
-$negro: #111111;
+$negro: #151521;
 $blanco: #FEFEFE;
-$grisOscuro: #222222;
 $grisClaro: #C8C8C8;
 $grisClaroHover: #ACABAB;
 $azul: #3E60E9;
 $azulHover: #254BE6;
+$azulNoche: #1E1E2D;
 
 $sombraDark: 10px 10px 20px rgba(170,170,170,.16);
 $sombraLight: 10px 10px 20px rgba(0,0,0,.16);
@@ -20,7 +20,7 @@ body {
 #nav{
 	transition: .3s ease all;
 body.dark &{
-	background: $grisOscuro;
+	background: $azulNoche;
 	li{
 		color: $grisClaro;
 	}
@@ -44,7 +44,7 @@ body.dark &{
 
 #card{
 	body.dark &{
-		background: $grisOscuro;
+		background: $azulNoche;
 		h6{
 			color: $grisClaro;
 		}
@@ -53,7 +53,7 @@ body.dark &{
 
 #perfil{
 	body.dark &{
-		background: $grisOscuro;
+		background: $azulNoche;
 		h5{
 			color: $grisClaro;
 		}
@@ -62,7 +62,7 @@ body.dark &{
 
 #profile{
 	body.dark &{
-		background: $grisOscuro;
+		background: $azulNoche;
 		h4{
 			color: $grisClaro;
 		}
@@ -70,19 +70,19 @@ body.dark &{
 			color: $grisClaro;
 		}
 		#cardHeader{
-			background: $grisOscuro;
+			background: $azulNoche;
 		}
 	}
 }
 
 #form{
 	body.dark &{
-		background: $grisOscuro;
+		background: $azulNoche;
 		h4{
 			color: $grisClaro;
 		}
 		#cardHeader{
-			background: $grisOscuro;
+			background: $azulNoche;
 		}
 		label{
 			color: $grisClaro;
@@ -92,12 +92,12 @@ body.dark &{
 
 #formModal{
 	body.dark &{
-		background: $grisOscuro;
+		background: $azulNoche;
 		h4{
 			color: $grisClaro;
 		}
 		#cardHeader{
-			background: $grisOscuro;
+			background: $azulNoche;
 		}
 		#colModal{
 			color: $grisClaro;
@@ -126,9 +126,9 @@ body.dark &{
 
 #dataTable{
 	body.dark &{
-		background: $grisOscuro;
+		background: $azulNoche;
 		#headerTable{
-			background: $grisOscuro;
+			background: $azulNoche;
 			color: $grisClaro;
 		}
 		tr{
