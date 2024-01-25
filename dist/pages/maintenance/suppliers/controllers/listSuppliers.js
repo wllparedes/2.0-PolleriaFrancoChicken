@@ -77,8 +77,8 @@ export const dataTable = tableSuppliers.DataTable({
 						'15%',
 						'15%',
 						'20%',
-					]; // Ajusta el ancho de las columnas
-					doc.styles.tableHeader.fillColor = '#3f8880'; // Cambia el color del encabezado de la tabla
+					]; 
+					doc.styles.tableHeader.fillColor = '#3f8880'; 
 				},
 			},
 		],

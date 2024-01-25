@@ -67,8 +67,8 @@ export const dataTable = tableCategories.DataTable({
 					columns: [0, 1, 2],
 				},
 				customize: function (doc) {
-					doc.content[1].table.widths = ['25%', '25%', '50%']; // Ajusta el ancho de las columnas
-					doc.styles.tableHeader.fillColor = '#3498db'; // Cambia el color del encabezado de la tabla
+					doc.content[1].table.widths = ['25%', '25%', '50%']; 
+					doc.styles.tableHeader.fillColor = '#3498db'; 
 				},
 			},
 		],

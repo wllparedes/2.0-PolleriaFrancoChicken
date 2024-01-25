@@ -80,8 +80,8 @@ export const dataTable = tableUsers.DataTable({
 						'15%',
 						'20%',
 						'15%',
-					]; // Ajusta el ancho de las columnas
-					doc.styles.tableHeader.fillColor = '#C497E7'; // Cambia el color del encabezado de la tabla
+					]; 
+					doc.styles.tableHeader.fillColor = '#C497E7'; 
 				},
 			},
 		],
