@@ -1,0 +1,187 @@
+$negro: #151521;
+$blanco: #FEFEFE;
+$grisClaro: #C8C8C8;
+$grisClaroHover: #ACABAB;
+$azul: #3E60E9;
+$azulHover: #254BE6;
+$azulNoche: #1E1E2D;
+
+$sombraDark: 10px 10px 20px rgba(170,170,170,.16);
+$sombraLight: 10px 10px 20px rgba(0,0,0,.16);
+
+body {
+	transition: .3s ease all;
+
+	&.dark{
+		background: $negro;
+	}
+}
+
+#nav{
+	transition: .3s ease all;
+body.dark &{
+	background: $azulNoche;
+	li{
+		color: $grisClaro;
+	}
+	a{
+		color: $grisClaro;
+		&:hover{
+			color: $azulHover;
+		}
+	}
+}
+}
+
+#heading{
+	transition: .3s ease all;
+	body.dark &{
+		h3{
+			color: $grisClaro;
+		}
+	}
+}
+
+#card{
+	body.dark &{
+		background: $azulNoche;
+		h6{
+			color: $grisClaro;
+		}
+		#icons{
+			color: $blanco;
+		}
+	}
+}
+
+#card{
+	#icons{
+		color: $negro;
+	}
+}
+
+#perfil{
+	body.dark &{
+		background: $azulNoche;
+		h5{
+			color: $grisClaro;
+		}
+	}
+}
+
+#profile{
+	body.dark &{
+		background: $azulNoche;
+		h4{
+			color: $grisClaro;
+		}
+		h5{
+			color: $grisClaro;
+		}
+		#cardHeader{
+			background: $azulNoche;
+		}
+	}
+}
+
+#form{
+	body.dark &{
+		background: $azulNoche;
+		h4{
+			color: $grisClaro;
+		}
+		#cardHeader{
+			background: $azulNoche;
+		}
+		label{
+			color: $grisClaro;
+		}
+	}
+}
+
+#formModal{
+	body.dark &{
+		background: $azulNoche;
+		h4{
+			color: $grisClaro;
+		}
+		#cardHeader{
+			background: $azulNoche;
+		}
+		#colModal{
+			color: $grisClaro;
+		}
+	}
+}
+
+#cardBody{
+	body.dark &{
+		h5{
+			color: $grisClaro;
+		}
+	}
+}
+
+#table{
+	body.dark &{
+		th{
+			color: $grisClaro;
+		}
+		td{
+			color: $grisClaro;
+		}
+	}
+}
+
+#dataTable{
+	body.dark &{
+		background: $azulNoche;
+		#headerTable{
+			background: $azulNoche;
+			color: $grisClaro;
+		}
+		tr{
+			color: $grisClaro;
+		}
+	}
+}
+
+// ----- ----- ----- ----- ----- Switch ----- ----- ----- ----- ----- 
+.switch{
+	background: #343D5B;
+	border-radius: 1000px;
+	border: none;
+	position: relative;
+	cursor: pointer;
+	display: flex;
+	outline: none;
+	&::after{
+		content: "";
+		display: block;
+		width: 25px;
+		height: 25px;
+		position: absolute;
+		background: #F1F1F1;
+		left: 2px;
+		right: unset;
+		border-radius: 100px;
+		transition: .3s ease all;
+		box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+	}
+	&.active{
+		background: orange;
+		color: #000;
+		&::after{
+			right: 0;
+			left: 34px;
+		}
+	}
+	span{
+		width: 25px;
+		height: 25px;
+		line-height: 25px;
+		display: block;
+		background: none;
+		color: #fff;
+	}
+}

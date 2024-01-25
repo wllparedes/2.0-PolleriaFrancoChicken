@@ -36,5 +36,54 @@ export const dataTable = tableUsers.DataTable({
 	autoWidth: false,
 	processing: true,
 	language: language,
-});
 
+	dom: '<"row"B<"col-md-6 p-3"l><"col-md-6 p-3"f>>rtip',
+	buttons: {
+		dom: {
+			button: {
+				className: 'btn',
+			},
+		},
+		buttons: [
+			//BOTON EXCEL
+			{
+				extend: 'excelHtml5',
+				text: "<i class='fa fa-file-excel'></i> Excel",
+				className: 'btn-success',
+				title: 'REPORTE DE USUARIOS',
+				filename: 'excel_usuarios',
+				exportOptions: {
+					//columns: ':visible'
+					columns: [0, 1, 2, 3, 4, 5, 6, 7],
+				},
+				excelStyles: {
+					template: 'orange_medium',
+				},
+			},
+			{
+				//BOTON PDF
+				extend: 'pdfHtml5',
+				text: "<i class='fa fa-file-pdf'></i> PDF",
+				className: 'btn-danger',
+				title: 'REPORTE DE USUARIOS',
+				filename: 'pdf_usuarios',
+				exportOptions: {
+					columns: [0, 1, 2, 3, 4, 5, 6, 7],
+				},
+				customize: function (doc) {
+					doc.content[1].table.widths = [
+						'5%',
+						'10%',
+						'15%',
+						'10%',
+						'10%',
+						'15%',
+						'20%',
+						'15%',
+					]; // Ajusta el ancho de las columnas
+					doc.styles.tableHeader.fillColor = '#C497E7'; // Cambia el color del encabezado de la tabla
+				},
+			},
+		],
+	},
+});

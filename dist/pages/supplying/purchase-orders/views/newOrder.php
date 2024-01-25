@@ -32,7 +32,7 @@ include("./../../../../php/verificar_session.php");
                     </a>
                 </header>
 
-                <div class="page-heading">
+                <div class="page-heading" id="heading">
                     <div class="page-title">
                         <div class="row">
                             <div class="col-12 col-md-6 order-md-1 order-last">
@@ -56,8 +56,8 @@ include("./../../../../php/verificar_session.php");
                     <!-- ! FILA  -->
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header">
+                            <div class="card" id="form">
+                                <div class="card-header" id="cardHeader">
                                     <h4>Formulario:</h4>
                                 </div>
                                 <div class="card-body">
@@ -95,7 +95,7 @@ include("./../../../../php/verificar_session.php");
                                             </div>
                                         </div>
 
-                                        <div class="row">
+                                        <div class="row" id="dataTable">
                                             <div class="col-12 table-responsive" id="table-supplier">
 
                                             </div>
@@ -124,7 +124,7 @@ include("./../../../../php/verificar_session.php");
                                         </div>
 
 
-                                        <div class="row">
+                                        <div class="row" id="dataTable">
                                             <div class="col-12 table-responsive" id="table-requirement">
 
                                             </div>

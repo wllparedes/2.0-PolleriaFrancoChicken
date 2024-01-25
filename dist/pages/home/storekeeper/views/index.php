@@ -1,8 +1,9 @@
 <?php
 
 include("./../../../../php/empezar_session.php");
+include('./../models/InformationDashboard.php');
 include("./../../../../php/verificar_session.php");
-
+$informationDashboard = new InformationDashboard();
 ?>
 
 <!DOCTYPE html>
@@ -15,9 +16,6 @@ include("./../../../../php/verificar_session.php");
 <body>
 	<div id="app">
 
-
-		<!-- dasdasdas -->
-
 		<!-- start siderbar -->
 		<?php include('./../../../../includes/_sidebar.php'); ?>
 		<!-- end siderbar -->
@@ -29,7 +27,7 @@ include("./../../../../php/verificar_session.php");
 				</a>
 			</header>
 
-			<div class="page-heading">
+			<div class="page-heading" id="heading">
 				<h3>Estadisticas</h3>
 			</div>
 			<div class="page-content">
@@ -37,20 +35,32 @@ include("./../../../../php/verificar_session.php");
 					<div class="col-12 col-lg-9">
 						<div class="row">
 							<div class="col-6 col-lg-3 col-md-6">
-								<div class="card">
+								<div class="card" id="card">
 									<div class="card-body px-3 py-4-5">
 										<div class="row">
 											<div class="col-md-4">
 												<div class="stats-icon purple">
-													<i class="iconly-boldShow"></i>
+													<svg class="icon-dashboard icon icon-tabler icon-tabler-meat"
+														width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+														stroke="currentColor" fill="none" stroke-linecap="round"
+														stroke-linejoin="round" id="icons">
+														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+														<path
+															d="M13.62 8.382l1.966 -1.967a2 2 0 1 1 3.414 -1.415a2 2 0 1 1 -1.413 3.414l-1.82 1.821" />
+														<path
+															d="M5.904 18.596c2.733 2.734 5.9 4 7.07 2.829c1.172 -1.172 -.094 -4.338 -2.828 -7.071c-2.733 -2.734 -5.9 -4 -7.07 -2.829c-1.172 1.172 .094 4.338 2.828 7.071z" />
+														<path d="M7.5 16l1 1" />
+														<path
+															d="M12.975 21.425c3.905 -3.906 4.855 -9.288 2.121 -12.021c-2.733 -2.734 -8.115 -1.784 -12.02 2.121" />
+													</svg>
 												</div>
 											</div>
 											<div class="col-md-8">
 												<h6 class="text-muted font-semibold">
-													Profile Views
+													Productos
 												</h6>
 												<h6 class="font-extrabold mb-0">
-													112.000
+													<?php echo $informationDashboard->calculateRecords('products') ?>
 												</h6>
 											</div>
 										</div>
@@ -58,20 +68,29 @@ include("./../../../../php/verificar_session.php");
 								</div>
 							</div>
 							<div class="col-6 col-lg-3 col-md-6">
-								<div class="card">
+								<div class="card" id="card">
 									<div class="card-body px-3 py-4-5">
 										<div class="row">
 											<div class="col-md-4">
 												<div class="stats-icon blue">
-													<i class="iconly-boldProfile"></i>
+													<svg class="icon-dashboard icon icon-tabler icon-tabler-users"
+														width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+														stroke="currentColor" fill="none" stroke-linecap="round"
+														stroke-linejoin="round" id="icons">
+														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+														<path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+														<path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+														<path d="M16 3.13a4 4 0 0 1 0 7.75" />
+														<path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
+													</svg>
 												</div>
 											</div>
 											<div class="col-md-8">
 												<h6 class="text-muted font-semibold">
-													Followers
+													Usuarios
 												</h6>
 												<h6 class="font-extrabold mb-0">
-													183.000
+													<?php echo $informationDashboard->calculateRecords('users') ?>
 												</h6>
 											</div>
 										</div>
@@ -79,20 +98,29 @@ include("./../../../../php/verificar_session.php");
 								</div>
 							</div>
 							<div class="col-6 col-lg-3 col-md-6">
-								<div class="card">
+								<div class="card" id="card">
 									<div class="card-body px-3 py-4-5">
 										<div class="row">
 											<div class="col-md-4">
 												<div class="stats-icon green">
-													<i class="iconly-boldAdd-User"></i>
+													<svg class="icon-dashboard icon icon-tabler icon-tabler-user-shield"
+														width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+														stroke="currentColor" fill="none" stroke-linecap="round"
+														stroke-linejoin="round" id="icons">
+														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+														<path d="M6 21v-2a4 4 0 0 1 4 -4h2" />
+														<path
+															d="M22 16c0 4 -2.5 6 -3.5 6s-3.5 -2 -3.5 -6c1 0 2.5 -.5 3.5 -1.5c1 1 2.5 1.5 3.5 1.5z" />
+														<path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+													</svg>
 												</div>
 											</div>
 											<div class="col-md-8">
 												<h6 class="text-muted font-semibold">
-													Following
+													Proveedores
 												</h6>
 												<h6 class="font-extrabold mb-0">
-													80.000
+													<?php echo $informationDashboard->calculateRecords('suppliers') ?>
 												</h6>
 											</div>
 										</div>
@@ -100,20 +128,30 @@ include("./../../../../php/verificar_session.php");
 								</div>
 							</div>
 							<div class="col-6 col-lg-3 col-md-6">
-								<div class="card">
+								<div class="card" id="card">
 									<div class="card-body px-3 py-4-5">
 										<div class="row">
 											<div class="col-md-4">
 												<div class="stats-icon red">
-													<i class="iconly-boldBookmark"></i>
+													<svg class="icon-dashboard icon icon-tabler icon-tabler-file-description"
+														width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+														stroke="currentColor" fill="none" stroke-linecap="round"
+														stroke-linejoin="round" id="icons">
+														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+														<path d="M14 3v4a1 1 0 0 0 1 1h4" />
+														<path
+															d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+														<path d="M9 17h6" />
+														<path d="M9 13h6" />
+													</svg>
 												</div>
 											</div>
 											<div class="col-md-8">
 												<h6 class="text-muted font-semibold">
-													Saved Post
+													Requerimientos
 												</h6>
 												<h6 class="font-extrabold mb-0">
-													112
+													<?php echo $informationDashboard->calculateRecords('requirements') ?>
 												</h6>
 											</div>
 										</div>
@@ -123,8 +161,8 @@ include("./../../../../php/verificar_session.php");
 						</div>
 						<div class="row">
 							<div class="col-12">
-								<div class="card">
-									<div class="card-header">
+								<div class="card" id="profile">
+									<div class="card-header" id="cardHeader">
 										<h4>Profile Visit</h4>
 									</div>
 									<div class="card-body">
@@ -135,11 +173,11 @@ include("./../../../../php/verificar_session.php");
 						</div>
 						<div class="row">
 							<div class="col-12 col-xl-4">
-								<div class="card">
-									<div class="card-header">
+								<div class="card" id="profile">
+									<div class="card-header" id="cardHeader">
 										<h4>Profile Visit</h4>
 									</div>
-									<div class="card-body">
+									<div class="card-body" id="cardBody">
 										<div class="row">
 											<div class="col-6">
 												<div class="d-flex align-items-center">
@@ -204,13 +242,13 @@ include("./../../../../php/verificar_session.php");
 								</div>
 							</div>
 							<div class="col-12 col-xl-8">
-								<div class="card">
-									<div class="card-header">
+								<div class="card" id="profile">
+									<div class="card-header" id="cardHeader">
 										<h4>Latest Comments</h4>
 									</div>
 									<div class="card-body">
 										<div class="table-responsive">
-											<table class="table table-hover table-lg">
+											<table class="table table-hover table-lg" id="table">
 												<thead>
 													<tr>
 														<th>Name</th>
@@ -272,25 +310,25 @@ include("./../../../../php/verificar_session.php");
 						</div>
 					</div>
 					<div class="col-12 col-lg-3">
-						<div class="card">
+						<div class="card" id="perfil">
 							<div class="card-body py-4 px-5">
 								<div class="d-flex align-items-center">
-									<!-- <div class="avatar avatar-xl">
+									<div class="avatar avatar-xl">
 										<img src="./../../../../assets/images/faces/1.jpg" alt="Face 1" />
-									</div> -->
-									<div class="ms-2 name">
+									</div>
+									<div class="ms-3 name text-truncate">
 										<h5 class="font-bold">
-											<?php echo $_SESSION["user_name"] ?>
+											<?php echo $informationDashboard->getUser('user_name') ?>
 										</h5>
-										<h6 class="text-muted mb-0">
-											<?php echo $_SESSION["email"] ?>
-										</h6>
+										<span class="text-muted mb-0 text-truncate">
+											<?php echo $informationDashboard->getUser('email') ?>
+										</span>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="card">
-							<div class="card-header">
+						<div class="card" id="profile">
+							<div class="card-header" id="cardHeader">
 								<h4>Recent Messages</h4>
 							</div>
 							<div class="card-content pb-4">
@@ -336,8 +374,8 @@ include("./../../../../php/verificar_session.php");
 								</div>
 							</div>
 						</div>
-						<div class="card">
-							<div class="card-header">
+						<div class="card" id="profile">
+							<div class="card-header" id="cardHeader">
 								<h4>Visitors Profile</h4>
 							</div>
 							<div class="card-body">

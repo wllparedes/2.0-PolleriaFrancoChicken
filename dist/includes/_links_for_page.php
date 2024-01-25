@@ -12,3 +12,4 @@
     <link rel="icon" href="./../../../../assets/images/login/icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./../../../../assets/css/custom.css" />
     <link rel="stylesheet" href="./../../../../assets/vendors/sweetalert2/sweetalert2.min.css">
+    <link rel="stylesheet" href="./../../../../assets/css/estilos.css" />

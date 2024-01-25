@@ -2,7 +2,7 @@
 <div class="modal fade text-left" id="editCategory" tabindex="-1" role="dialog" aria-labelledby="editCategory"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
+        <div class="modal-content" id="form">
             <div class="modal-header">
                 <h4 class="modal-title" id="myModalLabel33">Formulario para editar categoria </h4>
                 <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
