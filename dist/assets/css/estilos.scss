@@ -48,6 +48,15 @@ body.dark &{
 		h6{
 			color: $grisClaro;
 		}
+		#icons{
+			color: $blanco;
+		}
+	}
+}
+
+#card{
+	#icons{
+		color: $negro;
 	}
 }
 

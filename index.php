@@ -7,7 +7,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <link rel="stylesheet" href="dist/assets/css/login/login.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" href="dist/assets/img/login/icon.png" type="image/png">
+    <link rel="icon" href="dist/assets/images/login/icon.png" type="image/png">
     <title>Polleria | Franco Chicken </title>
 </head>
 

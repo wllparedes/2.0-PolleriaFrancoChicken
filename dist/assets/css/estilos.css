@@ -34,6 +34,13 @@ body.dark #card {
 body.dark #card h6 {
   color: #C8C8C8;
 }
+body.dark #card #icons {
+  color: #FEFEFE;
+}
+
+#card #icons {
+  color: #151521;
+}
 
 body.dark #perfil {
   background: #1E1E2D;

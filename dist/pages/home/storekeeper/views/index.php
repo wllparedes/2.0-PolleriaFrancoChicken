@@ -43,7 +43,7 @@ include('./../models/getUser.php');
 													<svg class="icon-dashboard icon icon-tabler icon-tabler-meat"
 														width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
 														stroke="currentColor" fill="none" stroke-linecap="round"
-														stroke-linejoin="round">
+														stroke-linejoin="round" id="icons">
 														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 														<path
 															d="M13.62 8.382l1.966 -1.967a2 2 0 1 1 3.414 -1.415a2 2 0 1 1 -1.413 3.414l-1.82 1.821" />
@@ -76,7 +76,7 @@ include('./../models/getUser.php');
 													<svg class="icon-dashboard icon icon-tabler icon-tabler-users"
 														width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
 														stroke="currentColor" fill="none" stroke-linecap="round"
-														stroke-linejoin="round">
+														stroke-linejoin="round" id="icons">
 														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 														<path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
 														<path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
@@ -106,7 +106,7 @@ include('./../models/getUser.php');
 													<svg class="icon-dashboard icon icon-tabler icon-tabler-user-shield"
 														width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
 														stroke="currentColor" fill="none" stroke-linecap="round"
-														stroke-linejoin="round">
+														stroke-linejoin="round" id="icons">
 														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 														<path d="M6 21v-2a4 4 0 0 1 4 -4h2" />
 														<path
@@ -136,7 +136,7 @@ include('./../models/getUser.php');
 													<svg class="icon-dashboard icon icon-tabler icon-tabler-file-description"
 														width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
 														stroke="currentColor" fill="none" stroke-linecap="round"
-														stroke-linejoin="round">
+														stroke-linejoin="round" id="icons">
 														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 														<path d="M14 3v4a1 1 0 0 0 1 1h4" />
 														<path
