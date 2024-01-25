@@ -148,28 +148,13 @@ create table proofs_of_purchase(
     FOREIGN KEY (id_purchase_order) REFERENCES purchase_orders(id)
 );
 
-
-
 INSERT INTO `charges` (`id`, `name`) VALUES (NULL, 'Almacenero');
 
 -- Insercion de usuarios
 
 insert users values (NULL ,'Adam', 'Milner', '987268698', '94875898', 'Adam  Milner', 'almacenero@gmail.com', '@Almacenero123', 1 );
 
--- Insercion de categorias
-
--- insert into categories values (1,'Pollo Entero','Productos que incluyen pollos enteros sin cortes');
-
--- Insercion de productos
-
--- INSERT INTO products (name, price, id_category) VALUES ('Pollo Asado Premium', 15.99, 1);
-
--- Insercion de proveedores
-INSERT INTO suppliers (company_name, address, ruc, phone, email)
-VALUES ('Granja Pollo', 'Av. Plumas 123, Lima', '18765432168', '985768216', 'granja@gmail.com');
-
 -- delete FROm usuario where id_usuario = 1;
-
 
 CREATE VIEW SELECTEDPRODUCTS AS
 SELECT p.id, p.name, p.price, p.id_category, c.name as category_name

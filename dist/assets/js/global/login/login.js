@@ -18,6 +18,7 @@ $(document).ready(function () {
                         divMensaje.classList.add('mensaje-error');
                         divMensaje.classList.remove('mensaje-success');
                         divMensaje.classList.remove('mensaje-warning');
+                        divMensaje.classList.remove('mensaje-primary');
                         divMensaje.style.opacity = 1 // ? cambiar
                         break;
                     case 'incompleto':
@@ -26,6 +27,7 @@ $(document).ready(function () {
                         divMensaje.classList.add('mensaje-warning');
                         divMensaje.classList.remove('mensaje-success');
                         divMensaje.classList.remove('mensaje-error');
+                        divMensaje.classList.remove('mensaje-primary');
                         
                         divMensaje.style.opacity = 1 // ? cambiar
                         break;  
@@ -36,6 +38,7 @@ $(document).ready(function () {
                             // Puedes cambiar el estilo o realizar otras acciones según tu necesidad
                             divMensaje.classList.add('mensaje-primary');
                             divMensaje.classList.remove('mensaje-success');
+                            divMensaje.classList.remove('mensaje-warning');
                             divMensaje.classList.remove('mensaje-error');
                             divMensaje.style.opacity = 1;
                           } else {

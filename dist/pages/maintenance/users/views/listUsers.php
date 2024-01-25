@@ -64,7 +64,7 @@ include("./../../../../php/verificar_session.php");
                 <section class="section">
                     <div class="card" id="dataTable">
                         <div class="card-header" id="headerTable">
-                            Lista de usuarios
+                            Generar reportes de mantenimiento (EXCEL - PDF)
                         </div>
                         <div class="card-body" id="form">
                             <table class="table table-striped" id="table-users">
@@ -100,14 +100,16 @@ include("./../../../../php/verificar_session.php");
 
 
     <?php include('./../../../../includes/_scripts_for_page.php'); ?>
-
-    <!-- plugins -->
     
     <!-- datatable -->
     <script src="./../../../../assets/vendors/datatables/datatables.min.js"></script>
     <script src="./../../../../assets/vendors/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
     <script src="./../../../../assets/vendors/datatables/Responsive-2.2.1/js/dataTables.responsive.min.js"></script>
     <script src="./../../../../assets/vendors/datatables/Responsive-2.2.1/js/responsive.bootstrap4.min.js"></script>
+
+    <!-- * plugins  -->
+    <script src="https://cdn.jsdelivr.net/npm/datatables-buttons-excel-styles@1.2.0/js/buttons.html5.styles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/datatables-buttons-excel-styles@1.2.0/js/buttons.html5.styles.templates.min.js"></script>
 
     <!-- virtual select -->
     <script src="./../../../../assets/vendors/virtual-select/virtual-select.min.js"></script>
