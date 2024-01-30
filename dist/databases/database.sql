@@ -5,6 +5,8 @@ use Polleria_IV;
 
 -- ABASTECIMIENTO
 
+-- Tabla de categorias
+
 create table categories(
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     name VARCHAR(20) NOT NULL,
@@ -18,6 +20,8 @@ INSERT INTO categories (name, description) VALUES
     ('Pollo', 'Productos relacionados con el pollo'),
     ('Carnes', 'Diferentes tipos de carnes'),
     ('Bebidas', 'Refrescos, jugos y otras bebidas para acompañar tu comida');
+
+-- Tabla de productos
 
 create table products(
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -48,7 +52,7 @@ INSERT INTO products (name, price, id_category) VALUES
     ('Pechuga de Pollo', 5.99, 2),
     ('Pollo Entero', 15.99, 2),
     ('Muslos de Pollo', 4.49, 2),    
-    ('Alitas de Pollo BBQ', 6.99, 2),
+    ('Alitas de Pollo', 6.99, 2),
     ('Filete de Res', 8.99, 3),      
     ('Chuletas de Cerdo', 7.49, 3),  
     ('Coca Cola', 1.99, 4),          
@@ -61,10 +65,20 @@ INSERT INTO products (name, price, id_category) VALUES
     ('Agua San Luis', 1.09, 4),     
     ('Agua Loa', 1.39, 4);          
 
+-- Tabla de cargos
+
 create table charges(
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     name VARCHAR(20) NOT NULL
 );
+
+-- Inserciones de cargos
+
+INSERT INTO `charges` (`id`, `name`) VALUES (NULL, 'Almacenero');
+INSERT INTO  `charges`  (`id`, `name`) VALUES (NULL,'Recepcionista');
+INSERT INTO  `charges`  (`id`, `name`) VALUES (NULL,'Mesero');
+
+-- Tabla de usuarios
 
 create table users( -- empleado
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -79,6 +93,13 @@ create table users( -- empleado
     FOREIGN KEY (id_charge) REFERENCES charges(id)
 );
 
+-- Insercion de usuario
+
+insert users values (NULL ,'Adam', 'Milner', '987268698', '94875898', 'Adam  Milner', 'almacenero@gmail.com', '@Almacenero123', 1 );
+
+-- delete FROm usuario where id_usuario = 1;
+
+-- Tabla de requisitos
 
 create table requirements(
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -90,6 +111,8 @@ create table requirements(
     FOREIGN KEY (id_user) REFERENCES users(id)
 ); 
 
+-- Tabla de requisitos de productos
+
 create table products_requirements(
 	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     id_requirement INT NOT NULL,
@@ -98,6 +121,8 @@ create table products_requirements(
     FOREIGN KEY (id_requirement) REFERENCES requirements(id) ON DELETE CASCADE,
     FOREIGN KEY (id_product) REFERENCES products(id) 
 );
+
+-- Tabla de proveedores
 
 create table suppliers(
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -127,6 +152,8 @@ INSERT INTO suppliers (company_name, address, ruc, phone, email) VALUES
 ('Suministros Médicos S.A.C.', 'Avenida Médica #909', '88990011223', '912345678', 'suministros_medicos@gmail.com'),
 ('Productos de Limpieza Express S.A.', 'Calle Limpieza #1010', '99001112234', '912345678', 'productos_limpieza_express@hotmail.com');
 
+-- Tabla de ordenes de compra
+
 create table purchase_orders(
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     observation VARCHAR(100) NOT NULL,
@@ -139,6 +166,8 @@ create table purchase_orders(
     FOREIGN KEY (id_supplier) REFERENCES suppliers(id) ON DELETE CASCADE
 );
 
+-- Tabla de pruebas de compra
+
 create table proofs_of_purchase(
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     description VARCHAR(200),
@@ -148,20 +177,14 @@ create table proofs_of_purchase(
     FOREIGN KEY (id_purchase_order) REFERENCES purchase_orders(id)
 );
 
-INSERT INTO `charges` (`id`, `name`) VALUES (NULL, 'Almacenero');
-
--- Insercion de usuarios
-
-insert users values (NULL ,'Adam', 'Milner', '987268698', '94875898', 'Adam  Milner', 'almacenero@gmail.com', '@Almacenero123', 1 );
-
--- delete FROm usuario where id_usuario = 1;
+-- Vista de productos seleccionados
 
 CREATE VIEW SELECTEDPRODUCTS AS
 SELECT p.id, p.name, p.price, p.id_category, c.name as category_name
 FROM products p, categories c
 WHERE p.id_category = c.id;
 
--- * sub total para el requerimiento de compra
+-- Vista para el sub total del requisito de compra
 
 CREATE VIEW CALCULATE_SUBTOTAL_REQUIREMENT AS
 SELECT pr.id_requirement, SUM(pr.quantity * p.price) AS subtotal
@@ -169,18 +192,23 @@ FROM products_requirements pr
 JOIN products p ON pr.id_product = p.id
 GROUP BY pr.id_requirement;
 
+-- Vista para seleccionar perfil
+
 CREATE VIEW SELECTPROFILE AS
 SELECT u.id, u.names, u.surnames, u.phone, u.dni, u.user_name, u.email, u.password, c.name as charge_user
 FROM users u, charges c
 WHERE c.id = u.id_charge;
--- * Boton Ver del listar requerimientos.
+
+-- Vista para ver requisito
 
 CREATE VIEW VIEW_REQUIREMENT AS
-SELECT r.id , u.id as id_user , concat(u.names, ' ' ,u.surnames) as name, r.date_time, r.description, r.state,
+SELECT DISTINCT r.id , u.id as id_user , concat(u.names, ' ' ,u.surnames) as name, r.date_time, r.description, r.state,
 r.subtotal
 FROM requirements r, products_requirements pr, products p, categories c, users u
 WHERE pr.id_requirement = r.id
 AND r.id_user = u.id;
+
+-- Vista para requisito del producto
 
 CREATE VIEW PRODUCT_REQUIREMENT AS
 SELECT r.id, pr.id as pr_id, p.name, c.name as category_name, p.price, pr.quantity
@@ -189,10 +217,10 @@ WHERE r.id = pr.id_requirement
 AND pr.id_product = p.id
 AND p.id_category = c.id;
 
+-- Vista para ver pedido
+
 CREATE OR REPLACE VIEW VIEW_ORDER AS 
 SELECT po.id, po.id_requirement, s.company_name, s.ruc, s.address, po.state, po.observation, po.date_time, r.subtotal, po.total, r.date_time as date_time_r
 FROM purchase_orders po, suppliers s, requirements r
 WHERE po.id_supplier = s.id
 AND po.id_requirement = r.id;
-
-
