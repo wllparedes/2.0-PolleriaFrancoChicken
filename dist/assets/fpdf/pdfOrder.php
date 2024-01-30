@@ -29,7 +29,7 @@ class PDF extends FPDF
       $this->SetTextColor(48, 62, 108); //color
       $this->SetFillColor(228, 243, 248); //colorFondo
       //creamos una celda o fila
-      $this->Cell(110, 15, utf8_decode('Detalle del Orden de compra'), 0, 1, 'L', 0); // AnchoCelda,AltoCelda,titulo,borde(1-0),saltoLinea(1-0),posicion(L-C-R),ColorFondo(1-0)
+      $this->Cell(110, 15, utf8_decode('Detalle de la Orden de compra'), 0, 1, 'L', 0); // AnchoCelda,AltoCelda,titulo,borde(1-0),saltoLinea(1-0),posicion(L-C-R),ColorFondo(1-0)
 
       $this->SetTextColor(128, 138, 134); //color 218, 230, 237   199, 213, 218   146, 184, 217
 
@@ -60,7 +60,7 @@ class PDF extends FPDF
       //color
       $this->SetTextColor(138, 148, 144); //199, 213, 218
       $this->SetFont('Arial', '', 12);
-      $this->Cell(100, 10, utf8_decode("Productos del Orden de compra"), 0, 1, '', 0);
+      $this->Cell(100, 10, utf8_decode("Productos de la Orden de compra"), 0, 1, '', 0);
       $this->Ln(1);
 
       /* CAMPOS DE LA TABLA */
@@ -101,9 +101,9 @@ class PDF extends FPDF
       $this->SetY(-35); // Posición: a 1,5 cm del final
       $this->SetFont('Arial', 'I', 10); //tipo fuente, cursiva, tamañoTexto
       
-      $this->Cell(94, 5, utf8_decode('Monto del Orden de Compra:'), 0, 0, 'L', 0); 
+      $this->Cell(94, 5, utf8_decode('Monto de la Orden de Compra:'), 0, 0, 'L', 0); 
       $this->Cell(94, 5, utf8_decode('Sub Total:'), 0, 1, 'R', 0);
-      $this->Cell(94, 5, utf8_decode('Nota: El monto del requerimiento de compra no incluye el IGV.'), 0, 0, 'L', 0); 
+      $this->Cell(94, 5, utf8_decode('Nota: El monto de la Orden de compra incluye IGV.'), 0, 0, 'L', 0); 
       $this->Cell(94, 5, utf8_decode('S/. ' . $dato_info->subtotal), 0, 1, 'R', 0);
       $this->Cell(94, 5, utf8_decode(''), 0, 0, 'L', 0); 
       $this->Cell(94, 5, utf8_decode('Total:'), 0, 1, 'R', 0);
@@ -153,4 +153,4 @@ if(isset($_GET['id'])) {
    echo "Error: No se proporcionó el parámetro 'id' en la URL";
 }
 
-$pdf->Output('Detalle del Requerimiento.pdf', 'D');//nombreDescarga, Visor(I->visualizar - D->descargar)
+$pdf->Output('Detalle de la Orden de compra.pdf', 'D');//nombreDescarga, Visor(I->visualizar - D->descargar)
