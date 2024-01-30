@@ -29,7 +29,7 @@ class PDF extends FPDF
       $this->SetTextColor(48, 62, 108); //color
       $this->SetFillColor(228, 243, 248); //colorFondo
       //creamos una celda o fila
-      $this->Cell(110, 15, utf8_decode('Detalle del requirimiento de compra'), 0, 1, 'L', 0); // AnchoCelda,AltoCelda,titulo,borde(1-0),saltoLinea(1-0),posicion(L-C-R),ColorFondo(1-0)
+      $this->Cell(110, 15, utf8_decode('Detalle del requerimiento de compra'), 0, 1, 'L', 0); // AnchoCelda,AltoCelda,titulo,borde(1-0),saltoLinea(1-0),posicion(L-C-R),ColorFondo(1-0)
 
       $this->SetTextColor(128, 138, 134); //color 218, 230, 237   199, 213, 218   146, 184, 217
 
