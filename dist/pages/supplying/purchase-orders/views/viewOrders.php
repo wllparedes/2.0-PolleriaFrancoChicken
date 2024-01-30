@@ -24,6 +24,9 @@
                                                 <p id="date"></p>
                                                 <strong>Hora: </strong><br>
                                                 <p id="time"></p>
+                                                <strong>ID Requerimiento: </strong><br>
+                                                <p id="id_requirement">
+                                                </p>
                                             </address>
                                         </div>
                                         <div class="col-md-6 text-md-right" id="colModal">
@@ -37,18 +40,8 @@
                                                 <strong>Dirección: </strong><br>
                                                 <p id="address">
                                                 </p>
-                                            </address>
-                                        </div>
-                                        <div class="col-md-6 text-md-right" id="colModal">
-                                            <address>
-                                                <strong>ID Requerimiento: </strong><br>
-                                                <p id="id_requirement">
-                                                </p>
                                                 <strong>Subtotal:</strong><br>
                                                 <p id="subtotal">
-                                                </p>
-                                                <strong>Fecha y Hora: </strong><br>
-                                                <p id="datetime">
                                                 </p>
                                             </address>
                                         </div>
@@ -58,7 +51,7 @@
 
                             <div class="row">
                                 <div class="col-md-12" id="colModal">
-                                    <p class="section-lead">Todos los productos del Requerimiento de compra.</p>
+                                    <p class="section-lead">Todos los productos del Orden de compra.</p>
                                     <div class="table-responsive" id="dataTable">
 
                                         <table id="table-product" class="table table-striped table-hover table-md">
@@ -76,8 +69,8 @@
                                     </div>
                                     <div class="row mt-4">
                                         <div class="col-lg-8">
-                                            <div class="section-title">Monto del Requerimiento de Compra: </div>
-                                            <p class="section-lead"> <strong>Nota: </strong>El monto del requerimiento
+                                            <div class="section-title">Monto del Orden de Compra: </div>
+                                            <p class="section-lead"> <strong>Nota: </strong>El monto del Orden
                                                 de compra incluye el IGV.</p>
                                         </div>
                                         <div class="col-lg-4 text-right">

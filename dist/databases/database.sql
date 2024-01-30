@@ -202,7 +202,7 @@ WHERE c.id = u.id_charge;
 -- Vista para ver requisito
 
 CREATE VIEW VIEW_REQUIREMENT AS
-SELECT DISTINCT r.id , u.id as id_user , concat(u.names, ' ' ,u.surnames) as name, r.date_time, r.description, r.state,
+SELECT r.id , u.id as id_user , concat(u.names, ' ' ,u.surnames) as name, r.date_time, r.description, r.state,
 r.subtotal
 FROM requirements r, products_requirements pr, products p, categories c, users u
 WHERE pr.id_requirement = r.id
@@ -211,7 +211,7 @@ AND r.id_user = u.id;
 -- Vista para requisito del producto
 
 CREATE VIEW PRODUCT_REQUIREMENT AS
-SELECT r.id, pr.id as pr_id, p.name, c.name as category_name, p.price, pr.quantity
+SELECT r.id, p.id as pr_id, p.name, c.name as category_name, p.price, pr.quantity
 FROM requirements r, products_requirements pr, products p, categories c
 WHERE r.id = pr.id_requirement
 AND pr.id_product = p.id

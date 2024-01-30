@@ -64,7 +64,6 @@
                                                 </tr>
                                             </thead>
                                         </table>
-
                                     </div>
                                     <div class="row mt-4">
                                         <div class="col-lg-8">
@@ -90,9 +89,6 @@
                 <div class="modal-footer">
                     <button type="button" class="close-modal btn btn-light-secondary" data-bs-dismiss="modal">
                         Cerrar
-                    </button>
-                    <button class="btn btn-warning btn-icon icon-left"><i class="fas fa-print"></i>
-                        Imprimir
                     </button>
                 </div>
             </form>
