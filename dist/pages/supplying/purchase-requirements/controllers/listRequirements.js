@@ -24,6 +24,10 @@ export const dataTable = tableRequirements.DataTable({
 						<i class="fas fa-eye"></i>
 					</button>
 					&nbsp;
+					<button class="pdf btn btn-sm btn-warning" data-id="${row.id_requirement}"> 
+						<i class="fas fa-file-pdf"></i>
+					</button>
+					&nbsp;
 					<button class="delete btn btn-sm btn-danger" data-id="${row.id_requirement}"> 
 						<i class="fas fa-trash"></i>
 					</button>
@@ -43,4 +47,20 @@ export let tableProducts = $('#table-product').DataTable({
 	autoWidth: false,
 	processing: true,
 	language: language,
+	pageLength: 100,
+	searching: false,
+	lengthChange: false,
+	paging: false,
+	info: false,
+});
+
+tableRequirements.on('click', '.pdf', function () {
+    // Obtener el ID del requerimiento desde el atributo data-id del botón
+    var requirementId = $(this).data('id');
+
+    // Construir la URL de la nueva página con el ID del requerimiento
+    var newPageUrl = '../../../../../dist/assets/fpdf/pdfRequirement.php?id=' + requirementId;
+	
+    // Abrir la nueva página en una nueva ventana
+    window.open(newPageUrl, '_blank');
 });
