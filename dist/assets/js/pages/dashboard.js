@@ -1,9 +1,13 @@
+
+
+// * CHART 
+
 var optionsProfileVisit = {
 	annotations: {
 		position: 'back'
 	},
 	dataLabels: {
-		enabled:false
+		enabled: false
 	},
 	chart: {
 		type: 'bar',
@@ -23,6 +27,10 @@ var optionsProfileVisit = {
 		categories: ["Jan","Feb","Mar","Apr","May","Jun","Jul", "Aug","Sep","Oct","Nov","Dec"],
 	},
 }
+
+
+// * CHART
+
 let optionsVisitorsProfile  = {
 	series: [70, 30],
 	labels: ['Male', 'Female'],
