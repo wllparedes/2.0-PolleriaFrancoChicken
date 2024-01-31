@@ -223,3 +223,17 @@ SELECT po.id, po.id_requirement, s.company_name, s.ruc, s.address, po.state, po.
 FROM purchase_orders po, suppliers s, requirements r
 WHERE po.id_supplier = s.id
 AND po.id_requirement = r.id;
+
+CREATE OR REPLACE VIEW QUANTITY_PRODUCT_FOR_CATEGORY AS 
+SELECT c.name, COUNT(p.id_category) AS qty
+FROM categories c
+JOIN products p ON c.id = p.id_category
+GROUP BY c.name;
+
+select * from PURCHASE_ORDERS_FOR_MONTH;
+
+CREATE OR REPLACE VIEW PURCHASE_ORDERS_FOR_MONTH AS
+SELECT MONTHNAME(date_time) AS month, COUNT(id) AS qty_orders
+FROM purchase_orders
+WHERE YEAR(date_time) = YEAR(CURDATE())
+GROUP BY MONTH(date_time);
