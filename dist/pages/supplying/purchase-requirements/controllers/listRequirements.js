@@ -55,12 +55,9 @@ export let tableProducts = $('#table-product').DataTable({
 });
 
 tableRequirements.on('click', '.pdf', function () {
-    // Obtener el ID del requerimiento desde el atributo data-id del botón
-    var requirementId = $(this).data('id');
 
-    // Construir la URL de la nueva página con el ID del requerimiento
-    var newPageUrl = '../../../../../dist/assets/fpdf/pdfRequirement.php?id=' + requirementId;
+    let requirementId = $(this).data('id');
+    let newPageUrl = '../../../../../dist/assets/fpdf/pdfRequirement.php?id=' + requirementId;
+	window.open(newPageUrl, '_blank');
 	
-    // Abrir la nueva página en una nueva ventana
-    window.open(newPageUrl, '_blank');
 });
