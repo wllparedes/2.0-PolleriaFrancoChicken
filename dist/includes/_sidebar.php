@@ -145,6 +145,7 @@
                         <span>Salir</span>
                     </a>
                 </li>
+                <!-- Modo oscuro -->
                 <li class="sidebar-item d-flex align-items-center gap-3">
                     <span class="mx-auto">Cambiar de modo</span>
                     <button class="switch ml-auto" id="switch">

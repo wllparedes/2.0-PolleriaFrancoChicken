@@ -26,6 +26,10 @@ export const dataTable = tableOrders.DataTable({
 						<i class="fas fa-eye"></i>
 					</button>
 					&nbsp;
+					<button class="pdf btn btn-sm btn-warning" data-id="${row.id}"> 
+						<i class="fas fa-file-pdf"></i>
+					</button>
+					&nbsp;
 					<button class="delete btn btn-sm btn-danger" data-id="${row.id}"> 
 						<i class="fas fa-trash"></i>
 					</button>
@@ -45,4 +49,22 @@ export let tableProducts = $('#table-product').DataTable({
 	autoWidth: false,
 	processing: true,
 	language: language,
+	pageLength: 100,
+	searching: false,
+	lengthChange: false,
+	paging: false,
+	info: false,
+});
+
+tableOrders.on('click', '.pdf', function () {
+    // Obtener el ID del requerimiento desde el atributo data-id del botón
+    var OrderId = $(this).data('id');
+
+	//FALTA AGREGAR CAMBIO DE STATE
+
+    // Construir la URL de la nueva página con el ID del requerimiento
+    var newPageUrl = '../../../../../dist/assets/fpdf/pdfOrder.php?id=' + OrderId;
+	
+    // Abrir la nueva página en una nueva ventana
+    window.open(newPageUrl, '_blank');
 });

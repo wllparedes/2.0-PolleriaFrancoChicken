@@ -46,7 +46,7 @@ include("./../../../../php/verificar_session.php");
                         <div class="col-12 col-md-6 order-md-2 order-first">
                             <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                                    <li class="breadcrumb-item"><a href="./../../../home/storekeeper/views/index.php">Dashboard</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Input Group</li>
                                 </ol>
                             </nav>
@@ -70,7 +70,7 @@ include("./../../../../php/verificar_session.php");
                                         <th>Fecha</th>
                                         <th>Hora</th>
                                         <th>Descripcion</th>
-                                        <th>Subtotal</th>
+                                        <th>Subtotal (S/.)</th>
                                         <th>Estado</th>
                                         <th>Opciones</th>
                                     </tr>
@@ -105,8 +105,7 @@ include("./../../../../php/verificar_session.php");
     <script src="./../../../../assets/vendors/datatables/Responsive-2.2.1/js/dataTables.responsive.min.js"></script>
     <script src="./../../../../assets/vendors/datatables/Responsive-2.2.1/js/responsive.bootstrap4.min.js"></script>
 
-    <!-- * parte de la pagina  
-    <script src="./../controllers/deleteCategory.js" type="module"></script>-->
+    <!-- * parte de la pagina  -->
     <script src="./../controllers/listRequirements.js" type="module"></script>
     <script src="./../controllers/getRequirements.js" type="module"></script>
     <script src="./../controllers/deleteRequirements.js" type="module"></script>

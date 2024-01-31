@@ -68,8 +68,8 @@ export const dataTable = tableProducts.DataTable({
 					columns: [0, 1, 2, 3],
 				},
 				customize: function (doc) {
-					doc.content[1].table.widths = ['25%', '25%', '25%', '25%']; // Ajusta el ancho de las columnas
-					doc.styles.tableHeader.fillColor = '#6aa3b4'; // Cambia el color del encabezado de la tabla
+					doc.content[1].table.widths = ['25%', '25%', '25%', '25%']; 
+					doc.styles.tableHeader.fillColor = '#6aa3b4'; 
 				},
 			},
 		],
