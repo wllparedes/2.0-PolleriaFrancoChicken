@@ -224,13 +224,15 @@ FROM purchase_orders po, suppliers s, requirements r
 WHERE po.id_supplier = s.id
 AND po.id_requirement = r.id;
 
+-- Vista para cantidad producto por categoria
+
 CREATE OR REPLACE VIEW QUANTITY_PRODUCT_FOR_CATEGORY AS 
 SELECT c.name, COUNT(p.id_category) AS qty
 FROM categories c
 JOIN products p ON c.id = p.id_category
 GROUP BY c.name;
 
-select * from PURCHASE_ORDERS_FOR_MONTH;
+-- Vista de ordenes de compra por mes
 
 CREATE OR REPLACE VIEW PURCHASE_ORDERS_FOR_MONTH AS
 SELECT MONTHNAME(date_time) AS month, COUNT(id) AS qty_orders
