@@ -10,10 +10,32 @@ $result = $stmt->get_result();
 
 $orders = [];
 
+$MONTH_ES = [
+    'January' => 'Enero',
+    'February' => 'Febrero',
+    'March' => 'Marzo',
+    'April' => 'Abril',
+    'May' => 'Mayo',
+    'June' => 'Junio',
+    'July' => 'Julio',
+    'August' => 'Agosto',
+    'September' => 'Septiembre',
+    'October' => 'Octubre',
+    'November' => 'Noviembre',
+    'December' => 'Diciembre'
+];
+
 while ($row = $result->fetch_assoc()) {
 
     $datetime = new DateTime($row['date_time']);
-    $date = $datetime->format('j \d\e F \d\e Y');
+
+    $month = $datetime->format('F');
+    $year = $datetime->format('Y');
+    $day = $datetime->format('d');
+
+    $month_es = $MONTH_ES[$month];
+    $date = $day . ' de ' . $month_es . ' del ' . $year;
+
     $hour = $datetime->format('h:i A');
 
     $status = $row['state'] ? 'success' : 'danger';
