@@ -11,13 +11,14 @@ $informationDashboard = new InformationDashboard();
 
 <head>
 	<?php include('./../../../../includes/_head.php'); ?>
+	<title>Inicio - Almacenero</title>
 </head>
 
 <body>
 	<div id="app">
-		
+
 		<?php $isActiveHome = 'active' ?>
-		
+
 		<!-- start sidebar -->
 		<?php include('./../../../../includes/_sidebar.php'); ?>
 		<!-- end sidebar -->
