@@ -15,7 +15,7 @@
         <div class="sidebar-menu">
             <ul class="menu">
                 <li class="sidebar-title">Menu</li>
-                <li class="sidebar-item ">
+                <li class="sidebar-item <?php echo $isActiveHome ?>">
                     <a href="./../../../home/storekeeper/views/index.php" class="sidebar-link">
                         <i class="bi bi-grid-fill"></i>
                         <span>Inicio</span>
@@ -24,61 +24,61 @@
 
                 <li class="sidebar-title">Mantenimiento</li>
 
-                <li class="sidebar-item has-sub">
+                <li class="sidebar-item has-sub <?php echo $isActiveModuleUser ?>">
                     <a href="#" class="sidebar-link">
                         <i class="bi bi-hexagon-fill"></i>
                         <span>Usuarios</span>
                     </a>
-                    <ul class="submenu">
-                        <li class="submenu-item">
+                    <ul class="submenu <?php echo $isActiveModuleUser ?>">
+                        <li class="submenu-item <?php echo $isActiveSectionNew ?>">
                             <a href="./../../../maintenance/users/views/newUser.php">Nuevo usuario</a>
                         </li>
-                        <li class="submenu-item">
+                        <li class="submenu-item <?php echo $isActiveSectionList ?>">
                             <a href="./../../../maintenance/users/views/listUsers.php">Lista de usuarios</a>
                         </li>
                     </ul>
                 </li>
 
-                <li class="sidebar-item has-sub">
+                <li class="sidebar-item has-sub <?php echo $isActiveModuleCategory ?>">
                     <a href="#" class="sidebar-link">
                         <i class="bi bi-file-earmark-spreadsheet-fill"></i>
                         <span>Categorias</span>
                     </a>
-                    <ul class="submenu">
-                        <li class="submenu-item">
+                    <ul class="submenu <?php echo $isActiveModuleCategory ?>">
+                        <li class="submenu-item  <?php echo $isActiveSectionNewCategory ?>">
                             <a href="./../../../maintenance/categories/views/newCategory.php">Nuevo categoria</a>
                         </li>
-                        <li class="submenu-item">
+                        <li class="submenu-item <?php echo $isActiveSectionListCategory ?>">
                             <a href="./../../../maintenance/categories/views/listCategories.php">Lista de categorias</a>
                         </li>
                     </ul>
                 </li>
 
-                <li class="sidebar-item has-sub">
+                <li class="sidebar-item has-sub <?php echo $isActiveModuleProduct ?>">
                     <a href="#" class="sidebar-link">
                         <i class="bi bi-pen-fill"></i>
                         <span>Productos</span>
                     </a>
-                    <ul class="submenu">
-                        <li class="submenu-item">
+                    <ul class="submenu <?php echo $isActiveModuleProduct ?>">
+                        <li class="submenu-item <?php echo $isActiveSectionNewProduct ?>">
                             <a href="./../../../maintenance/products/views/newProduct.php">Nuevo producto</a>
                         </li>
-                        <li class="submenu-item">
+                        <li class="submenu-item <?php echo $isActiveSectionListProduct ?>">
                             <a href="./../../../maintenance/products/views/listProducts.php">Lista de productos</a>
                         </li>
                     </ul>
                 </li>
 
-                <li class="sidebar-item has-sub">
+                <li class="sidebar-item has-sub <?php echo $isActiveModuleSupplier ?>">
                     <a href="table.html" class="sidebar-link">
                         <i class="bi bi-grid-1x2-fill"></i>
                         <span>Proveedores</span>
                     </a>
-                    <ul class="submenu">
-                        <li class="submenu-item">
+                    <ul class="submenu <?php echo $isActiveModuleSupplier ?>">
+                        <li class="submenu-item <?php echo $isActiveSectionNewSupplier ?>">
                             <a href="./../../../maintenance/suppliers/views/newSupplier.php">Nuevo proveedor</a>
                         </li>
-                        <li class="submenu-item">
+                        <li class="submenu-item <?php echo $isActiveSectionListSupplier ?>">
                             <a href="./../../../maintenance/suppliers/views/listSuppliers.php">Lista de proveedores</a>
                         </li>
                     </ul>
@@ -86,56 +86,41 @@
 
                 <li class="sidebar-title">Abastecimiento</li>
 
-                <li class="sidebar-item has-sub">
+                <li class="sidebar-item has-sub <?php echo $isActiveModuleRequirement ?>">
                     <a href="#" class="sidebar-link">
                         <i class="bi bi-pentagon-fill"></i>
                         <span>Requerimiento de compra</span>
                     </a>
-                    <ul class="submenu">
-                        <li class="submenu-item">
+                    <ul class="submenu <?php echo $isActiveModuleRequirement ?>">
+                        <li class="submenu-item <?php echo $isActiveSectionNewRequirement ?>">
                             <a href="./../../../supplying/purchase-requirements/views/newRequirement.php">Nuevo
                                 requerimiento</a>
                         </li>
-                        <li class="submenu-item">
+                        <li class="submenu-item <?php echo $isActiveSectionListRequirement ?>">
                             <a href="./../../../supplying/purchase-requirements/views/listRequirements.php">Lista de
                                 requerimientos</a>
                         </li>
                     </ul>
                 </li>
 
-                <li class="sidebar-item has-sub">
+                <li class="sidebar-item has-sub <?php echo $isActiveModuleOrder ?>">
                     <a href="#" class="sidebar-link">
                         <i class="bi bi-egg-fill"></i>
                         <span>Orden de compra</span>
                     </a>
-                    <ul class="submenu">
-                        <li class="submenu-item">
+                    <ul class="submenu <?php echo $isActiveModuleOrder ?>">
+                        <li class="submenu-item <?php echo $isActiveSectionNewOrder ?>">
                             <a href="./../../../supplying/purchase-orders/views/newOrder.php">Nueva orden</a>
                         </li>
-                        <li class="submenu-item">
+                        <li class="submenu-item <?php echo $isActiveSectionListOrder ?>">
                             <a href="./../../../supplying/purchase-orders/views/listOrders.php">Lista de ordenes</a>
                         </li>
                     </ul>
                 </li>
 
-                <!-- <li class="sidebar-item has-sub">
-                    <a href="#" class="sidebar-link">
-                        <i class="bi bi-bar-chart-fill"></i>
-                        <span>Comprobante de compra</span>
-                    </a>
-                    <ul class="submenu">
-                        <li class="submenu-item">
-                            <a href="ui-chart-chartjs.html">Registrar comprobante</a>
-                        </li>
-                        <li class="submenu-item">
-                            <a href="ui-chart-apexcharts.html">Lista de comprobantes</a>
-                        </li>
-                    </ul>
-                </li> -->
-
                 <li class="sidebar-title">Perfil</li>
 
-                <li class="sidebar-item">
+                <li class="sidebar-item <?php echo $isActiveModuleProfile ?>">
                     <a href="./../../../maintenance/profile/views/viewProfile.php" class="sidebar-link">
                         <i class="bi bi-life-preserver"></i>
                         <span>Mi perfil</span>

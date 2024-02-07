@@ -21,6 +21,11 @@ include("./../../../../php/verificar_session.php");
         <div class="main-wrapper main-wrapper-1">
             <div class="navbar-bg"></div>
 
+        <?php
+            $isActiveModuleOrder = 'active';
+            $isActiveSectionNewOrder = 'active';
+        ?>
+
             <?php include('./../../../../includes/_sidebar.php'); ?>
 
 

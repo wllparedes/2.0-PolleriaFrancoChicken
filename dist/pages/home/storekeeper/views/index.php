@@ -15,10 +15,13 @@ $informationDashboard = new InformationDashboard();
 
 <body>
 	<div id="app">
-
-		<!-- start siderbar -->
+		
+		<?php $isActiveHome = 'active' ?>
+		
+		<!-- start sidebar -->
 		<?php include('./../../../../includes/_sidebar.php'); ?>
-		<!-- end siderbar -->
+		<!-- end sidebar -->
+
 
 		<div id="main">
 			<header class="mb-3">

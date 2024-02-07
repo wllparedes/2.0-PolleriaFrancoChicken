@@ -21,6 +21,11 @@ include("./../../../../php/verificar_session.php");
 <body>
     <div id="app">
 
+        <?php
+            $isActiveModuleRequirement = 'active';
+            $isActiveSectionListRequirement = 'active';
+        ?>
+
         <!-- start sidebar -->
 
         <?php include('./../../../../includes/_sidebar.php'); ?>

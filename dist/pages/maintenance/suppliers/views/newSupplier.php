@@ -16,6 +16,11 @@ include("./../../../../php/verificar_session.php");
 <body>
     <div id="app">
 
+        <?php
+            $isActiveModuleSupplier = 'active';
+            $isActiveSectionNewSupplier = 'active';
+        ?>
+
         <!-- start sidebar -->
 
         <?php include('./../../../../includes/_sidebar.php'); ?>
@@ -41,7 +46,8 @@ include("./../../../../php/verificar_session.php");
                         <div class="col-12 col-md-6 order-md-2 order-first">
                             <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="./../../../home/storekeeper/views/index.php">Inicio</a></li>
+                                    <li class="breadcrumb-item"><a
+                                            href="./../../../home/storekeeper/views/index.php">Inicio</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Nuevo proveedor</li>
                                 </ol>
                             </nav>
@@ -65,7 +71,8 @@ include("./../../../../php/verificar_session.php");
                                                     <label for="razon_social">Razon Social</label>
                                                     <div class="form-group position-relative has-icon-left">
                                                         <input type="text" id="razon_social" name="razon_social"
-                                                            class="form-control input-form" placeholder="Gallinas y Alas SRL">
+                                                            class="form-control input-form"
+                                                            placeholder="Gallinas y Alas SRL">
                                                         <div class="form-control-icon">
                                                             <i class="bi bi-bookmark-heart"></i>
                                                         </div>
@@ -99,7 +106,8 @@ include("./../../../../php/verificar_session.php");
                                                     <label for="phone">Telefono</label>
                                                     <div class="form-group position-relative has-icon-left">
                                                         <input type="text" id="phone" name="phone" rows="5"
-                                                            class="form-control input-form" placeholder="+51 985 987 685">
+                                                            class="form-control input-form"
+                                                            placeholder="+51 985 987 685">
                                                         <div class="form-control-icon">
                                                             <i class="bi bi-card-text"></i>
                                                         </div>
@@ -111,7 +119,8 @@ include("./../../../../php/verificar_session.php");
                                                     <label for="email">Email</label>
                                                     <div class="form-group position-relative has-icon-left">
                                                         <input type="text" id="email" name="email" rows="5"
-                                                            class="form-control input-form" placeholder="gallinas_alas@gmail.com">
+                                                            class="form-control input-form"
+                                                            placeholder="gallinas_alas@gmail.com">
                                                         <div class="form-control-icon">
                                                             <i class="bi bi-card-text"></i>
                                                         </div>

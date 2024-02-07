@@ -13,7 +13,7 @@ include("./../../../../php/verificar_session.php");
     <?php include('./../../../../includes/_links_for_page.php'); ?>
 
     <!-- virtual select -->
-    <link rel="stylesheet" href="./../../../../assets/vendors/virtual-select/virtual-select.min.css">    
+    <link rel="stylesheet" href="./../../../../assets/vendors/virtual-select/virtual-select.min.css">
     <!-- * datatable -->
     <link rel="stylesheet"
         href="./../../../../assets/vendors/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
@@ -24,6 +24,11 @@ include("./../../../../php/verificar_session.php");
 
 <body>
     <div id="app">
+
+        <?php
+            $isActiveModuleUser = 'active';
+            $isActiveSectionList = 'active';
+        ?>
 
         <!-- start sidebar -->
 
@@ -50,7 +55,8 @@ include("./../../../../php/verificar_session.php");
                         <div class="col-12 col-md-6 order-md-2 order-first">
                             <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="./../../../home/storekeeper/views/index.php">Inicio</a></li>
+                                    <li class="breadcrumb-item"><a
+                                            href="./../../../home/storekeeper/views/index.php">Inicio</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Lista de usuarios</li>
                                 </ol>
                             </nav>
@@ -100,7 +106,7 @@ include("./../../../../php/verificar_session.php");
 
 
     <?php include('./../../../../includes/_scripts_for_page.php'); ?>
-    
+
     <!-- datatable -->
     <script src="./../../../../assets/vendors/datatables/datatables.min.js"></script>
     <script src="./../../../../assets/vendors/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
@@ -108,12 +114,14 @@ include("./../../../../php/verificar_session.php");
     <script src="./../../../../assets/vendors/datatables/Responsive-2.2.1/js/responsive.bootstrap4.min.js"></script>
 
     <!-- * plugins  -->
-    <script src="https://cdn.jsdelivr.net/npm/datatables-buttons-excel-styles@1.2.0/js/buttons.html5.styles.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/datatables-buttons-excel-styles@1.2.0/js/buttons.html5.styles.templates.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/datatables-buttons-excel-styles@1.2.0/js/buttons.html5.styles.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/datatables-buttons-excel-styles@1.2.0/js/buttons.html5.styles.templates.min.js"></script>
 
     <!-- virtual select -->
     <script src="./../../../../assets/vendors/virtual-select/virtual-select.min.js"></script>
-    
+
     <!-- * parte de la pagina  -->
     <script src="./../controllers/listUsers.js" type="module"></script>
     <script src="./../controllers/getUser.js" type="module"></script>
