@@ -30,18 +30,19 @@
 - Bootstrap 5
 - jQuery
 - Sweet Alert2
-- Chart.js
+- ApexCharts.js
 - Virtual Select
-- cleave Js
 - Fontawesome
-- Smmoth Scrollbar
 - FPDF
+- DataTable
+- JSPDF
+- DatePicker
+- Moment.js
+- Perfect scrollbar
 
 # Otras Herramientas
 
-- IBM Rational Software Architec
-- DIA
-- XAMP
+- XAMPP
 - Visual Studio Code
 - GitHub
 - GIT
