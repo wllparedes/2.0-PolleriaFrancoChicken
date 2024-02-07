@@ -57,14 +57,9 @@ export let tableProducts = $('#table-product').DataTable({
 });
 
 tableOrders.on('click', '.pdf', function () {
-    // Obtener el ID del requerimiento desde el atributo data-id del botón
-    var OrderId = $(this).data('id');
 
-	//FALTA AGREGAR CAMBIO DE STATE
-
-    // Construir la URL de la nueva página con el ID del requerimiento
-    var newPageUrl = '../../../../../dist/assets/fpdf/pdfOrder.php?id=' + OrderId;
-	
-    // Abrir la nueva página en una nueva ventana
+	let OrderId = $(this).data('id');
+    let newPageUrl = '../../../../../dist/assets/fpdf/pdfOrder.php?id=' + OrderId;
     window.open(newPageUrl, '_blank');
+
 });

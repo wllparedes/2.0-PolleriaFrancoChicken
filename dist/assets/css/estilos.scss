@@ -17,6 +17,17 @@ body {
 	}
 }
 
+#error {
+	transition: .3s ease all;
+	body.dark &{
+		background: $negro;
+		h1{
+			color: $grisClaro;
+		}
+	}
+
+}
+
 #nav{
 	transition: .3s ease all;
 body.dark &{

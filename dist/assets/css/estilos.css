@@ -5,6 +5,16 @@ body.dark {
   background: #151521;
 }
 
+#error {
+  transition: 0.3s ease all;
+}
+body.dark #error {
+  background: #151521;
+}
+body.dark #error h1 {
+  color: #C8C8C8;
+}
+
 #nav {
   transition: 0.3s ease all;
 }
