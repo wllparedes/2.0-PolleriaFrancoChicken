@@ -26,7 +26,7 @@
 
                 <li class="sidebar-item has-sub <?php echo $isActiveModuleUser ?>">
                     <a href="#" class="sidebar-link">
-                        <i class="bi bi-hexagon-fill"></i>
+                        <i class="bi bi-person-badge-fill"></i>
                         <span>Usuarios</span>
                     </a>
                     <ul class="submenu <?php echo $isActiveModuleUser ?>">
@@ -41,7 +41,7 @@
 
                 <li class="sidebar-item has-sub <?php echo $isActiveModuleCategory ?>">
                     <a href="#" class="sidebar-link">
-                        <i class="bi bi-file-earmark-spreadsheet-fill"></i>
+                        <i class="bi bi-stack"></i>
                         <span>Categorias</span>
                     </a>
                     <ul class="submenu <?php echo $isActiveModuleCategory ?>">
@@ -56,7 +56,7 @@
 
                 <li class="sidebar-item has-sub <?php echo $isActiveModuleProduct ?>">
                     <a href="#" class="sidebar-link">
-                        <i class="bi bi-pen-fill"></i>
+                        <i class="bi bi-egg-fill"></i>
                         <span>Productos</span>
                     </a>
                     <ul class="submenu <?php echo $isActiveModuleProduct ?>">
@@ -71,7 +71,7 @@
 
                 <li class="sidebar-item has-sub <?php echo $isActiveModuleSupplier ?>">
                     <a href="table.html" class="sidebar-link">
-                        <i class="bi bi-grid-1x2-fill"></i>
+                        <i class="bi bi-file-earmark-medical-fill"></i>
                         <span>Proveedores</span>
                     </a>
                     <ul class="submenu <?php echo $isActiveModuleSupplier ?>">
@@ -88,7 +88,7 @@
 
                 <li class="sidebar-item has-sub <?php echo $isActiveModuleRequirement ?>">
                     <a href="#" class="sidebar-link">
-                        <i class="bi bi-pentagon-fill"></i>
+                        <i class="bi bi-pen-fill"></i>
                         <span>Requerimiento de compra</span>
                     </a>
                     <ul class="submenu <?php echo $isActiveModuleRequirement ?>">
@@ -105,7 +105,7 @@
 
                 <li class="sidebar-item has-sub <?php echo $isActiveModuleOrder ?>">
                     <a href="#" class="sidebar-link">
-                        <i class="bi bi-egg-fill"></i>
+                        <i class="bi bi-file-earmark-spreadsheet-fill"></i>
                         <span>Orden de compra</span>
                     </a>
                     <ul class="submenu <?php echo $isActiveModuleOrder ?>">
@@ -122,14 +122,14 @@
 
                 <li class="sidebar-item <?php echo $isActiveModuleProfile ?>">
                     <a href="./../../../maintenance/profile/views/viewProfile.php" class="sidebar-link">
-                        <i class="bi bi-life-preserver"></i>
+                        <i class="bi bi-person-circle"></i>
                         <span>Mi perfil</span>
                     </a>
                 </li>
 
                 <li class="sidebar-item">
                     <a href="./../../../../php/cerrar_session.php" class="sidebar-link">
-                        <i class="bi bi-cash"></i>
+                        <i class="bi bi-x-octagon-fill"></i>
                         <span>Salir</span>
                     </a>
                 </li>
