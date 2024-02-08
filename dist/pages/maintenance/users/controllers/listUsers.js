@@ -18,6 +18,7 @@ export const dataTable = tableUsers.DataTable({
 		{ data: 'user_name' },
 		{ data: 'email' },
 		{ data: 'charge' },
+		{ data: 'state' },
 		{
 			render: function (data, type, row) {
 				return `<div class="btn-group btn-group-sm">
@@ -54,7 +55,7 @@ export const dataTable = tableUsers.DataTable({
 				filename: 'excel_usuarios',
 				exportOptions: {
 					//columns: ':visible'
-					columns: [0, 1, 2, 3, 4, 5, 6, 7],
+					columns: [0, 1, 2, 3, 4, 5, 6, 7, 8],
 				},
 				excelStyles: {
 					template: 'orange_medium',
@@ -68,20 +69,21 @@ export const dataTable = tableUsers.DataTable({
 				title: 'REPORTE DE USUARIOS',
 				filename: 'pdf_usuarios',
 				exportOptions: {
-					columns: [0, 1, 2, 3, 4, 5, 6, 7],
+					columns: [0, 1, 2, 3, 4, 5, 6, 7, 8],
 				},
 				customize: function (doc) {
 					doc.content[1].table.widths = [
 						'5%',
 						'10%',
-						'15%',
 						'10%',
 						'10%',
+						'10%',
 						'15%',
-						'20%',
 						'15%',
-					]; 
-					doc.styles.tableHeader.fillColor = '#C497E7'; 
+						'15%',
+						'10%',
+					];
+					doc.styles.tableHeader.fillColor = '#C497E7';
 				},
 			},
 		],

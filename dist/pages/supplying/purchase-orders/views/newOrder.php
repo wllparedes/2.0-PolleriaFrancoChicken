@@ -21,6 +21,11 @@ include("./../../../../php/verificar_session.php");
         <div class="main-wrapper main-wrapper-1">
             <div class="navbar-bg"></div>
 
+        <?php
+            $isActiveModuleOrder = 'active';
+            $isActiveSectionNewOrder = 'active';
+        ?>
+
             <?php include('./../../../../includes/_sidebar.php'); ?>
 
 
@@ -45,8 +50,8 @@ include("./../../../../php/verificar_session.php");
                             <div class="col-12 col-md-6 order-md-2 order-first">
                                 <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Input Group</li>
+                                        <li class="breadcrumb-item"><a href="./../../../home/storekeeper/views/index.php">Inicio</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Nueva órden de compra</li>
                                     </ol>
                                 </nav>
                             </div>

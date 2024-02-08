@@ -11,14 +11,18 @@ $informationDashboard = new InformationDashboard();
 
 <head>
 	<?php include('./../../../../includes/_head.php'); ?>
+	<title>Inicio - Almacenero</title>
 </head>
 
 <body>
 	<div id="app">
 
-		<!-- start siderbar -->
+		<?php $isActiveHome = 'active' ?>
+
+		<!-- start sidebar -->
 		<?php include('./../../../../includes/_sidebar.php'); ?>
-		<!-- end siderbar -->
+		<!-- end sidebar -->
+
 
 		<div id="main">
 			<header class="mb-3">
@@ -106,7 +110,7 @@ $informationDashboard = new InformationDashboard();
 													<svg class="icon-dashboard icon icon-tabler icon-tabler-user-shield"
 														width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
 														stroke="currentColor" fill="none" stroke-linecap="round"
-														stroke-linejoin="round" id="icons">
+														stroke-linejoin="round">
 														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 														<path d="M6 21v-2a4 4 0 0 1 4 -4h2" />
 														<path

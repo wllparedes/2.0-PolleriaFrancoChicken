@@ -9,13 +9,14 @@ if (isset($_POST['name'])) {
     $dni = $_POST['dni'];
     $userName = $_POST['userName'];
     $email = $_POST['email'];
-    $id_charge = (int) $_POST['id_charge'];
     $password = $_POST['password'];
+    $state = (int) $_POST['state'];
+    $id_charge = (int) $_POST['id_charge'];
 
     try {
-        $query = "INSERT INTO users (names, surnames, phone, dni, user_name, email, password, id_charge)  VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        $query = "INSERT INTO users (names, surnames, phone, dni, user_name, email, password, state, id_charge)  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($query);
-        $stmt->bind_param("sssssssi", $name, $surnames, $phone, $dni, $userName, $email, $password, $id_charge);
+        $stmt->bind_param("sssssssii", $name, $surnames, $phone, $dni, $userName, $email, $password, $state, $id_charge);
         $stmt->execute();
         $stmt->close();
 
@@ -24,12 +25,12 @@ if (isset($_POST['name'])) {
     } catch (Exception $e) {
         $status = false;
     }
-    
+
 }
 $conn->close();
 
 echo json_encode([
-    "status"=> $status,
+    "status" => $status,
 ]);
 
 ?>

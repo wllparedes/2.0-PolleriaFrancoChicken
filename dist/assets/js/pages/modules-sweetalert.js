@@ -121,6 +121,16 @@ const usuario_now = () => {
 		timer: 5000,
 	});
 };
+const usuario_admin = () => {
+	Swal.fire({
+		position: 'center',
+		icon: 'warning',
+		title: 'No se ha podido eliminar',
+		text: `Usted no puede eliminar al Administrador.`,
+		showConfirmButton: false,
+		timer: 5000,
+	});
+};
 
 
 export {
@@ -133,4 +143,5 @@ export {
 	error,
 	si_actualizado,
 	usuario_now,
+	usuario_admin,
 };

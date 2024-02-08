@@ -9,7 +9,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-body{
+body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +19,7 @@ body{
   background-position: center;
 }
 
-.wrapper{
+.wrapper {
   width: 420px;
   background: transparent;
   border: 2px solid rgba(255, 255, 255, .2);
@@ -30,19 +30,19 @@ body{
   padding: 30px 40px;
 }
 
-.wrapper h1{
+.wrapper h1 {
   font-size: 36px;
   text-align: center;
 }
 
-.wrapper .input-box{
+.wrapper .input-box {
   position: relative;
   width: 100%;
   height: 50px;
   margin: 30px 0;
 }
 
-.input-box input{
+.input-box input {
   width: 100%;
   height: 100%;
   background: transparent;
@@ -55,11 +55,11 @@ body{
   padding: 20px 45px 20px 20px;
 }
 
-.input-box input::placeholder{
+.input-box input::placeholder {
   color: #fff;
 }
 
-.input-box i{
+.input-box i {
   position: absolute;
   right: 20px;
   top: 50%;
@@ -67,14 +67,14 @@ body{
   font-size: 20px;
 }
 
-.wrapper .remember-forgot{
+.wrapper .remember-forgot {
   display: flex;
   justify-content: space-between;
   font-size: 14.5px;
   margin: -15px 0 15px;
 }
 
-.wrapper .btn{
+.wrapper .btn {
   width: 100%;
   height: 45px;
   background: #fff;
@@ -88,26 +88,26 @@ body{
   font-weight: 600;
 }
 
-input{
+input {
   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-input:focus{
+input:focus {
   border-color: #80bdff;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-.btn{
+.btn {
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: rgba(0, 123, 255, 0.5);
   color: #fff;
 }
 
-.btn:focus{
+.btn:focus {
   outline: none;
   box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
 }
@@ -116,63 +116,70 @@ input:focus{
 
 /*Alertas*/
 .mensaje {
-    width: 100%;
-    color: white;
-    padding: 12px;
-    border-radius: 7px;
-    transition: opacity 1s;
-    margin: 10px 0 0 0;
-    display: none;
+  width: 100%;
+  color: white;
+  padding: 12px;
+  border-radius: 7px;
+  transition: opacity 1s;
+  margin: 10px 0 0 0;
+  display: none;
 }
 
 .mensaje-success {
-    display: block;
-    background-image: linear-gradient(-225deg, #2a9550 0%, #35a77d 51%, #30d2aa 100%);
+  display: block;
+  background-image: linear-gradient(-225deg, #2a9550 0%, #35a77d 51%, #30d2aa 100%);
 }
 
 .mensaje-error {
-    display: block;
-    background-image: linear-gradient(to right, #f3627c 0%, #fd5879 19%, #f86f76 60%, #f06d59 100%);
+  display: block;
+  background-image: linear-gradient(-60deg, #da1e50 0%, #e70f16 100%);
 }
 
 .mensaje-warning {
-    display: block;
-    background-image: linear-gradient(-60deg, #ff7c58 0%, #f09819 100%);
+  display: block;
+  background-image: linear-gradient(-60deg, #ff7c58 0%, #f09819 100%);
 }
 
 .mensaje-primary {
-    display: block;
-    background-image: linear-gradient(-60deg, #007bff 0%, #0056b3 100%);
+  display: block;
+  background-image: linear-gradient(-60deg, #007bff 0%, #0056b3 100%);
+}
+
+.mensaje-inactive {
+  display: block;
+  background-image: linear-gradient(-60deg, #da1e66 0%, #cb4055 100%);
 }
 
 /*Responsive Form*/
 
-@media (max-width: 430px){
-    .wrapper{
-      width: 100%;
-      height: 100vh;
-      border: none;
-      border-radius: 0;
-      display: flex;
-      align-items: center; 
-      justify-content: center;
-    }
-    #form-login{
-      width: 30rem;
-    }
-}
-
-@media (max-width: 770px){
-  .wrapper{
+@media (max-width: 430px) {
+  .wrapper {
     width: 100%;
     height: 100vh;
     border: none;
     border-radius: 0;
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
   }
-  #form-login{
+
+  #form-login {
+    width: 30rem;
+  }
+}
+
+@media (max-width: 770px) {
+  .wrapper {
+    width: 100%;
+    height: 100vh;
+    border: none;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #form-login {
     width: 40rem;
   }
 }

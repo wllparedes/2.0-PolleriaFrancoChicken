@@ -7,7 +7,9 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <link rel="stylesheet" href="dist/assets/css/login/login.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="dist/assets/vendors/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="icon" href="dist/assets/images/login/icon.png" type="image/png">
+
     <title>Polleria | Franco Chicken </title>
 </head>
 
@@ -38,6 +40,7 @@
     <script src="dist/assets/js/global/login/redirect.js"></script>
     <!-- Controller: login.js -->
     <script src="dist/assets/js/global/login/login.js"></script>
+    <script src="dist/assets/vendors/@fortawesome/fontawesome-free/js/all.min.js"></script>
 </body>
 
 </html>
