@@ -74,10 +74,12 @@ create table charges(
 
 -- Inserciones de cargos
 
+INSERT INTO  `charges`  (`id`, `name`) VALUES (NULL,'Administrador');
 INSERT INTO `charges` (`id`, `name`) VALUES (NULL, 'Almacenero');
 INSERT INTO  `charges`  (`id`, `name`) VALUES (NULL,'Recepcionista');
 INSERT INTO  `charges`  (`id`, `name`) VALUES (NULL,'Mesero');
-INSERT INTO  `charges`  (`id`, `name`) VALUES (NULL,'Administrador');
+
+select * from charges;
 
 -- Tabla de usuarios
 
@@ -96,9 +98,9 @@ create table users( -- empleado
 );
 
 -- Insercion de usuario
+insert users values (NULL ,'Admin', 'Admin', '907268698', '90875898', 'Administrador', 'admin@gmail.com', '@Admin123', 1, 1 );
+insert users values (NULL ,'Adam', 'Milner', '987268698', '94875898', 'Adam  Milner', 'almacenero@gmail.com', '@Almacenero123', 1, 2 );
 
-insert users values (NULL ,'Adam', 'Milner', '987268698', '94875898', 'Adam  Milner', 'almacenero@gmail.com', '@Almacenero123', 1, 1 );
-insert users values (NULL ,'Admin', 'Admin', '907268698', '90875898', 'Administrador', 'admin@gmail.com', '@Admin123', 1, 4 );
 
 -- delete FROm usuario where id_usuario = 1;
 
