@@ -26,8 +26,8 @@ include("./../../../../php/verificar_session.php");
     <div id="app">
 
         <?php
-            $isActiveModuleUser = 'active';
-            $isActiveSectionList = 'active';
+        $isActiveModuleUser = 'active';
+        $isActiveSectionList = 'active';
         ?>
 
         <!-- start sidebar -->
@@ -84,6 +84,7 @@ include("./../../../../php/verificar_session.php");
                                         <th>N. Usuario</th>
                                         <th>Email</th>
                                         <th>Cargo</th>
+                                        <th>Estado</th>
                                         <th>Opciones</th>
                                     </tr>
                                 </thead>

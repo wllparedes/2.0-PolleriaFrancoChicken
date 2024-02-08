@@ -2,7 +2,13 @@
 
 import { verifyTarget } from '../../../../assets/js/global/verifyTarget.js';
 import { dataTable } from './listUsers.js';
-import  {no_eliminado, si_eliminado, alerta_confirmacion, usuario_now}  from '../../../../assets/js/pages/modules-sweetalert.js';
+import {
+	no_eliminado,
+	si_eliminado,
+	alerta_confirmacion,
+	usuario_now,
+	usuario_admin,
+} from '../../../../assets/js/pages/modules-sweetalert.js';
 
 let tableUsers = $('#table-users');
 
@@ -17,10 +23,14 @@ tableUsers.on('click', '.delete', (e) => {
 				type: 'POST',
 				data: { id },
 				dataType: 'JSON',
-                success: function (response) {
-
+				success: function (response) {
 					if (response.status === 'notDelete') {
 						usuario_now();
+						return;
+					}
+
+					if (response.status === 'notDeleteAdmin') {
+						usuario_admin();
 						return;
 					}
 

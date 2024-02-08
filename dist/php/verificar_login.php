@@ -23,6 +23,7 @@ if (!empty($_POST["email"]) and !empty($_POST["password"])) {
     $_SESSION["id_user"] = $datos->id;
     $_SESSION["user_name"] = $datos->user_name;
     $_SESSION["email"] = $datos->email;
+    $_SESSION["state"] = $datos->state;
 
     // Obtener el nombre del cargo
     $query_charge = "SELECT * FROM charges WHERE id = ?";
@@ -46,8 +47,12 @@ if (!empty($_POST["email"]) and !empty($_POST["password"])) {
           $redirect = "index";
           $mensaje = "Usted no cuenta con los permisos necesarios";
           break;
-        case 'Almacenero':
-          $redirect = "dist/pages/home/storekeeper/views/index";
+        case 'Almacenero' || 'Administrador':
+          if ($_SESSION["state"] == 1) {
+            $redirect = "dist/pages/home/storekeeper/views/index";
+          } else {
+            $mensaje = "inactivo";
+          }
           break;
         default:
           $redirect = "index";
@@ -57,8 +62,8 @@ if (!empty($_POST["email"]) and !empty($_POST["password"])) {
       $redirect = "index"; // Set a default redirect if $_SESSION["job_title_name"] is not set
     }
 
-     // Imprime el mensaje si existe
-     if (isset($mensaje)) {
+    // Imprime el mensaje si existe
+    if (isset($mensaje)) {
       echo $mensaje;
     } else {
       echo $redirect;

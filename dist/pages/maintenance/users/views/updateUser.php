@@ -1,6 +1,6 @@
 <!-- Modal -->
 <div class="modal fade" id="editUser" tabindex="-1" role="dialog" aria-labelledby="editUser" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered  modal-lg" role="document">
+    <div class="modal-dialog modal-dialog-centered  modal-xl" role="document">
         <div class="modal-content" id="form">
             <div class="modal-header">
                 <h4 class="modal-title" id="myModalLabel33">Formulario para editar usuario </h4>
@@ -14,7 +14,8 @@
                         <div class="col-lg-4 mb-1">
                             <label for="name">Nombres</label>
                             <div class="form-group position-relative has-icon-left">
-                                <input type="text" id="name" name="name" class="form-control input-form" placeholder="John Adam">
+                                <input type="text" id="name" name="name" class="form-control input-form"
+                                    placeholder="John Adam">
                                 <div class="form-control-icon">
                                     <i class="bi bi-person"></i>
                                 </div>
@@ -45,7 +46,8 @@
                         <div class="col-lg-4 mb-1">
                             <label for="dni">DNI</label>
                             <div class="form-group position-relative has-icon-left">
-                                <input type="text" id="dni" name="dni" class="form-control input-form" placeholder="12235492">
+                                <input type="text" id="dni" name="dni" class="form-control input-form"
+                                    placeholder="12235492">
                                 <div class="form-control-icon">
                                     <i class="bi bi-hash"></i>
                                 </div>
@@ -91,6 +93,21 @@
                                 </div> -->
                             </div>
                         </div>
+
+                        <?php
+
+                        if ($_SESSION["job_title_name"] === 'Administrador') {
+                            ?>
+                            <div class="col-lg-4 mb-1">
+                                <label for="state">Estado</label>
+                                <div class="form-group position-relative" id="parent-state">
+                                </div>
+                            </div>
+                            <?php
+                        }
+
+                        ?>
+
                     </div>
 
                     <div class="row">

@@ -43,6 +43,7 @@ tableUsers.on('click', '.edit', (e) => {
 
 			// * creamos el elemento select
 			const element = document.createElement('div');
+
 			element.setAttribute('id', 'select-charges');
 			element.setAttribute('class', 'form-control charges');
 
@@ -59,6 +60,30 @@ tableUsers.on('click', '.edit', (e) => {
 				searchPlaceholderText: 'Buscar cargo',
 			});
 
+			if ($('#parent-state').length) {
+				const parentStateElement = document.getElementById('parent-state');
+
+				parentStateElement.innerHTML = '';
+
+				const element2 = document.createElement('div');
+
+				element2.setAttribute('id', 'select-state');
+				element2.setAttribute('class', 'form-control state');
+
+				parentStateElement.appendChild(element2);
+
+				VirtualSelect.init({
+					ele: element2,
+					required: true,
+					placeholder: 'Seleccione un estado',
+					options: [
+						{ label: 'Activo', value: '1' },
+						{ label: 'Inactivo', value: '0' },
+					],
+					selectedValue: usuario.state,
+				});
+			}
+
 			// * inicializar el validador del los inputs del form
 
 			const inputs = document.querySelectorAll('#editUser .input-form');
@@ -73,8 +98,6 @@ tableUsers.on('click', '.edit', (e) => {
 				email: expresiones.email,
 				password: expresiones.password,
 			});
-
-
 		},
 		complete: function () {
 			document.querySelector('.update').setAttribute('data-id', id);
@@ -82,4 +105,3 @@ tableUsers.on('click', '.edit', (e) => {
 		},
 	});
 });
-

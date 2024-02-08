@@ -2,9 +2,9 @@
 
 // Datos de la base de datos
 $servername = "localhost";
-$username = "root"; // u830186501_root
-$password = ""; // X!r9gtj4zQ2t
-$dbname = "polleria_iv"; // u830186501_PolleriaFranco
+$username = "root"; // id21129361_root
+$password = ""; // u830186501_PolleriaFranco
+$dbname = "polleria_iv"; // id21129361_polleria_franco_chicken
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 

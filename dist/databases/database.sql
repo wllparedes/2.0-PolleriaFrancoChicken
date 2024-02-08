@@ -77,6 +77,7 @@ create table charges(
 INSERT INTO `charges` (`id`, `name`) VALUES (NULL, 'Almacenero');
 INSERT INTO  `charges`  (`id`, `name`) VALUES (NULL,'Recepcionista');
 INSERT INTO  `charges`  (`id`, `name`) VALUES (NULL,'Mesero');
+INSERT INTO  `charges`  (`id`, `name`) VALUES (NULL,'Administrador');
 
 -- Tabla de usuarios
 
@@ -89,13 +90,15 @@ create table users( -- empleado
     user_name VARCHAR(80) NOT NULL,
     email VARCHAR(80) UNIQUE NOT NULL,
     password VARCHAR(256) NOT NULL,
+    state BOOLEAN NOT NULL DEFAULT 1,
     id_charge INT NOT NULL,
     FOREIGN KEY (id_charge) REFERENCES charges(id)
 );
 
 -- Insercion de usuario
 
-insert users values (NULL ,'Adam', 'Milner', '987268698', '94875898', 'Adam  Milner', 'almacenero@gmail.com', '@Almacenero123', 1 );
+insert users values (NULL ,'Adam', 'Milner', '987268698', '94875898', 'Adam  Milner', 'almacenero@gmail.com', '@Almacenero123', 1, 1 );
+insert users values (NULL ,'Admin', 'Admin', '907268698', '90875898', 'Administrador', 'admin@gmail.com', '@Admin123', 1, 4 );
 
 -- delete FROm usuario where id_usuario = 1;
 

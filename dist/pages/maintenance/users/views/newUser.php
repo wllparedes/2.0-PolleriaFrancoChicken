@@ -19,8 +19,8 @@ include("./../../../../php/verificar_session.php");
     <div id="app">
 
         <?php
-            $isActiveModuleUser = 'active';
-            $isActiveSectionNew = 'active';
+        $isActiveModuleUser = 'active';
+        $isActiveSectionNew = 'active';
         ?>
 
         <!-- start sidebar -->
@@ -155,6 +155,15 @@ include("./../../../../php/verificar_session.php");
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="col-lg-4 mb-1">
+                                                    <label for="state">Estado</label>
+                                                    <div class="form-group position-relative">
+
+                                                        <div class="state form-control" id="select-state">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
 
                                             <!-- = Message Error -->
@@ -204,6 +213,7 @@ include("./../../../../php/verificar_session.php");
     <script src="./../../../../assets/vendors/virtual-select/virtual-select.min.js"></script>
     <!-- * parte de la pagina -->
     <script src="../tasks/charges.js"></script>
+    <script src="../tasks/state.js"></script>
     <script src="../controllers/NewUser.js" type="module"></script>
 </body>
 

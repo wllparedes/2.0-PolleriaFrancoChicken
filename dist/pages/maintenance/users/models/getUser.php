@@ -26,6 +26,7 @@ while ($row = $result->fetch_assoc()) {
         'user_name' => $row['user_name'],
         'email' => $row['email'],
         'password' => $row['password'],
+        'state' => $row['state'],
         'id_charge' => $row['id_charge'],
     );
 }

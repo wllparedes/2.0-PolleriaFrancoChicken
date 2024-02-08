@@ -2,7 +2,7 @@
 
 include("./../../../../databases/db.php");
 
-$query = "SELECT id, name FROM charges";
+$query = "SELECT id, name FROM charges WHERE id != 1";
 
 $stmt = $conn->prepare($query);
 $stmt->execute();

@@ -20,6 +20,8 @@ while ($row = $result->fetch_assoc()) {
     $rowx = $resultx->fetch_assoc();
     $name_charge = $rowx['name'];
 
+    $state = $row['state'] == 0 ? "<div class='badge alert-danger'>Inactivo</div>" : "<div class='badge alert-success'>Activo</div>";
+
     $users[] = array(
         'id_user' => "" . $row['id'] . "",
         'names' => $row['names'],
@@ -28,6 +30,7 @@ while ($row = $result->fetch_assoc()) {
         'dni' => $row['dni'],
         'user_name' => $row['user_name'],
         'email' => $row['email'],
+        'state' => $state,
         'charge' => $name_charge,
     );
 
